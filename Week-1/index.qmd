@@ -20,7 +20,30 @@ editor:
     wrap: 72
 ---
 
-# Introduction
+## Welcome! {.smaller}
+
+::: columns
+::: {.column width="30%"}
+![](images/prof_pic.jpg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+`Dr. Manika Lamba`
+
+`Office:` Room 118E, Bizzell Library
+
+`Office hours:` Tuesdays & Thursdays (2:30-5 PM) or by appointment
+
+`Email:` manika\@ou.edu
+
+`Research interests:` information organization, digital libraries, critical data practices, 
+science of science using text mining, NLP, & machine learning
+:::
+:::
+
+::: footer
+<https://manika-lamba.github.io/>
+:::
 
 ::: notes
 Welcome to Module 1! In this week, you will learn about data's role in
@@ -334,7 +357,7 @@ and `"library" jobs`:
 
 # Trends in Data Stewardship
 
-## ![](images/open science.png)
+## ![](images/open%20science.png)
 
 ## ![](images/fair.png)
 
