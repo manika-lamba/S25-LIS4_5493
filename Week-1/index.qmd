@@ -1,0 +1,653 @@
+---
+title: "Data Stewardship: An Overview"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: true
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+Welcome to Module 1! In this week, you will learn about data's role in
+making decisions. You have of course all heard “BIG DATA” and perhaps
+even more about its potentials in business, government, security, and
+other contexts.
+
+Libraries and information organizations have been dealing with BIG DATA
+(and small data) for many years, but as more is produced each year, it
+has also become the focus of many library and data science efforts.
+
+The world is virtually drowning in data, in many forms, produced through
+research, scholarship, governance, business, etc. Managing and curating
+the data is essential for its use or re-use. Libraries and information
+organizations are also using data visualization tools to analyze data as
+well as for outreach and public relationship purposes.
+
+In this module we will briefly explore data stewardship and
+visualization and the role that information professionals play in
+today’s data saturated world. We will also briefly look at data
+visualization as a means to help others make sense of their data.
+:::
+
+## What is Data Stewardship? {.smaller}
+
+-   `Data Stewardship` is concerned with all aspects of the **creation,
+    management, analysis, and communication of data** focusing
+    particularly on the application of
+    `computational methods to digital data`
+
+-   Data Stewardship = Data Management + Data Curation + Data Analytics
+
+    -   Data management: Ensuring the management of data in order to
+        better support the analysis of data
+    -   Data curation: Ensuring that data can be efficiently and
+        reliably found and used
+    -   Data analytics: Employing specific techniques to extract
+        knowledge from data
+
+-   It includes among other things: *acquisition and collection,
+    modeling, workflow, provenance, validity and integrity, metadata,
+    preservation, integration, retrieval, re- use, policy, standards,
+    identifiers, format conversions, processing levels, supporting
+    reproducibility*, etc.
+
+-   It includes active and on-going management of data through its
+    lifecycle of interest and usefulness to scholarship, science, and
+    education; curation activities enable data discovery and retrieval,
+    maintain quality, add value, and provide for re-use over time.
+
+## Science of... vs Practice of...
+
+The [*science*]{.underline} of data stewardship:
+
+```         
+research and development on new methods of data management and use;
+draws on mathematical and engineering methods, but also on methods from social science, law, economics, and other disciplines
+```
+
+The [*practice*]{.underline} of data stewardship:
+
+```         
+use and adaptation of data management methods to meet user needs and support data analytics
+```
+
+## Values
+
+*`Data analytics values:`* Extraction should be novel, fast, precise,
+accurate
+
+*`Data stewardship values:`* Data should be efficient and reliable:
+**findable, useable, legal** *(thereby supporting novelty, speed,
+precision, accuracy)*
+
+## Importance of Data Stewardship {.smaller}
+
+-   Where real world interdisciplinary challenges are concerned,
+    managerial & curatorial problems are acute:
+
+> *Large amounts of rapidly changing data, often heterogeneous in nature
+> and developed by different scientific communities, must be found,
+> retrieved, authenticated, reformatted, integrated with other data and
+> managed for effective use, and demonstrably reliable even after
+> processing and preparation*
+
+-   Supporting analysis, discovery, and use is an enormous challenge
+
+> . . . it involves the complex management of large-scale data storage
+> and preservation, creation of metadata and tools for retrieval and
+> context documentation, preparation of computationally accessible
+> documentation of provenance and workflow, conducting reliable format
+> conversions to support new tools and applications, the management of
+> identifiers and validity checks that accommodate format changes, the
+> integration of related data elements from substantially different data
+> sources, and more. . . .
+
+## Importance of Data Stewardship (Cont.) {.smaller}
+
+-   Without successful data management & curation, data analysis is not
+    possible, it would be prohibitively expensive and and dangerously
+    unreliable
+
+-   Data Stewardship is the larger part of data science.
+
+-   Not only Data Stewardship is essential for reliable efficient
+    analysis, but most of the cost associated with using data is, by
+    far, in management & curation, not analysis, and most of the
+    workforce needs are, also by far, in management & curation, not
+    analysis.
+
+| *Ask any data manager in industry will tell you, it is the management & curatorial work where they make the largest investment, of money, staff, time, and effort*
+
+## Broader Activities {.smaller}
+
+`Some of the broader activites in Data Stewardship includes:`
+
+![](images/activites.png){fig-align="center"}
+
+::: notes
+1.  **Collection:** It includes support for, e.g., coordination of
+    instrument calibration, protocols, procedures, collection area
+    division, interview transcription, etc. Of particular importance it
+    records information (as metadata) related to collection activity so
+    that all relevant aspects of context are available later to support
+    full understanding, authentication, and provenance.
+
+2.  **Organization:**
+
+-   It determine an appropriate data model and schema
+-   Use abstraction and indirection to manage data
+-   Identify and use any relevant standards for both syntax and
+    semantics
+-   Of particular importance:
+    -   Document schema attributes (including specifying datatypes and
+        constraints).
+    -   Document all changes to schemas.
+    -   Maintain metadata for schema changes.
+
+3.  **Storage:** Select storage strategies that proved the right mix of
+    reliability, security and access
+
+4.  **Preservation:** Maintain a documented preservation strategy. This
+    includes not just bit sequence preservation and syntax
+    documentation, but also the documentation of semantics for data
+    elements and the generation and preservation of all metadata needed
+    to ensure that the data is useable and understandable, and can be
+    authenticated and audited for provenance. Execute that strategy with
+    discipline, documenting all actions taken.
+
+5.  **Discoverability:**
+
+-   Develop metadata to support searching for and finding relevant data
+    in relevant formats.
+-   Support searching that provide relevance ranking and recommends
+    related datasets
+
+6.  **Access:**
+
+-   Maintain systems, tools, and metadata that support the efficient and
+    reliable retrieval and distribution of data
+-   Add metadata describing file formats
+-   Where appropriate control access appropriately and maintain data on
+    distribution and access
+
+7.  **Workflow:**
+
+-   The processing of data should be carried out a well-designed modular
+    system of transformations.
+-   The role of each module should be documented.
+-   The execution of a workflow should be documented as well.
+-   To the greatest extent possible documentation should be generated
+    automatically and should itself be both machine readable and
+    executable.
+-   Specifically: well-maintained scripts should be developed and used
+    to document as well as execute data transformations
+
+8.  **Identification:**
+
+-   Identifier systems must be carefully designed. Attention must be
+    given to what (conceptually) is being identified and to the method
+    of identification.
+-   Related entities (such as the data abstractly and the same data
+    represented in different formats) must be both precisely
+    distinguished and precisely related.
+-   Version control for format changes, corrections, etc. must be
+    implemented.
+-   Authentication (the data is in fact the data it claims to be) and
+    validation (the schema constraints, syntax and semantics, are met)
+    are both fundamental.
+
+9.  **Integration:**
+
+-   Both variations in syntax and data element semantics must be
+    accommodated if data from multiple sources is to be combined and
+    related to solve real world problems.
+-   Use schema alignment and cross-walking techniques to integrate data.
+-   Document integration strategies in detail so that any conflation,
+    data loss, etc. is noted.
+
+10. **Reformatting:**
+
+-   Data must frequently be reformatted in order to support new tools,
+    new versions of existing tools, or to meet new format standards.
+-   Reformatting must be documented and any changes in semantics or
+    meaning must be identified.
+
+11. **Reproducibility**: It includes documenting not only data
+    collection and management, but also documenting processing and
+    analysis
+
+12. **Sharing:** There are many obstacles to data sharing, ranging from
+    formats, to lack of documentation, to concerns about misuse or
+    misunderstanding. Data stewardship must address these, typically
+    with policies, documentation, metadata, and interoperable systems.
+
+13. **Communication:** To be useful data must be presented in forms that
+    provide insight (such as scientific visualizations) and integrated
+    clearly and efficiently into the full life-cycle of scientific work,
+    which includes scientific publishing. Related communication issues
+    are relevant to other data stewardship activities: in entertainment,
+    documentation, services, etc. Here data stewardship overlaps with
+    interface design.
+
+14. **Provenance:** When one data set (or view) is derived from another,
+    reliable use and understanding requires that the inputs,
+    calculations, and actions responsible for data values can be
+    identified.
+
+15. **Modification:**
+
+-   Data must be updated and corrected.
+-   This must be supported and managed so that errors are not introduced
+    but so that the changes overtime can be tracked and audited.
+
+16. **Compliance:** The issues here range from intellectual property
+    rights to regulations regarding the privacy of medical, financial,
+    and personal information.
+
+17. **Security:** This will involve methods for controlling access and
+    determining user identity and privileges, as well as data identity,
+    authentication and validation.
+:::
+
+## Data Stewardship: Methods of Action {.smaller}
+
+1.  `Analysis`: To determine needs, and develop relevant data models and
+    metadata, and reformat, correct, or update data.
+2.  `Documentation`: To record essential information (typically via
+    metadata)
+3.  `System design and implementation`: To support all data curatorial
+    activities To support the generation and use of data documentation
+    and processing documentation
+4.  `Policy`: To specify objectives, procedures, practices, and formats.
+5.  `Process`: To ensure success and efficiency by managing the
+    development of appropriate organizational units and roles, providing
+    training, advocating for change, and managing curatorial activities.
+
+## Data Stewardship Workforce {.smaller}
+
+> `There is no single occupational category for [data stewardship] and no precise mapping between knowledge and skills needed for [data stewardship] and existing professions, careers, or job titles.`
+
+> `The knowledge and skills required of those engaged in [data stewardship] are dynamic and highly interdisciplinary. They include an integrated understanding of computing and information science, librarianship, archival practice, and the disciplines and domains generating and using data. Additional knowledge and skills for effective [data stewardship] are emerging in response to data-driven scholarship.`
+
+## Who Does Data Work? {.smaller}
+
+::: columns
+::: {.column width="50%"}
+Some professional `“data” jobs`:
+
+-   Data Scientist
+
+-   Data/Business Analyst
+
+-   Data Wrangler
+
+-   Data Curator
+
+-   Data Steward
+
+-   Data Engineer
+
+-   … ML, AI Engineer
+:::
+
+::: {.column width="50%"}
+and `“database” jobs`:
+
+-   Database Engineer
+
+-   Database Programmer
+
+-   Database Architect
+
+-   Database Administrator
+
+and `"library" jobs`:
+
+-   Research Data Services Librarian
+
+-   Research Data Steward
+
+-   Data Librarian
+
+-   Data Scholarship Librarian
+
+-   Digital Humanities Librarian
+
+-   AI Librarian
+:::
+:::
+
+# Trends in Data Stewardship
+
+## ![](images/open science.png)
+
+## ![](images/fair.png)
+
+## ![](images/sharing.png)
+
+## ![](images/repro.png)
+
+## ![](images/repro2.png)
+
+## ![](images/ethics.png)
+
+# What is Data?
+
+::: notes
+Ever check the weather before leaving your house or scroll through
+social media feeds? These are some everyday examples of data in use.
+
+Data is information made up of statistics and facts that can be used for
+analysis and making decisions. In this course, when we talk about data,
+we're referring to data that is mainly collected and stored
+electronically.
+
+So let's ask ourselves, **how does data impact our lives?**
+
+Data helps us find our way in the world, literally. Like when we use
+navigation apps to avoid traffic jams. We use weather forecasts to plan
+how we dress for the day, to stay warm, or to decide if this weekend is
+a good one for an outdoor event.
+
+Many of us have apps that track and monitor our steps and heart rate,
+motivating us to meet our fitness goals. Online stores use data to
+personalize our shopping experiences ever noticed recommended products
+after viewing something similar in an online store? That's data analysis
+at work, suggesting items you might also be interested in.
+
+Video streaming services track your viewing habits, recommending movies
+and shows based on your previous viewing history, and music apps do the
+same using our listing histories. Data is used all the time to
+personalize your entertainment, making it more enjoyable.
+
+Data's impact on our lives can reach beyond personal fitness, shopping
+and entertainment. It's also used by organizations of all sizes to help
+figure out things like future staffing needs, where to construct new
+roads and bridges, or even for helping to decide how to treat illnesses.
+Data has a powerful impact on our lives.
+:::
+
+## We are Data {.smaller}
+
+::: columns
+::: {.column width="50%"}
+#### [***We are filled with data in today's networked society***]{style="color: blue;"}
+
+-   through our web activity, we are assigned *gender, ethnicity, class,
+    age, education level, and potential status of parent with x no. of
+    children* ([digital trace data/digital footprint/digital
+    breadcrumbs]{style="color: orange;"})
+
+-   if internet metadata identifies a user as foreigner than they lose
+    right to privacy afforded to U.S. citizens
+
+-   who would have thought that [*class status, citizenship,
+    ethnicity*]{.underline} could be algorithmically understood?
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-1302120039.png){fig-align="center" width="300"}
+:::
+:::
+
+::: footer
+John Cheney-Lippold. (2017). We are Data: algorithms and the making of
+our digital selves. New York University Press.
+:::
+
+::: notes
+In the last slide, you learn what data is and explored some examples of
+how data affects our lives. Now, we will look at the data from a
+critical lens.
+
+We need to keep in mind about data is that while data can be used to
+benefit us, we can also need to have a say about how it's collected and
+used.
+
+Many platforms allow you to control your privacy settings. An example is
+how mobile platforms like Apple's iOS make the information shared with
+apps more transparent to the user. We should all become familiar with
+how our data gets used and make conscious decisions about what we allow.
+
+The data shared by such platforms can generate biases in algorithms that
+we use daily through social networking apps (Facebook, X, Instagram,
+etc.) or just searching through internet!
+
+By understanding the power of data in our lives, we can leverage it for
+good and ensure our privacy is respected.
+:::
+
+## We are Data (Cont.) {.smaller}
+
+#### [***We live in a world of ubiquitous networked communication***]{style="color: blue;"}
+
+-   technologies that constituent the Internet are so woven into the
+    fabric of our daily lives, where for most of us, existing without
+    seems unimaginable
+
+#### [***We also live in a world of ubiquitous surveillance***]{style="color: blue;"}
+
+-   same technologies have helped spawn an impressive network of
+    governmental, commercial, and unaffiliated infrastructures of mass
+    observation and control
+-   most of what we do in this world has at least the **capacity** to be
+    *observed, recorded, analyzed, and stored* in a databank
+    -   HOW?
+        -   storage is cheap
+        -   computers are fast to analyze information in both real time
+            & retrospective
+        -   our daily activities that are mediated with software can be
+            easily configured to record and report everything it sees
+            upstream
+
+::: footer
+John Cheney-Lippold. (2017). We are Data: algorithms and the making of
+our digital selves. New York University Press.
+:::
+
+::: notes
+Ever wonder how Netflix or Amazon Prime know which movie or show to
+recommend or how your vehicle's GPS knows how to navigate you around
+traffic?
+
+It's data!
+
+Let's explore some examples of how data can play an essential role in
+everyday decisions.
+
+Imagine you're stuck in traffic. You open a navigation app and it
+re-routes you based on real time traffic data. This data collected from
+other users and sensors helps the app make an informed decision about
+the fastest route for you to take.
+
+Data plays a vital role in healthcare too. Doctors use patient data such
+as medical history and test results to diagnose illnesses and determine
+the best course of treatment.
+
+Data is also a powerful tool for scientific research. Scientists collect
+data on everything from weather patterns to animal behavior. By
+analyzing this data, they can make predictions and develop new
+technologies and strategies to manage real world problems.
+
+Businesses also use data to make decisions. For example, marketing teams
+use customer data to understand their audience and target their
+advertising campaigns. This data helps them reach the right people with
+the right message at the right time.
+
+Even our cities use data to improve the lives of their residents. City
+planners use data on population density, traffic patterns, and resource
+usage to inform plans for building and managing the city's
+infrastructure and public transportation systems.
+
+So the next time you see a movie recommendation or navigate through
+smooth traffic, remember that data is working behind the scenes, helping
+you and countless others daily. The world of data is vast and ever
+evolving, but one thing is certain, data is a powerful tool that can be
+used to improve our lives in countless ways. We will examine the types
+of data and the various ways in which data is collected later.
+:::
+
+## Data Lifecycle
+
+![](images/clipboard-2779466639.png){fig-align="center" width="700"}
+
+::: footer
+[Digital Curation Centre (DCC) Lifecycle Model
+(UK)](https://www.dcc.ac.uk/%20guidance/curation-lifecycle-model)
+:::
+
+::: notes
+The data lifecycle refers to the numerous phases of data as it is
+collected, curated, analysed, used, decommissioned, and iteratively
+reviewed within the larger AI project lifecycle to ensure accurate,
+secure, and robust performance of an AI/ML system. Integral to every
+stage of the data lifecycle is responsible data stewardship.
+
+The Digital Curation Center has developed the curation lifecycle model
+shown on the slide. The model illustrates the processes as data are
+created. The outermost ring illustrates the research process, which can
+be extended to other contexts as well. For example, a research project
+is conceptualized. Data is created or received, appraised and selected,
+ingested into a system, preserved and stored in a database or other
+computerized storage. Later it is accessed and re-used by the original
+creators or by other audiences. Finally it is transformed into other
+data or publication.
+
+In later modules, you will learn the essential processes for organizing
+the data within the cycle in depth.
+:::
+
+## Data Management Across Research Lifecycle
+
+![](images/clipboard-3439982391.png){fig-align="center" width="700"}
+
+::: notes
+Again, we will cover about Research Data and its Management in detail in
+later modules.
+
+This slide summarizes a typical research data lifecycle showing how data
+undergo the subsequent stages of processing, analyzing, preserving,
+accessing, and reusing.
+:::
+
+## Data Visualization
+
+`Why Create Visualizations Generally?`
+
+![](images/clipboard-2612812196.png){fig-align="center" width="1000"}
+
+::: notes
+Data visualization helps the user make sense of large (and often times
+small) amounts of data using computational and analytic tools. In
+academic and special libraries data visualization helps researchers and
+business users recognize and understand the “patterns” in the data to
+assist them in decision making, research, product development,
+marketing, and other uses not yet realized.
+
+Along with the emergence of “big data” came the need for more visual
+means to analyze and make sense of the data. Visualization also allows
+for re-purposing of datasets beyond their original use.
+
+Information professionals assist in data visualization but also in
+managing and preparing the data for use.
+
+An academic library may title these professionals as *Data analysis
+librarian, Data manager, Digital Projects librarian/specialist*, etc.
+The titles are emerging as fast as the visualization tools themselves.
+Special librarians have always conducted data analysis and competitive
+intelligence for their companies. Data visualization is an extension of
+this service to their user community.
+
+Information professionals also use data visualization themselves for
+innovative ways to present information to users, to market their
+services, and to synthesize data for stakeholders.
+:::
+
+## Academic and Professional Organizations {.smaller}
+
+-   [Association for Computing Machinery (ACM)](https://www.acm.org/)
+-   [Institute of Electrical and Electronics Engineers
+    (IEEE)](https://www.ieee.org/)
+-   [Association for Information Science & Technology
+    (ASIS&T)](https://www.asist.org/)
+-   \[Domain and discipline specific organizations
+    -   Biosciences, geosciences, social sciences, economics, etc.
+-   [Research Data Alliance (RDA)](https://www.rd-alliance.org/)
+-   [Committee on Data (CODATA)](https://codata.org/)
+-   [National Digital Stewardship Alliance (NDSA)](https://ndsa.org/)
+
+## 
+
+![](images/rda.png){fig-align="center"}
+
+::: footer
+<https://www.rd-alliance.org/about-the-rda/>
+:::
+
+## Conferences: Computing and Databases {.smaller}
+
+-   ACM International Conference on Information & Knowledge Management
+    (CIKM)
+-   ACM Special Interest Group on Management of Data (SIDMOD)
+-   Very Large Databases (VLDB)
+-   IEEE International Conference on Data Engineering (ICDE)
+-   ACM SIG on Human-Computer Interaction (SIGHCI)
+-   International Provenance and Annotation Workshop (IPAW)
+-   International Semantic Web Conference (ISWC)
+-   ACM Conference on Fairness, Accountability, and Transparency (FACCT)
+-   ACM Conference on Reproducibility and Replicability (REP)
+
+## Conferences: Digital Libraries, Curation, & Preservation
+
+-   ACM Joint Conference on Digital Libraries (JCDL)
+-   International Conference on Digital Preservation (iPres)
+-   International Association for Social Science Information Service and
+    Technology (IASSIST)
+-   Open Repositories
+
+## Selected Journals
+
+-   Transactions on Database Systems (TODS)
+-   IEEE Transactions on Knowledge and Data Engineering (TKDE)
+-   CODATA Data Science Journal
+-   International Journal of Digital Curation (IJDC)
+
+## “Everyone wants to do the model work, not the data work”
+
+-   **Data quality** is essential in machine learning and AI
+-   **Data** often determines model performance, fairness, safety,
+    scalability
+-   This is particularly acute in high-stakes domains
+    -   Health, safety, environment
+-   However, **data work** is often **undervalued** and not
+    **incentivized**
+
+::: footer
+Sambasivan, N., et al. (2021). [“Everyone wants to do the model work,
+not the data work”: Data Cascades in High-Stakes
+AI.](https://dl.acm.org/doi/10.1145/3411764.3445518) Proceedings of the
+2021 CHI Conference on Human Factors in Computing Systems, 1–15.
+:::
+
+::: notes
+I hope you have enjoyed learning more about these new vital roles for
+information professionals. Each role takes the traditional skills and
+puts them to use in the digital data life cycle to manage, clean, store,
+preserve, and re-purpose data in new ways to advance science, research,
+learning, and business enterprises.
+:::
