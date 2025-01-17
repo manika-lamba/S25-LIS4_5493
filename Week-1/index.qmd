@@ -36,8 +36,9 @@ editor:
 
 `Email:` manika\@ou.edu
 
-`Research interests:` information organization, digital libraries, critical data practices, 
-science of science using text mining, NLP, & machine learning
+`Research interests:` information organization, digital libraries,
+critical data practices, science of science using text mining, NLP, &
+machine learning
 :::
 :::
 
@@ -94,6 +95,10 @@ visualization as a means to help others make sense of their data.
     education; curation activities enable data discovery and retrieval,
     maintain quality, add value, and provide for re-use over time.
 
+:::notes
+Read the Slides
+::::
+
 ## Science of... vs Practice of...
 
 The [*science*]{.underline} of data stewardship:
@@ -109,6 +114,11 @@ The [*practice*]{.underline} of data stewardship:
 use and adaptation of data management methods to meet user needs and support data analytics
 ```
 
+:::notes
+Read the Slides
+::::
+
+
 ## Values
 
 *`Data analytics values:`* Extraction should be novel, fast, precise,
@@ -117,6 +127,10 @@ accurate
 *`Data stewardship values:`* Data should be efficient and reliable:
 **findable, useable, legal** *(thereby supporting novelty, speed,
 precision, accuracy)*
+
+:::notes
+Read the Slides
+::::
 
 ## Importance of Data Stewardship {.smaller}
 
@@ -140,6 +154,10 @@ precision, accuracy)*
 > integration of related data elements from substantially different data
 > sources, and more. . . .
 
+:::notes
+Read the Slides
+::::
+
 ## Importance of Data Stewardship (Cont.) {.smaller}
 
 -   Without successful data management & curation, data analysis is not
@@ -155,6 +173,11 @@ precision, accuracy)*
     analysis.
 
 | *Ask any data manager in industry will tell you, it is the management & curatorial work where they make the largest investment, of money, staff, time, and effort*
+
+:::notes
+Read the Slides
+::::
+
 
 ## Broader Activities {.smaller}
 
@@ -301,11 +324,19 @@ precision, accuracy)*
     development of appropriate organizational units and roles, providing
     training, advocating for change, and managing curatorial activities.
 
+:::notes
+Read the Slides
+::::
+
 ## Data Stewardship Workforce {.smaller}
 
 > `There is no single occupational category for [data stewardship] and no precise mapping between knowledge and skills needed for [data stewardship] and existing professions, careers, or job titles.`
 
 > `The knowledge and skills required of those engaged in [data stewardship] are dynamic and highly interdisciplinary. They include an integrated understanding of computing and information science, librarianship, archival practice, and the disciplines and domains generating and using data. Additional knowledge and skills for effective [data stewardship] are emerging in response to data-driven scholarship.`
+
+:::notes
+Read the Slides
+::::
 
 ## Who Does Data Work? {.smaller}
 
@@ -355,19 +386,51 @@ and `"library" jobs`:
 :::
 :::
 
+:::notes
+Read the Slides
+::::
+
 # Trends in Data Stewardship
 
 ## ![](images/open%20science.png)
+:::notes
+Read the Slides
+::::
+
 
 ## ![](images/fair.png)
+:::notes
+Read the Slides
+::::
+
 
 ## ![](images/sharing.png)
+:::notes
+Read the Slides
+::::
+
 
 ## ![](images/repro.png)
+:::notes
+Read the Slides
+::::
+
 
 ## ![](images/repro2.png)
+:::notes
+Read the Slides
+::::
+
 
 ## ![](images/ethics.png)
+:::notes
+Read the Slides
+::::
+
+
+:::notes
+Read the Slides
+::::
 
 # What is Data?
 
@@ -614,6 +677,10 @@ services, and to synthesize data for stakeholders.
 -   [Committee on Data (CODATA)](https://codata.org/)
 -   [National Digital Stewardship Alliance (NDSA)](https://ndsa.org/)
 
+:::notes
+Read the Slides
+::::
+
 ## 
 
 ![](images/rda.png){fig-align="center"}
@@ -643,12 +710,20 @@ services, and to synthesize data for stakeholders.
     Technology (IASSIST)
 -   Open Repositories
 
+:::notes
+Read the Slides
+::::
+
 ## Selected Journals
 
 -   Transactions on Database Systems (TODS)
 -   IEEE Transactions on Knowledge and Data Engineering (TKDE)
 -   CODATA Data Science Journal
 -   International Journal of Digital Curation (IJDC)
+
+:::notes
+Read the Slides
+::::
 
 ## “Everyone wants to do the model work, not the data work”
 
