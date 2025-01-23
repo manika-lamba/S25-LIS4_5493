@@ -1,0 +1,834 @@
+---
+title: "Data in Everyday Life and the Research Process"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+In this week’s module we will discuss:
+
+-   How data are generated throughout daily life activities and how data
+    is/may be used.
+
+-   The types of data that is generated in various contexts
+
+-   The research process in scholarly as well as business, government,
+    and other contexts
+
+-   The issues associated with managing and using the data.
+
+As you review the readings for this week, keep in mind these topics but
+also the role you as the data steward will play. Also, think about real
+world examples of how data are gathered and used AS WELL AS the purposes
+for, and CONTEXTS in which the data are gathered AND USED. Throughout
+the semester we will think about and discuss the ethical issues a data
+steward must consider when working with data or assisting others who are
+gathering the data.
+:::
+
+## Digital Trace Data
+
+![](images/clipboard-1113407654.png)
+
+::: notes
+The past decade has witnessed an increasingly voluminous amount of
+digital data that is produced on the internet which describes human
+behavior and other objects of scholarly inquiry. As this figure shows,
+recent decades have not only witnessed an increase in the amount of text
+based data, but also increased computing power which is increasingly
+necessary to analyze it. Together, these two shifts hold the potential
+to significantly expand the scope of research in many different fields.
+:::
+
+## Strengths of Digital Trace Data
+
+`1. Always On`
+
+![](images/clipboard-2325722226.png){fig-align="center"}
+
+::: notes
+I will begin by discussing some of the positive aspects of digital trace
+data, and then move on to some of the challenges. In so doing, I draw
+upon Matt Salganik’s Book [Bit by Bit](https://www.bitbybitbook.com/)
+which I highly recommend for a more detailed discussion of digital trace
+data.
+
+One of the most attractive features of digital trace data is that it is
+**continuously collected** (or `ALWAYS ON`), unlike surveys which
+usually only provide a brief snapshot of the social world. As the image
+indicates, social media can occasionally provide a glimpse of major
+events such as protests, revolutions, or stock market surges, *as they
+unfold*.
+:::
+
+## Strengths of Digital Trace Data (Cont.)
+
+`2. Non-Reactive`
+
+![](images/clipboard-398922328.png){fig-align="center"}
+
+::: notes
+Another important advantage of digital trace data is that it is
+**non-reactive, or not produced via interaction between researchers and
+those who they study**. In some cases, this may lead to significant
+reductions in social desirability bias or other forms of interviewer
+effects.
+
+Consider, for example, the use of Google search data to study violent
+radicalization, a subject which could not be studied with survey data–
+what type of extremists would describe their violent intentions to a
+survey researcher?
+
+Yet in the [paper](https://advances.sciencemag.org/content/4/6/eaao5948)
+(shown on screen), discovered that people do reveal some digital traces
+that might indicate they might aspire to engage in such behavior.
+:::
+
+## Strengths of Digital Trace Data (Cont.)
+
+`3. Captures Social relationships`
+
+![](images/clipboard-4059065453.png){fig-align="center"}
+
+::: notes
+Digital trace data are also somewhat unusual in that they often describe
+**social relationships**. Whereas conventional survey techniques usually
+only measure characteristics of individual subjects, for example,
+digital trace data can often be used to measure social relationships
+such as the network of elected officials, media organizations, and
+advocacy groups shown from a [this
+paper](https://www.pnas.org/content/115/37/9216) .
+:::
+
+## Weakness of Digital Trace Data
+
+Despite the considerable advantages of digital trace data, they also
+create a range of challenges for empirical observation and causal
+inference
+
+`1.  Inaccessible`
+
+![](images/clipboard-1003739624.png)
+
+::: notes
+An even more formidable challenge is that data are often
+**inaccessible**. Though some Facebook pages such as “fan pages” have
+default public settings, the vast majority of Facebook users set their
+default privacy settings in a manner that only allows people to access
+their data if they are affiliated with each other as “friends.”
+
+What other examples can you think of?
+:::
+
+## Weakness of Digital Trace Data (Cont.)
+
+`2. Non-Representative`
+
+![](images/clipboard-2091510931.png)
+
+::: notes
+Another core challenge facing those who wish to work with digital trace
+data is that a random sample of Facebook or X users is not
+representative of the broader population of the United States, or most
+other countries.
+
+The figure presents some data from the Wall Street Journal on user
+demographics of several social media sites that demonstrates significant
+differences by platform according to race.
+
+On the other hand, usage of Facebook has become so widespread that some
+readers might be surprised to see how much more representative it has
+become of the U.S. public in recent years.
+:::
+
+## Weakness of Digital Trace Data (Cont.)
+
+`3. Drifting`
+
+::: columns
+::: {.column width="50%"}
+[![](images/clipboard-1366382165.png){width="560"}](https://www.washingtonpost.com/technology/2025/01/22/tiktok-ban-app-online-users-quit/)
+:::
+
+::: {.column width="50%"}
+[![](images/clipboard-1892732326.png){width="559"}](https://www.scientificamerican.com/article/u-s-tiktok-users-flock-to-rednote-as-ban-looms/)
+:::
+:::
+
+::: notes
+[![](images/clipboard-1748678266.png)](https://www.bbc.com/news/articles/c897pg2nengo)
+
+MySpace was once the largest social media site in the world, according
+to some analysts. It is now resides in the graveyard of internet history
+like so many other websites.
+
+This raises the risk of `“drift”` in digital trace data– platforms not
+only shift in their overall popularity (which of course has important
+implications for their representativeness), but also according to who
+uses them and why. Though Facebook was once the most popular platform
+for U.S. undergraduates, many have shifted to Instagram or Snapchat in
+reaction to the uptick of Facebook usage by their parents’ generation.
+
+Also, the recent examples of banning of TikTok few days ago made
+TikTokers to join another app called RedNote AND Meta offering money to
+popular creator to join their platform.
+:::
+
+## Weakness of Digital Trace Data (Cont.)
+
+`4. Algorithmic Counfounding`
+
+![](images/clipboard-1621226927.png){fig-align="center"}
+
+::: notes
+Sometimes, digital trace data that appear to describe human behavior
+actually reflect changes in the way humans interact with algorithms.
+
+One popular example of this is the “parable of Google Flu.” Google Flu
+was once a popular tool that allowed users to estimate the prevalence of
+influenza using Google search data. The tool was so accurate that some
+suggested it should displace official surveys from the Centers for
+Disease Control (CDC).
+
+Yet in early 2013, Google estimates were far higher than those from the
+CDC. [Researchers later
+discovered](https://gking.harvard.edu/publications/parable-google-flu%C2%A0traps-big-data-analysis)
+that estimates of influenza had been inflated by google advertising
+links about the flu that people were clicking on that had appeared in
+their web browsers after they searched for information about symptoms of
+the common cold. This is sometimes refered to as “blue-team” dynamics.
+:::
+
+## Weakness of Digital Trace Data (Cont.)
+
+`5. Unstructured`
+
+![](images/clipboard-4154299116.png)
+
+::: notes
+Digital Trace data are also often very messy.
+
+Newcomers to the field often assume that because data are generated in
+digital format that they are well structured, easily searchable, and
+quickly transposable across different formats.
+
+As we shall see in future tutorials, this is most often not true— a
+recent New York Times article indicated that data scientists spend
+upwards of 80% of their time cleaning data!
+:::
+
+## Weakness of Digital Trace Data (Cont.)
+
+`6.Sensitive`
+
+![](images/clipboard-1050650109.png)
+
+::: notes
+Digital trace data are also often very sensitive.
+
+Events involving Facebook and the Cambridge Analytica Political
+Consulting Firm underscore the dangers of unfettered access to large
+troves of digital trace data, but there were many more—arguably more
+invasive—data breaches long before this recent event. One such incident,
+pictured, involved European researchers who mined data from the internet
+dating site OK Cupid and then publicly released their data online.
+:::
+
+## Weakness of Digital Trace Data (Cont.)
+
+`7. Incomplete`
+
+![](images/clipboard-2314730444.png)
+
+::: notes
+Though much is often made of the size and scale of digital trace data
+that can be collected, newcomers to the field are often surprised about
+the amount of data that are often missing or incomplete.
+
+Consider, for example, a study of bullying behavior on social media --
+many of the most abusive posts that might be of interest to a researcher
+are often removed by Facebook before one might attempt to study them.
+:::
+
+## Weakness of Digital Trace Data (Cont.) {.smaller}
+
+`8.Elite Bias`
+
+You know the famous saying, “history is written by the victors”? Much
+digital trace data is also created by people who are elites, and who
+might provide selective or incomplete accounts of what is going on, or
+worse.
+
+`9. Positivity-Bias`
+
+Finally, digital trace data often have performative dimensions. Many
+people do not report negative information about themselves online
+precisely because they know that their friends, colleagues -- or other
+people they do not know -- may be watching them. This creates another
+common form of bias in social media research.
+
+![](images/clipboard-1753562299.png){fig-align="center"}
+
+::: notes
+Read the Slides
+:::
+
+## Future of Digital Trace Data
+
+![](images/clipboard-1375823410.png)
+
+::: notes
+After reviewing so many of the negatives of digital trace data, you may
+be questioning whether its strengths outweigh its weaknesses.
+
+I am overall optimistic about the future of digital trace data research
+because it is in its infancy.
+
+As Salganik (2016) writes, the field has recently experienced a Gartner
+hype cycle (see figure).
+
+Chris Bail thinks that it is reaching the “plateau of productivity” and
+will most likely require hybrid approaches that combine digital trace
+data analysis alongside more conventional modes of research such as
+survey analysis. He wrote about it at length about this issue, and
+specifically the potential of using app technology to integrate digital
+trace data collection with survey research.
+:::
+
+## We are Data {.smaller}
+
+::: columns
+::: {.column width="50%"}
+#### [***We are filled with data in today's networked society***]{style="color: blue;"}
+
+-   through our web activity, we are assigned *gender, ethnicity, class,
+    age, education level, and potential status of parent with x no. of
+    children* ([digital trace data/digital footprint/digital
+    breadcrumbs]{style="color: orange;"})
+
+-   if internet metadata identifies a user as foreigner than they lose
+    right to privacy afforded to U.S. citizens
+
+-   who would have thought that [*class status, citizenship,
+    ethnicity*]{.underline} could be algorithmically understood?
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-1302120039.png){fig-align="center" width="300"}
+:::
+:::
+
+::: footer
+John Cheney-Lippold. (2017). We are Data: algorithms and the making of
+our digital selves. New York University Press.
+:::
+
+::: notes
+We will start this lecture by revisiting this slide from last week. We
+learnt how data shared by platforms can generate biases in algorithms
+that we use daily through social networking apps (Facebook, X,
+Instagram, etc.) or just searching through internet.
+:::
+
+## We are Data (Cont.) {.smaller}
+
+#### [***We live in a world of ubiquitous networked communication***]{style="color: blue;"}
+
+-   technologies that constituent the Internet are so woven into the
+    fabric of our daily lives, where for most of us, existing without
+    seems unimaginable
+
+#### [***We also live in a world of ubiquitous surveillance***]{style="color: blue;"}
+
+-   same technologies have helped spawn an impressive network of
+    governmental, commercial, and unaffiliated infrastructures of mass
+    observation and control
+-   most of what we do in this world has at least the **capacity** to be
+    *observed, recorded, analyzed, and stored* in a databank
+    -   HOW?
+        -   storage is cheap
+        -   computers are fast to analyze information in both real time
+            & retrospective
+        -   our daily activities that are mediated with software can be
+            easily configured to record and report everything it sees
+            upstream
+
+::: footer
+John Cheney-Lippold. (2017). We are Data: algorithms and the making of
+our digital selves. New York University Press.
+:::
+
+::: notes
+We also looked into how it was generated in business, healthcare,
+scientific research and can be used for surveillance.
+:::
+
+## We are Data (Cont.) {.smaller}
+
+#### [***We call people 'terrorists' based on metadata***]{style="color: blue;"}*; [**We kill people based on metadata**]{style="color: blue;"}*
+
+-   data-based attack is a *'signature strike'*
+
+    -   a strike that requires no *'target identification'* but rather
+        an identification of groups of men who bear certain signatures
+        or defining characteristics associated with terrorists activity
+        but whose identities are unknown
+
+-   US drone program in early 2000s, strikes were *"targeted"*
+
+-   US does not publicly differentiate between its *"targeted"* and
+    *"signature"* strikes
+
+    -   shift in spike in frequency of drone attacks from 49 between
+        2004 and 2008 to 372 between 2009 and 2015
+
+::: footer
+John Cheney-Lippold. (2017). We are Data: algorithms and the making of
+our digital selves. New York University Press.
+:::
+
+::: notes
+So, as you know by now that `metadata` can be incredibly revealing. In
+particular, the type of metadata known as `*use metadata*` captures a
+great deal of data about individuals and individual's behaviors.
+
+Further, not only can `*use metadata*` reveal information about
+individuals, it can also provide rich data about social networks, and
+the connections between individuals, places, and organizations.
+:::
+
+## Algorithmic Confounding/Biasness {.smaller}
+
+> It occurs when a computer system reflects the implicit values of the
+> humans who are involved in collecting, selecting, or using data
+
+![](images/clipboard-4129531906.png){fig-align="center" width="700"}
+
+::: footer
+Source:
+<https://www.weforum.org/agenda/2021/07/ai-machine-learning-bias-discrimination/>
+:::
+
+::: notes
+Data does not naturally appear in the wild but rather it is collected by
+humans, manipulated by researchers and ultimately used by theoreticians
+to explain a phenomenon.
+
+Data plays a key role at every stage of the project lifecycle. It can be
+used to train, validate, and test an AI model, thereby shaping the type
+of AI system produced.
+
+Algorithms assemble, and control our datafied selves which can lead to
+algorithmic confounding/biasness.
+:::
+
+## Algorithmic Confounding/Biasness (Cont.) {.smaller}
+
+-   Algorithms might disseminate social biases against certain groups of
+    sociodemographic factors (such as race, gender, geography)
+-   The output of these algorithms is primarily dependent on the
+    [annotated datasets and is sensitive to social bias created by
+    humans]{style="color: blue;"}
+-   An algorithm that uses [both text and metadata to learn is likely to
+    be highly biased]{style="color: blue;"} as metadata consists of the
+    author’s nationality, discipline, etc., when compared to an
+    algorithm with text-only data
+-   Even with text-only data, algorithms will still learn bias due to
+    the language problems generated by [second-order
+    effects]{style="color: blue;"} for text-based machine learning
+-   Additionally, when using chatbots (*such as ChatGPT*) to provide
+    realtime recommendations, the dialogue of chatbot can be modelled
+    with available metadata to adjust the features of the replier in
+    terms of gender, age, and mood *`(Metaphors in HCI)`*
+
+::: footer
+Lamba, M., Madhusudhan, M. (2022). Text Data and Mining Ethics. In: Text
+Mining for Information Professionals. Springer, Cham.
+https://doi.org/10.1007/978-3-030-85085-2_11
+:::
+
+::: notes
+Read the Slides
+:::
+
+## Ways to Mitigate Biases {.smaller}
+
+-   Understanding how the data was generated
+-   Using tools that identify bias in models and algorithms such as
+    `FairML`, `IBM AI Fairness 360`,
+    `Accenture’s “Teach and Test” Methodology,` `Google’s What-If Tool`,
+    and `Microsoft’s Fairlearn`
+-   Making the data, process, and outcome open, thus making it
+    transparent and helping us to judge
+-   Creating algorithms and standards that can be adapted from one
+    application to another
+-   Following the set of standards proposed by the Association for
+    Computing Machinery US Public Policy Council and applying them at
+    every stage in the algorithm creation process
+-   Enforcing accountability in policies during [*auditing in pre-and
+    post-processing as well as standardized assessment*]{.underline} as
+    algorithms do not make mistakes, but humans do
+
+::: footer
+Lamba, M., Madhusudhan, M. (2022). Text Data and Mining Ethics. In: Text
+Mining for Information Professionals. Springer, Cham.
+https://doi.org/10.1007/978-3-030-85085-2_11
+:::
+
+::: notes
+Once we mitigate the biases from our data using the methods shown on the
+slide. We can move to the data management step.
+:::
+
+# Research Data
+
+## What Constitutes Research Data? {.smaller}
+
+[University]{style="color: blue;"}: "Material or information on which an
+argument, theory, test or hypothesis, or another research output is
+based" *([Queensland \> University of Technology. Manual of Procedures
+and Policies. Section \>
+2.8.3.](http://www.mopp.qut.edu.au/D/D_02_08.jsp))*
+
+[Digital Project Management]{style="color: blue;"}: "What constitutes
+such data will be determined by the community of interest through the
+process of peer review and program management. This may include, but is
+not limited to: data, publications, samples, physical collections,
+software and models" *([Marieke
+Guy](http://www.slideshare.net/MariekeGuy/bridging-the-gap-between-researchers-and-research-data-management))*
+
+[Government Institution]{style="color: blue;"}: "Research data is
+defined as the recorded factual material commonly accepted in the
+scientific community as necessary to validate research findings, but not
+any of the following: preliminary analyses, drafts of scientific papers,
+plans for future research, peer reviews, or communications with
+colleagues" *([OMB-110, Subpart C, section 36, (d)
+(i)](https://www.whitehouse.gov/wp-content/uploads/2017/11/Circular-110.pdf))*
+
+[Data Science]{style="color: blue;"}: "The short answer is that we can’t
+always trust empirical measures at face value: data is always biased,
+measurements always contain errors, systems always have confounders, and
+people always make assumptions" ([*Angela
+Bassa*](https://medium.com/@angebassa/data-alone-isnt-ground-truth-9e733079dfd4)*)*
+
+::: notes
+These quotes on the slide offers a variety of perspectives to understand
+research data across different stakeholders. The inclusion of these
+different approaches to research data is to suggest that there is no
+singular, definitive approach, and is dependent on multiple factors,
+including your project considerations.
+
+Broadly, research data can be understood as materials or information
+necessary to come to your conclusion but what these materials and
+information is depends on your project.
+:::
+
+## Forms of Data {.smaller}
+
+`A small list of open multimedia formats`. **For a list of file formats,
+consider checking out the Library of Congress' list of [Sustainability
+of Digital
+Formats](https://www.loc.gov/preservation/digital/formats/fdd/browse_list.shtml#).**
+
+![](images/clipboard-1989609810.png){fig-align="center"}
+
+::: notes
+There are many ways to represent data, just as there are many sources of
+data.
+
+What can you/do you count as data?
+
+This slide shows the small list of possibilities of collections of
+digital objects acquired and generated during research!
+
+**For a list of file formats, consider checking out the Library of
+Congress' list of [Sustainability of Digital
+Formats](https://www.loc.gov/preservation/digital/formats/fdd/browse_list.shtml#).**
+:::
+
+## Importance of Using Open Data Formats {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](images/clipboard-3191207816.png){fig-align="center" width="525"}
+
+A screenshot of a dataset as a `cvs file`, uncompressed, and follow an
+open standard
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-3331950522.png)
+
+A screenshot of the same dataset in an `Excel file (.xlsx)`. Unlike the
+previous image, this is a proprietary format
+:::
+:::
+
+::: notes
+Open data formats are usually available to anyone free-of-charge and
+allows for easy reusability.
+
+Proprietary formats often hold copyrights, patents, or have other
+restrictions placed on them, and are dependent on (expensive) licensed
+softwares. If the licensed software ceases to support its proprietary
+format or it becomes obsolete, you may be stuck with a file format that
+cannot be easily opened or (re)used (e.g. .mac).
+
+For accessibility, future-proofing, and preservation, keep your data in
+open, sustainable formats.
+:::
+
+## **Challenge: Forms of Data** {.smaller}
+
+As you inspect the information present in each image, consider these
+questions:
+
+-   `What are some forms of data used in the project?`
+-   `What are some forms of data outputted by the project?`
+-   `Where was the data retrieved from to complete the project?`
+
+::: columns
+::: {.column width="50%"}
+![](images/clipboard-921239384.png)
+
+[Human Computers at
+NASA](https://omeka.macalester.edu/humancomputerproject/) is an archival
+project that "seeks to shed light on the buried stories of African
+American women with math and science degrees who began working at NACA
+(now NASA) in 1943 in secret, segregated facilities."
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-4067923799.png)
+
+[Listen for the Iraqis in
+NYC!](https://www.arcgis.com/apps/Cascade/index.html?appid=caace3a2d1624aecac2754b5802de3fc)
+is an audio community mapping project that seeks to locate the Iraqi
+population in NYC using their own voices.
+:::
+:::
+
+::: notes
+This slides show two front matter pages of two distinct digital
+projects. As you inspect the information present in each image, consider
+these questions:
+
+-   What are some forms of data used in the project?
+-   What are some forms of data outputted by the project?
+-   Where was the data retrieved from to complete the project?
+
+From the `left side image`, we can deduce that **newspaper articles
+(digital copies of text) and photographs (digital copies of images)**
+were used to compile this archive. Noticing the highlighted name in the
+news article, the data may be outputted as **searchable text, searchable
+database, and/or searchable images**. The data most likely was retrieved
+from a database and/or non-digital field notes. This is the [data source
+page](https://omeka.macalester.edu/humancomputerproject/items/browse)
+for Human Computers At NASA.
+
+From the `right side image`, we can deduce that **audio recordings of
+participants and a map (geospatial data)** were used to compile this
+project. Given the details in the text on the right of the screen, we
+learn that the researcher will provide a map (geospatial data) and
+testaments (audio files) for us to peruse. The researcher has gathered
+**digital field notes in the form of audio files from participants
+through a survey**. The Call for Participants for Listen for the Iraqis
+in NYC! can be found
+[here](https://docs.google.com/document/d/1G8RxmEILImlW4O5LgRQ5I3e3JOlg0Sg6b7dM2CmrvEQ/edit).
+:::
+
+## Institutional Compliance for Data and Research {.smaller}
+
+-   [The Institutional Review Board
+    (IRB)](https://www.fda.gov/about-fda/center-drug-evaluation-and-research-cder/institutional-review-boards-irbs-and-protection-human-subjects-clinical-trials)
+    is a floor for ethical responsibility at universities that came to
+    pass after outrage about horrific unethical research studies done on
+    people. A prime example of these grotesque studies is the [Tuskegee
+    Syphilis Study
+    (1932-1972)](https://www.cdc.gov/tuskegee/index.html).
+
+-   Born from concerns of the ethical choices made in biomedical and
+    behavioral research, IRB compliance is not broadly applicable.
+
+-   This leaves holes in institutional ethical regulations and requires
+    researches in other fields, such as the social sciences, to find
+    other ethical regulations or devise field specific ethical
+    considers.
+
+## When is an IRB required? {.smaller}
+
+`Usually, IRB review is required when ALL of the criteria below are met`:
+
+-   The investigator is conducting **research** or **clinical
+    investigation**,
+
+-   The proposed **research** or **clinical investigation** involves
+    human subjects, and
+
+-   The university or research institution is **engaged** in the
+    research or clinical investigation involving human subjects.
+
+::: notes
+An IRB is an institutional compliance that may not consider other
+ethical impacts expect shown on the slides. As we move forward, we will
+consider data and digital project ethics beyond compliance.
+:::
+
+## Stages of Data
+
+![](images/clipboard-2326465625.png){fig-align="center"}
+
+::: notes
+We begin without data. Then it is observed, or made, or imagined, or
+generated. After that, it goes through further transformations. Stages
+of data typically consist of:
+
+1.  **`Collection of "raw" data`**
+
+We start with formulating a research question(s) or hypotheses and set
+up a project to answer our question(s).
+
+-   E.g. What proportion of the artwork collected and/or hosted in the
+    Met are by non cis-gender men artists and also in public domain?
+
+2.  **`Processing and/or transforming data`**
+
+In the process of setting up the project, we make decisions on what kind
+of data we think can help us to answer the question.
+
+-   E.g. We may retrieve the data from the Met's [open access data
+    set](https://media.githubusercontent.com/media/metmuseum/openaccess/master/MetObjects.csv).
+    We will need to look at what variables exist in the dataset to find
+    out if we can filter by gender and the variables that will
+    correspond to copyrights.( Note: if the file opens as a web page,
+    you would need to use your machine's 'save as' option to save it as
+    a csv file to view it in a tabular form.)
+
+3.  **`Cleaning`**
+
+After collecting our data we then consider and make decisions in the
+processes of cleaning.
+
+-   E.g. We have to transform some of the gender values and decide what
+    to do with the missing fields.
+
+4.  **`Analysis`**
+
+We then run our preliminary analysis of the data.
+
+-   E.g. We can run an analysis of the subset of non cis-gender men and
+    public domain media objects against the total number of media
+    objects to find out the proportion.
+
+5.  **`Visualization`**
+
+At the end of our analysis, a decision is then made about how we would
+present the data and its analysis.
+
+-   E.g. We can present the result in a pie chart or a bar graph.
+:::
+
+## Stages of Data: Non-Linear
+
+![](images/clipboard-3197536694.png)
+
+::: notes
+There is no one way to go through the stages.
+
+For example, we could do a preliminary analysis first, such as running a
+correlation of variables, to explore what is missing before we begin the
+process of cleaning. Often, we also end up doing multiple iterations of
+cleaning and analysis, making decisions and choices to collapse
+particular variables or remove them entirely at each iteration.
+
+Making sure that we keep a clear documentation of our process will
+ensure that we are accountable to the data we have collected/are using
+and also ensure that our results can be replicated and reproduced if
+others choose to work on our "raw" data.
+
+While making these decisions seems innocuous, there are ethical
+considerations, beyond the institution, and impacts we must evaluate in
+the process.
+:::
+
+## Issues for Data Stewards: During the Research Cycle
+
+-   `Ensuring` good, useful data
+-   `Organizing` and `Structuring` data for the user
+-   `Storing` the data
+-   `Documenting` and `Describing` the data
+-   Supporting the `Analysis` of the data
+-   `Publishing` data sets
+-   `Sharing` the data and results
+
+::: notes
+Data stewards play a specific role both DURING THE RESEARCH CYCLE and
+AFTER. This slide identifies the issues data stewards encounter DURING
+the research cycle such as working with the researcher to ensure good,
+useful data during the planning stage.
+
+The data steward may advise the researcher about good data collection
+based on the outcomes and uses the researcher has for the data.
+Understanding the goals of the research project and how the data will be
+analyzed and used are essential for helping the researcher organize and
+structure the data, as well as for choosing the appropriate storage
+option for the data as it is gathered by the researcher.
+
+Documenting how the data are gathered and what the dataset includes, as
+well as assigning metadata to the data at the onset of the study ensure
+that data will be useful for the research in the current project but
+also in the future by the researcher and by others.
+
+Good organization of the data also ensures the data can be analyzed to
+produce meaningful results. The last stage of this part of the research
+process is helping the researcher publish the data set and sharing the
+data and results.
+:::
+
+## Issues for Data Stewards: After the Research Cycle
+
+-   `Curating` and `Preserving` good, useful data
+-   `Preparing` the data for the user
+-   `Ingesting` and `Storing` the data
+-   `Ensuring privacy` and `securing` the data
+-   `Re-using` the data
+
+::: notes
+AFTER the research process the data steward is still involved in making
+sure the data are curated and preserved for future use. The steward also
+prepares the data for long term storage in a permanent data store. The
+researcher may be required by the funder, if applicable, to store the
+data online in an open source environment, such as an institutional
+repository or discipline-specific repository. The steward now is tasked
+with preparing the data for ingest and storage. They also take steps to
+ensure privacy and security of the data.
+
+We will focus the remainder of course learning about the role of the
+steward both DURING and AFTER the research process and how the steward
+participates in each stage of the research/data life cycle.
+:::
+
+# Going Forward 
+
+
+::: notes
+In the next module, we will take a deep dive into data feminism and algorithmic confounding. 
+:::

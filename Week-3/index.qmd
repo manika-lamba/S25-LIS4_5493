@@ -1,0 +1,47 @@
+---
+title: "Data in Everyday Life and the Research Process"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+
+
+## Going Forward 
+
+- We will compare the most widely-used data life cycle models
+- Discuss the specific actions and activities that take place within the data life cycle
+- Learn more about the role of the data steward at each stage
+- Examine how uses for data affect the research process and data life cycle
+
+::: notes
+In the next module, we will compare and contrast the most widely-used
+data life cycle models and the role of the data steward within each.
+
+Further, we will discuss the specific actions and activities that take
+place within the data life cycle and learn about the role of the data
+steward at each stage.
+
+Finally, we will examine how uses for the data affect the research
+process and the data life cycle. We will frame the class by placing the
+data life cycle within the research cycle, differentiating activities
+and actions that happen during the research process and after.
+:::
