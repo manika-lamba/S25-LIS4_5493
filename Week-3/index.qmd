@@ -1,5 +1,5 @@
 ---
-title: "Data in Everyday Life and the Research Process"
+title: "Data Feminism and Algorithms"
 subtitle: "LIS 4/5493: Data Stewardship"
 author: 
   - Dr. Manika Lamba
@@ -23,25 +23,591 @@ editor:
 # Introduction
 
 ::: notes
+In this week's module, we delve into a critical and increasingly relevant topic -- Data Feminism and Algorithms! As we continue to navigate the complexities of data ethics, governance, and responsibility, it is essential to recognize how power, privilege, and inequality are embedded in the systems we design, the data we collect, and the algorithms we deploy. 
 
+In this module, we will explore the principles of data feminism, examine case studies that highlight the gendered and intersectional impacts of algorithms, and discuss strategies for designing more equitable and accountable data systems. 
+:::
 
-## Going Forward 
-
-- We will compare the most widely-used data life cycle models
-- Discuss the specific actions and activities that take place within the data life cycle
-- Learn more about the role of the data steward at each stage
-- Examine how uses for data affect the research process and data life cycle
+# In Today's World [*Data is Power*]{style="color: blue;"}
 
 ::: notes
-In the next module, we will compare and contrast the most widely-used
-data life cycle models and the role of the data steward within each.
+Data is becoming an incredible form of power in today's world. BUT that
+power remains incredibly uneven and more specifically the power of data
+is being wielded by a small and homogeneous group of institutions,
+corporations, and well-resourced governments usually for their own
+benefits as these people have the resources to design and deploy these
+data systems and usually it comes at the expenses of everyone else.
 
-Further, we will discuss the specific actions and activities that take
-place within the data life cycle and learn about the role of the data
-steward at each stage.
+This is where the role of feminism, intersectionality, and data feminism
+comes in!
+:::
 
-Finally, we will examine how uses for the data affect the research
-process and the data life cycle. We will frame the class by placing the
-data life cycle within the research cycle, differentiating activities
-and actions that happen during the research process and after.
+## What is Feminism?
+
+`Feminism entails a belief in the equality of all genders`
+
+`Feminism is also about Power`
+
+![](images/clipboard-1379187561.png){fig-align="center"}
+
+::: footer
+Klein L and D'Ignazio C. (2024). [Data Feminism for
+AI.](https://dl.acm.org/doi/pdf/10.1145/3630106.3658543) FAccT '24
+:::
+
+::: notes
+Feminism entails a belief in the equality of all gender which includes
+women and men, as well as Two Spirit, genderqueer, travesti, nonbinary
+people, and more.
+
+Until gender equality was realized in the world, there were *different
+waves of feminism* that resulted into this goal of equality a reality.
+
+Feminism and intersectional feminism in particular is focused on
+identifying these imbalance of power and structural forces that caused
+them and overcoming those.
+
+The brittleness of AI systems which is defined as this idea that AI
+systems are optimized for certain scenarios or certain groups and break
+in other instances.
+
+People when talk about this brittleness they are often sort of surprised
+that why that is happening? The basic idea that systems be it social
+systems, governmental systems, or institutional systems are optimized
+for certain groups and not others. That is not a surprise to feminists.
+Also, the basic idea of bias in training data where people wonders how
+these effect of these biases can occur with such surprise but the idea
+of biases are pretty much baked into the cultural record. And this is
+really the ground truth of much feminist work.
+
+Feminism is an essential tool in our toolbox as a digital steward if we
+want to make manage, curate, and create such sort of liberatory data
+science or AI infused projects.
+:::
+
+## Intersectionality {.smaller}
+
+::: columns
+::: {.column width="50%"}
+`Intersectionality is a metaphor for understanding the ways that multiple forms of inequality or disadvantage sometimes compound themselves and create obstacles that often are not understood among conventional ways of thinking`
+(Crenshaw, K.W., 1989)
+
+`Intersectional feminism is not only about women or even only about gender. It is about power who Has it and who Does Not`
+:::
+
+::: {.column width="50%"}
+![](AI%20biasness%20example.mp4)
+:::
+:::
+
+::: footer
+Sources
+
+-   [Using intersectionality to understand structural inequality in
+    Scotland](https://www.gov.scot/publications/using-intersectionality-understand-structural-inequality-scotland-evidence-synthesis/pages/10/)
+
+-   [More than a Glitch: Confronting Race, Gender, and Ability Bias in
+    Tech](https://www.amazon.com/More-than-Glitch-Confronting-Ability/dp/0262047659)
+:::
+
+::: notes
+Let's circle back to the important concept is `intersectional feminism`
+mentioned in the last slide.
+
+`Intersectional Feminism` resulted from the work of *women of color
+feminists, and Black feminists* in the United States in particular.
+
+This idea—that different aspects of identity (like race, gender, class,
+disability, or sexuality) overlap to shape people's experiences—is
+called intersectionality. The term was introduced by legal scholar
+Kimberlé Crenshaw to explain how laws and policies often fail to protect
+people who belong to multiple marginalized groups.
+
+The video on the slide shows the viral video posted on Twitter (now X)
+in 2017 where a dark colored skinned man try to use automatic soap
+dispenser in men’s bathroom but the soap dispenser only “sees” light
+color, not dark.
+
+To a viewer with light skin, the video is shocking. To a viewer with
+dark skin, **this video is a confirmation of the technology bias they
+have struggled with for years**.
+
+Every kind of sensor tech, from facial recognition to automatic faucets
+tens to work better on light skin than on dark skin. This problem has
+its historical roots in FILM TECHNOLOGY and old-school technology with
+computer vision built on.
+
+Up until 1970, dark skin looked muddy on film because Kodak used
+pictures called “Shirley cards” to tune the film- processing machines in
+photo labs. Kodak did not tune for darker skin, because institutional
+racism ran deep.
+
+So, Kodak made change in response to customers in furniture industry as
+they complained walnut & mahogany furniture looked muddy in catalog
+photographs!
+
+As you start to recognise the role that unconscious bias plays in tech
+world, technology is often built by small, homogenous group of people;
+eg. soap dispenser might be developed by all light skinned group of
+people who tested it on themselves and it worked and assumed that it
+would work for everyone else!
+:::
+
+## Algorithmic Confounding/Biasness {.smaller}
+
+![](images/biasness.png){fig-align="center"}
+
+:::footer
+Lamba, M., Madhusudhan, M. (2022). [Text Data and Mining Ethics](https://link.springer.com/chapter/10.1007/978-3-030-85085-2_11)
+:::
+
+::: notes
+Data plays a critical role in shaping AI systems, and biases in data can
+lead to biased AI outcomes. Since AI models learn patterns and make
+decisions based on the data they are trained on, any biases present in
+the data can be amplified or perpetuated by the AI. 
+
+There are various types of biases that might led to algorthmic biasness such as:
+
+1. **Response or Activity Bias:** It occurs in the content generated by humans such as
+tweets, reviews, posts, etc. As only a small proportion of people within particular
+demographic groups and geographic areas contribute to opinion, content, and
+preferences that are unlikely to reflect the opinions of the whole population, this
+can lead to response or activity bias.
+
+2. **Selection Bias Due to Feedback Loops:** It occurs when a model itself influences
+the generation of data that is used to train it, such as a ranking system or
+recommender system. Machine learning models have built-in feedback loops,
+where the generated data is fed back into the system as training data for the
+model and is influenced by the user’s responses. The user’s responses are used to
+generate label examples by tracking their views, clicks, and scrolls. This bias
+tends to favor models that generated the data when evaluated using held-out
+samples from this data and homogenizes user’s behavior over time.
+
+3. **Bias Due to System Drift:** It occurs when the model or algorithm changes how
+users interact with the system over time, for instance, the failure of Google Flu
+Trends for influenza-like illness based on search data to forecast the expected
+number of flu cases for a season. It is of two types:
+
+  (a) Concept Drift: It occurs when the target or concept being learned is changed,
+such as the definition of fraud changes in fraud prediction system.
+  (b) Model Drift: It occurs when there is a change in the user interaction model,
+such as adding new modes of user interaction like share or like buttons or the
+addition of search assist feature.
+
+4. **Omitted Variable Bias:** It occurs when the vital attributes that influence the
+outcome are missing and happens when data generation relies on human input,
+or the process that records the data does not have access to the attributes due to
+privacy concerns.
+
+5. **Societal Bias:** It occurs when humans produce content on the web and social
+media, such as gender or race stereotypes.
+:::
+
+
+
+## Fighting Bias in Algorithms
+
+{{< video https://youtu.be/eRUEVYndh9c?si=1R6UXXKZ5vcTrAt4 width="800" height="500">}}
+
+::: notes
+In this video by Joy Buolamwini shared her experience while working with
+facial analysis software, noticed a problem: the software didn't detect
+her face -- because the people who coded the algorithm hadn't taught it
+to identify a broad range of skin tones and facial structures.
+
+This is a very popular video where the biases in facial analysis
+software come in front and demanded for accountability in coding.
+
+From her lab from MIT, they also made a movie called "Coded Bias" which
+was released in 2020 and is one of the task for you to watch this week!
+Do not forget to watch it! Joy Buolamwini and others from MIT shares
+more in depth about the biases that can be embedded into technology like
+facial recognition and highlights how such technology systems can cause
+problems for vulnerable groups as due to bias within the code.
+:::
+
+## What is Data Feminism? {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   `Data Feminism` is a framework and approach to data science that
+    applies feminist and intersectionality approaches to the analysis
+    and interpretation of data
+
+-   It critiques traditional data practices that often *reinforce
+    existing power structures, inequalities, and biases*, and instead
+    **`advocates for more equitable, inclusive, and socially just ways of working with data`**
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-3709308036.png)
+:::
+:::
+
+::: notes
+Data Feminism is a framework and approach to data science that applies
+feminist principles to the analysis and interpretation of data. It
+critiques traditional data practices that often reinforce existing power
+structures, inequalities, and biases, and instead advocates for more
+equitable, inclusive, and socially just ways of working with data. The
+concept was popularized by Catherine D'Ignazio and Lauren F. Klein in
+their book Data Feminism (2020).
+
+Thus, data feminism is an approach to data science that seeks to make
+data more fair, ethical, and inclusive. It challenges the idea that data
+is neutral and instead asks:
+
+-   Who is collecting the data?
+-   Whose experiences are being represented—or ignored?
+-   How do biases in data and algorithms affect different groups?
+
+`Intersectionality in data science helps us to`:
+
+-   **Avoid oversimplified conclusions**: If we only look at "women" as
+    a single group, we might miss how race, disability, or economic
+    status shape their experiences differently.
+-   **Uncover hidden biases in datasets**: Many AI systems perform
+    poorly for people from marginalized communities because they were
+    trained on data that didn't include them.
+-   **Ensure more just and ethical decision-making**: From hiring
+    algorithms to healthcare predictions, considering intersectionality
+    prevents data from reinforcing existing inequalities.
+:::
+
+## Data Feminism for AI
+
+`7 Principles of Data Feminism` (Klein & D'Ignazio, 2024)
+
+<div>
+
+------------------------------------------------------------------------
+
+</div>
+
+`Principle 1: Examine Power`: Analyzing how power operates in the world
+
+[Example: Facial Recognition Bias]{style="color: orange;"}
+
+`Principle 2: Challenge Power`: Challenging power and working towards
+justice
+
+[Example: Gender Data Gap in Medicine]{style="color: orange;"}
+
+::: notes
+All the large models, AI, and algorithms, we are seeing right now are
+ultimately **powered by data**. Many of the biases and the inequalities
+that we see these models reproducing in the world are related to
+problems with data.
+
+Here are few principles/best practices of data feminism to consider
+while managing, curation, and working with data to avoid the said
+biases:
+
+`The first principle is to` --
+
+**Examine Power:** This principle emphasizes the importance of analyzing
+how power operates within data systems. It encourages scrutiny of who
+controls data collection, analysis, and dissemination, and how these
+processes may reinforce existing inequalities.
+
+For example, researchers such as Joy Buolamwini (introduced earlier)
+examined power dynamics in AI by exposing racial and gender biases in
+commercial facial recognition systems. Her work showed that these
+systems had higher error rates for darker-skinned individuals, revealing
+the unequal power distribution in AI development and testing.
+
+`The second principle is to` --
+
+**Challenge Power:** Building upon the examination of power structures,
+this principle advocates for actively challenging and dismantling unjust
+systems. It calls for using data to expose and address inequalities,
+striving toward social justice.
+
+For instance, medical research has historically used male bodies as the
+default, leading to misdiagnoses and ineffective treatments for women.
+Initiatives like the [WHAM (Women’s Health Access Matters)
+project](https://whamnow.org/)challenge this imbalance by advocating for
+more sex-disaggregated data in health research to improve outcomes for
+women.
+:::
+
+## Data Feminism for AI (Cont.)
+
+`Principle 3: Rethink Binaries and Hierarchies`: Data feminism requires
+us to challenge the gender binary, along with other systems of counting
+and classification that perpetuate oppression.
+
+[Example: Non-Binary Gender Categories in
+Surveys]{style="color: orange;"}
+
+`Principle 4: Elevate Emotion and Embodiment`: Data feminism teaches us
+to value multiple forms of knowledge, including the knowledge that comes
+from people as living, feeling bodies in the world.
+
+[Example: Indigenous Data Sovereignty]{style="color: orange;"}
+
+::: notes
+`The third principle is to` --
+
+**Rethink Binaries and Hierarchies:** This principle challenges
+traditional binary classifications and hierarchical structures in data.
+It promotes the recognition of complexity and the avoidance of
+oversimplification, encouraging more nuanced and inclusive data
+representations.
+
+For instance, in traditional data collection often forces people into
+rigid categories (e.g., male/female). Some organizations, such as the
+Canadian government, have introduced non-binary gender options in
+official surveys and documents, recognizing that gender exists beyond
+binary classifications.
+
+`The fourth principle is to` --
+
+**Elevate Emotion and Embodiment:** Data feminism recognizes the value
+of emotions and embodied experiences as legitimate sources of knowledge.
+This principle urges the inclusion of diverse perspectives and the
+acknowledgment of subjective experiences in data work.
+
+For example, many Indigenous communities, such as those involved in the
+[CARE Principles (Collective Benefit, Authority to Control,
+Responsibility, and Ethics)](https://www.gida-global.org/care), push for
+data governance models that respect their cultural and emotional
+relationship with land, heritage, and identity, rather than treating
+data as purely objective and extractive. We will discuss more on CARE
+principles in future modules.
+:::
+
+## Data Feminism for AI (Cont.)
+
+`Principle 5: Embrace Pluralism`: Data feminism insists that the most
+complete knowledge comes from synthesizing multiple perspectives, with
+priority given to local, Indigenous, and experiential ways of knowing.
+
+[Example: Community-Based AI Models for Language
+Preservation]{style="color: orange;"}
+
+`Principle 6: Consider Context`: Data feminism asserts that data are not
+neutral or objective. They are the products of unequal social relations,
+and this context is essential for conducting accurate, ethical analysis.
+
+[Example: Predictive Policing Risks]{style="color: orange;"}
+
+::: notes
+`The fifth principle is to` --
+
+**Embrace Pluralism:** Emphasizing the importance of multiple
+perspectives, this principle advocates for the inclusion of diverse
+voices in data processes. It supports collaborative approaches that
+respect and integrate different forms of knowledge.
+
+For instance, AI models trained on dominant languages often marginalize
+indigenous and minority languages. Initiatives like [Mozilla’s Common
+Voice project](https://commonvoice.mozilla.org/en) invite speakers of
+underrepresented languages to contribute voice data, making AI more
+inclusive and representative.
+
+`The sixth principle is to` --
+
+**Consider Context:** Data does not exist in a vacuum; this principle
+highlights the necessity of situating data within its specific social,
+cultural, and historical contexts. Understanding these contexts is
+crucial for accurate interpretation and ethical application.
+
+For instance, predictive policing algorithms trained on historical crime
+data often reinforce systemic biases, leading to over-policing of
+marginalized communities. Studies from organizations like [AI Now
+Institute highlight how removing context (e.g., historical racial bias
+in policing) results in unfair AI
+outcomes](https://ainowinstitute.org/publication/dirty-data-bad-predictions-how-civil-rights-violations-impact-police-data).
+:::
+
+## Data Feminism for AI (Cont.)
+
+`Principle 7: Make Labor Visible`: The work of data science, like all
+work in the world, is the work of many hands. Data feminism makes this
+labor visible so that it can be recognized and valued.
+
+[Example: Crowdsourced Data Labeling in AI]{style="color: orange;"}
+
+::: footer
+Klein L and D'Ignazio C. (2024). [Data Feminism for
+AI.](https://dl.acm.org/doi/pdf/10.1145/3630106.3658543). FAccT '24
+:::
+
+::: notes
+`The seventh principle is to` --
+
+**Make Labor Visible:** Often, the labor involved in data work is hidden
+or undervalued. This principle calls for acknowledging and valuing the
+contributions of all individuals involved in data processes, from data
+collectors to analysts.
+
+For instance, large language models (LLMs) like ChatGPT require massive
+datasets that must be cleaned, labeled, and moderated by human workers.
+These workers, often located in the Global South, are paid low wages to
+review harmful content, annotate images, or fine-tune models—tasks that
+are critical but rarely acknowledged in discussions about AI
+advancements as covered in [this
+report](https://time.com/6247678/openai-chatgpt-kenya-workers/).
+
+This principle calls for recognizing and fairly compensating this labor.
+The report aligns with this principle by exposing the hidden workforce
+behind AI and advocating for more ethical labor practices, such as fair
+wages, labor protections, and transparency in AI development.
+:::
+
+## Case Study: Missing Data
+
+::: columns
+::: {.column width="50%"}
+![](images/missing-data.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/missing-data2.png){fig-align="center"}
+:::
+:::
+
+::: footer
+-   [The Library of Missing Datasets
+    (2016)](https://mimionuoha.com/the-library-of-missing-datasets)
+
+    -   [GitHub for Library of Missing
+        Datsets](https://github.com/MimiOnuoha/missing-datasets)
+:::
+
+::: notes
+One of the downstream effects of the privilege hazard—the risks incurred
+when people from dominant groups create most of our data products—is not
+only that datasets are biased or unrepresentative, but that they never
+get collected at all. Mimi Onuoha—an artist, designer, and educator—has
+long been asking *who questions* about data science.
+
+Her project, The Library of Missing Datasets (**IMAGE ON LEFT**), is a
+list of datasets that one might expect to already exist in the world,
+because they help to address pressing social issues, but that in reality
+have never been created.
+
+The project exists as a website and as an art object. The latter
+consists of a file cabinet filled with folders labeled with phrases
+like:
+
+-   “People excluded from public housing because of criminal records”
+
+-   “Mobility for older adults with physical disabilities or cognitive
+    impairments” and
+
+-   “Total number of local and state police departments using stingray
+    phone trackers (IMSI-catchers)”
+
+Visitors can tab through the folders and remove any particular folder of
+interest, only to reveal that it is empty. They all are. The datasets
+that should be there are `“missing.”`
+
+By compiling a list of the datasets that are missing from our “otherwise
+data- saturated” world, Onuoha explains,
+
+> “we find cultural and colloquial hints of what is deemed important”
+> and what is not.
+
+> “Spots that we’ve left blank reveal our hidden social biases and
+> indifferences". And by calling attention to these datasets as
+> “missing,” she also calls attention to how the matrix of domination
+> encodes these “social biases and indifferences” across all levels of
+> society.
+
+Another example (**IMAGE ON RIGHT**) on the uses of islamic art for text
+and image models which shows that inspite of the wide variety of actual
+islamic Art in the world, the range of images that these models are able
+to create are in fact quite narrow. This is because of multiple layers
+of COLONIAL POWER that contribute to the training data that we can
+access today. So, first the power of the European explorers to initially
+decide which artifacts they liked when they encountered them and
+therefore to sort of select for preservation and which ones would not be
+preserved and therefore not still exist into the present. Then there is
+a Power of World's Major ART MUSEUMS which are themselves Colonial
+institutions. So, these are the institutions deciding which among tens
+of thousands of artifacts in their holdings should be digitized so that
+we have access to digital versions of them.
+
+Them you feed all this data into these text-to-image models. When these
+models are asked to produce Islamic Art -- you get very limited examples
+and with the colonial viewpoint embedded inside and these end up
+confirming a very narrow view of what matters in the world of Islamic
+Art and what does not.
+
+The *who question* in this case is:
+`Who benefits from data science and who is overlooked?` Examining those
+gaps can sometimes mean calling out missing datasets; characterizing
+them; and advocating for filling them. At other times, it can mean
+collecting the missing data yourself!
+
+These datasets they are missing for a reason and that reason is the
+profound imbalance of Power with respect to data collection in the world
+today. Who has this Power? Generally speaking, its governments, moneyed
+institutions, cooperation – the ***people with resources to design and
+deploy*** these data systems. Whereas, minoritized groups do not have
+the ability to collect data at scale on the problems that matter to them
+or to us.
+
+This is why the feminist approach to data and to AI always needs to
+begin with this analysis of power because far too often the datasets
+that we can access and in turn the models that they are used to train;
+and then ask research questions that we can ask using these models that
+have been developed – all of these things are already overdetermined by
+the imbalance of power that we face in the world.
+
+These examples show what happens when unequal power surrounding data
+creation, curation, and preservation is allowed to compound and accrue
+and accumulate.
+:::
+
+# ![](images/future.png)
+
+::: notes
+We in academia are only experiencing the corporate capture of AI
+research -- its design, development, regulation, or the lack thereof.
+
+The recent development in AI research and AI systems along with all of
+their compute requirements have brought more considerations to the
+floor.
+
+For example, the environmental cost of training these systems which take
+our already limited natural resources like water and energy away from
+people and communities towards cooling data centers & GPUs.
+
+Then there is human cost. We have known for several years how Amazon
+played role in cloud storage for Immigration and Customs Enforcement
+(ICE). How Google developed technology to make drones Stripes more
+accurate -- which they then sold it to the US government. This was
+Project Maven which you might recall was a source of Google led worker
+protest to end terminate that contract.
+
+But now we are seeing this nearly identical object detection software
+being put to use right now both in Ukraine and in Gaza -- which people
+are describing as the first AI Wars.
+
+It is really worth pausing for a moment and reflect on how the ultimate
+use case is for the set of technologies that are truly intended to
+benefit humanity. As it turns out causing the literal destruction of
+humanity instead.
+
+I would like to end this lecture on a hopeful note that these **AI
+systems are incredibly powerful but they are only as powerful as the**
+
+-   data on which they are trained;
+-   the conditions under which they are put to use; and
+-   the context in which and for which they are developed.
+
+If we are going to imagine alternative conditions for their development
+and alternative contexts for their use then I think feminism has a very
+strong & real role to play. These are contexts that empower rather than
+dis-empower. These are one that rebalance the existing structures of
+power that affect our world today. It is an interventionist & political
+one --- technology is not NEUTRAL. None of the choices that we make are.
+In this particular case, it is not neutral because it challenges these
+default settings of models, datasets, and systems -- it does so with a
+goal towards -- Designing technology that works towards liberation and
+not just resource extraction.
 :::

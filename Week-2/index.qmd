@@ -342,10 +342,9 @@ our digital selves. New York University Press.
 :::
 
 ::: notes
-We will start this lecture by revisiting this slide from last week. We
-learnt how data shared by platforms can generate biases in algorithms
-that we use daily through social networking apps (Facebook, X,
-Instagram, etc.) or just searching through internet.
+In last module, we learnt how data shared by platforms can generate
+biases in algorithms that we use daily through social networking apps
+(Facebook, X, Instagram, etc.) or just searching through internet.
 :::
 
 ## We are Data (Cont.) {.smaller}
@@ -826,9 +825,9 @@ steward both DURING and AFTER the research process and how the steward
 participates in each stage of the research/data life cycle.
 :::
 
-# Going Forward 
-
+# Going Forward
 
 ::: notes
-In the next module, we will take a deep dive into data feminism and algorithmic confounding. 
+In the next module, we will take a deep dive into data feminism and
+algorithmic confounding.
 :::
