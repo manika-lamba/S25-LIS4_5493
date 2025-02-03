@@ -203,9 +203,8 @@ such as:
     search data to forecast the expected number of flu cases for a
     season. It is of two types:
 
-```{=html}
 <!-- -->
-```
+
 (a) Concept Drift: It occurs when the target or concept being learned is
     changed, such as the definition of fraud changes in fraud prediction
     system.
@@ -213,9 +212,8 @@ such as:
     interaction model, such as adding new modes of user interaction like
     share or like buttons or the addition of search assist feature.
 
-```{=html}
 <!-- -->
-```
+
 4.  **Omitted Variable Bias:** It occurs when the vital attributes that
     influence the outcome are missing and happens when data generation
     relies on human input, or the process that records the data does not
