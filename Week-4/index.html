@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.555">
+
+  <meta name="author" content="Dr.&nbsp;Manika Lamba">
+  <title>Data Life Cycle Models</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Data Life Cycle Models</h1>
+  <p class="subtitle">LIS 4/5493: Data Stewardship</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Manika Lamba 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+<aside class="notes">
+<p>Data “lives” through what is called a Data Life Cycle Model. There are several conceptual models that describe the data life cycle, some from a data curation focus and others from a data management focus. You will also see some that are discipline-specific such as those focused on scientific research and data, and others related to social science data.</p>
+<p>Each different perspective on data management, as defined in Module 1, has its own view of the data life cycle and the phases within it. Also, each phase contains specific activities and roles for data stewards.</p>
+<p>In this module, we will examine the more widely cited and used data life cycle models and how each presents a slightly different, though overlapping approach to the stewardship, curation, and management of data, along with best practices, tools, and processes for each stage.</p>
+<p>We will review how the data life cycle models guide researchers, data stewards, users of data; and also discuss best practices and the importance of adhering to best practices.</p>
+<p>Lastly, we will review the FAIR Guiding Principles as one example of data management best practices that can be used in any context or project.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="communities-of-practice" class="slide level2">
+<h2>Communities of Practice</h2>
+
+<img data-src="images/dc.png" class="quarto-figure quarto-figure-center r-stretch" width="500"><aside class="notes">
+<p>The data curation community lies at the intersection of a number of related disciplines and professional communities. These include archives, <strong>digital curation, data management, and digital preservation.</strong></p>
+<p>Each of these traditions draw from similar contexts but approach the work involved around stewarding digital objects from slightly different perspectives. For example,</p>
+<ul>
+<li>an <strong>archival perspective</strong> might value provenance and the origin of a given record more than other factors informing its management</li>
+<li>a <strong>digital curation perspective</strong> might emphasize a series of interventions and policies across the lifecycle of a digital object</li>
+<li>a <strong>data management perspective</strong> might focus most on the metadata that serves the research needs of the scientist or lab group that created the dataset, or complies with funding regulations</li>
+<li>a <strong>digital preservation approach</strong> would begin with a focus on the technical needs to sustain the digital objects over time</li>
+</ul>
+<p>And each of these perspectives have something valuable to offer us when considering the preservation, archiving, and curation of scientific research data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="what-is-the-value-of-models-and-standards" class="slide level2 smaller">
+<h2>What is the Value of Models and Standards?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><code>Frameworks provide basic guidance to organizations seeking to expand work in these areas</code></p>
+<p>Many decisions around data curation and archival work are highly dependent on specific conditions within a given organization</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/clipboard-697570218.png" width="266"></p>
+</div>
+</div>
+<aside class="notes">
+<p>Why do we use standards and models to understand how to approach this work from a practical perspective?</p>
+<p>As the saying goes “all models are wrong, but some are useful,” and that certainly applies here.</p>
+<p>While no model is capable of covering every situation or possibility when it comes to data management work, these standards and frameworks provide some level of basic guidance for individuals or organizations seeking to expand their work in this area.</p>
+<p>If you wonder which standard or framework will work best about a specific situation at your organization or one that you’ve encountered in your work. The answer is - - <em>it depends!</em></p>
+<p>This is because so many of the decisions around data curation and archival work are highly dependent on specific conditions within a given organization.</p>
+<p>What makes sense for your organization may not work in a different context. This is just something to keep in mind as we move forward!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="decisions-decisions-and-more-decisions" class="slide level2">
+<h2>Decisions, Decisions, and More Decisions!</h2>
+<ul>
+<li><p>Open source vs.&nbsp;commercial software</p></li>
+<li><p>Cloud vs.&nbsp;locally hosted</p></li>
+<li><p>Consortial models vs.&nbsp;in-house services</p></li>
+<li><p>Metadata standards</p></li>
+</ul>
+<aside class="notes">
+<p>To illustrate this point, I want to highlight just a few of the types of choices organizations are faced with when building data management capacity:</p>
+<ul>
+<li><p>Do they want to employ open-source software or use a commercial product?</p></li>
+<li><p>Do they want to host the system in the cloud or run it off of local servers managed by their organization?</p></li>
+<li><p>Should they join some type of consortium to share resources or go their own way and do it themselves?</p></li>
+<li><p>What metadata standards should they use in a potential data repository?</p></li>
+</ul>
+<p>These choices, and more, will be addressed as we continue in this module.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="digital-curation-lifecycle-models" class="title-slide slide level1 center">
+<h1>Digital Curation LifeCycle Models</h1>
+<aside class="notes">
+<p>Now, we will examine some common data life cycle models that are<br>
+used in scientific, social science, and humanities contexts. These data life cycle models are also useful for business and other contexts as well.</p>
+<p>However, as you will see with each of these models, it is generic enough that it can be used by any type of research project and in any venue. You will no doubt see many similarities and overlaps between the models as you review them.</p>
+<p>For example they each begin with a Planning step. Some of the models give a detailed accounting of what should happen at this step, such as developing a Data Management Plan, writing a research proposal or research plan, determining data methods to use, sample for data collection, etc. What is most important in this step is to plan out the entire project, including how the data will be managed and by whom.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="open-archival-information-system-oais" class="slide level2">
+<h2>Open Archival Information System (OAIS)</h2>
+
+<img data-src="images/clipboard-370621759.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>We’ll begin with the Open Archival Information System Reference Model, often referred to by the acronym OAIS.</p>
+<p>This model was developed by the Consultative Committee for Space Data Systems in service of the digital preservation of astronomy data but has since been widely used as a guide for any organization doing digital preservation.</p>
+<p>The model itself represents the theoretical space of a digital repository, as signaled by the rectangle within the model image. On the left, an information flow begins when a data producer deposits a submission information package, or SIP, into the repository.</p>
+<p>This SIP is then ingested into the repository and transformed into an archival information package, or AIP, via the addition of things like technical metadata, additional file formats, or creation of preservation copies.</p>
+<p>Within the repository a number of maintenance and administrative tasks can take place until a data consumer or user comes along and queries the access system to return relevant results based on their needs.</p>
+<p>The data package downloaded by this user is called the dissemination information package or DIP, and might, for example, consist of a lower image quality intended for distribution while the largest files remain on the repository server.</p>
+<p>Now, this was only the briefest introduction to OAIS but the thing to keep in mind is that this model is characterized by those other acronyms SIPs, AIPs, and DIPs.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="digital-curation-centre-lifecycle" class="slide level2">
+<h2>Digital Curation Centre Lifecycle</h2>
+
+<img data-src="images/dcc.png" class="quarto-figure quarto-figure-center r-stretch" width="700"><aside class="notes">
+<p>Our next model is the Digital Curation lifecycle model, sometimes referred to as the DCC model.</p>
+<p>This model was developed in the United Kingdom and presents curation work as a cycle, with differing levels of interpretation. At the center of the model lies a digital object, in our case we can think about it as a data file or dataset.</p>
+<p>This model includes both Full cycle steps or activities as well as Sequential ones. It also includes concentric circles or rings to show the activities within each step.</p>
+<p>Full cycle steps include Description and Representation of Information activities, Presentation Planning, Community Watch and Participation, and Curate and Preserve. Thus, here we add descriptive information, metadata, preservation planning and policies, as well as the idea that repositories engage with and learn from their user communities about what services are most needed.</p>
+<p>Sequential steps include Conceptualize, Appraise, Ingest, Preservation, Store, Access, Use &amp; Re-Use, and Transform where we see a series of tasks moving in an iterative circle, from creating and receiving data, to appraising, selecting, ingesting, preserving, storage, managing, accessing, and transforming data.<br>
+</p>
+<p>Sequential steps or activities would be conducted at specific junctures of the project and may occur either during research or after research but are primarily curation-related activities.</p>
+<p>The DCC Model is informed by archival and library science perspectives while being focused on research data, which can make for a complicated image but a comprehensive view of digital curation work.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="dataone-data-life-cycle" class="slide level2">
+<h2>DataONE Data Life Cycle</h2>
+
+<img data-src="images/clipboard-2743969177.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>Like the DCC Model, this circular representation in DataONE lifecycle moves around from planning for data curation to collecting data, assuring its integrity, describing it, preserving and making it discoverable, and finally, integrating and analyzing it. This data life cycle model is used in scientific communities and was developed with this audience in mind.</p>
+<p>What is unique in this model in particular is that it includes an Assurance step where quality assurance procedures are conducted with data that were previously collected. The Analyze step also is much later in the cycle than in other models.</p>
+<p>Just as DataONE represents a partnership between researchers and data curators, so too does this model encompass curation and access aspects of research data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair-data-principles" class="slide level2">
+<h2>FAIR Data Principles</h2>
+
+<img data-src="images/fair.jpg" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<p><a href="https://force11.org/info/the-fair-data-principles/" class="uri">https://force11.org/info/the-fair-data-principles/</a></p>
+</div>
+<aside class="notes">
+<p>Next, we’ve got the FAIR data principles. These were developed by scientists and first introduced in a Nature article in 2016. FAIR is both the intention of the initiative and an acronym, standing for FINDABLE, ACCESSIBLE, INTEROPERABLE, and REUSABLE data.</p>
+<p>These principles are a bit more theoretical and focused on issues related to accessing data, reflecting their origin in the scientific community. Still, the value here can be for data curators to ask themselves when working with a given dataset:</p>
+<ul>
+<li><p>Is this data FAIR?</p></li>
+<li><p>What steps could I take to increase any aspect of these principles through additional curation steps?</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair-principle-findable" class="slide level2">
+<h2>FAIR Principle: Findable</h2>
+
+<img data-src="images/clipboard-2975423192.png" class="r-stretch"><aside class="notes">
+<p>The FAIR Principles are designed to assure good data management for both humans and computational stakeholders (computers or other machine-aided processes). This slide presents the first of the FAIR principles: <code>To be FINDABLE</code>.</p>
+<p>To assure findability data and metadata (both referred to as metadata in FAIR) should be assigned a globally unique and eternally persistent identifier. A DOI is an example of this principle.</p>
+<p>Data should also be described with rich metadata so that it is easily searchable by humans and computational stakeholders. Metadata is registered or indexed in a searchable resource, and lastly, that the metadata specific the data identifier. As you think back to AE#1 can you see the importance of these principles to your own process of finding data sets?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair-principle-accessible" class="slide level2">
+<h2>FAIR Principle: Accessible</h2>
+
+<img data-src="images/clipboard-384362981.png" class="r-stretch"><aside class="notes">
+<p><code>To be ACCESSIBLE</code>: The second set of principles includes further best practices for making data accessible to users. (Meta)data are retrievable by their identifier using a standardized communications protocol, meaning that data and metadata should be accessible via the web, web encoding standards such as XML, that are retrieval using web resources.</p>
+<p>Further, the protocol is open, free, and easily implementable and should allow for an authentication and authorization procedure if necessary. Lastly, the metadata should remain accessible even after the data are no longer available.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair-principle-interoperable" class="slide level2">
+<h2>FAIR Principle: Interoperable</h2>
+
+<img data-src="images/clipboard-1169169633.png" class="r-stretch"><aside class="notes">
+<p><code>To be INTEROPERABLE:</code> Interoperability means that systems can communicate with each other, therefore making data and metadata searchable and accessible. (Meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.</p>
+<p>This would apply to the metadata scheme used as well as any agreed upon set of terms to represent concepts within the community. There are many discipline-specific metadata schemes that could be used. Individual projects should consider one of these metadata schemes so that the data can be shared easily.</p>
+<p>(Meta)data use vocabularies that follow FAIR principles or those established within the community to ensure that systems can easily search the metadata fields and metadata. Lastly, (meta)data include qualified references to other (meta)data that is easily searchable within many systems. Using a standardized metadata scheme such as Darwin Core in natural science collections, or Dublin Core in humanities collections will ensure that systems can communicate and make data accessible.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fair-principle-re-usable" class="slide level2">
+<h2>FAIR Principle: Re-Usable</h2>
+
+<img data-src="images/clipboard-3598184918.png" class="r-stretch"><aside class="notes">
+<p><code>To be RE-USABLE:</code> To have continued utility for other researchers and even for the original researcher, data have to be re-usable. To be re-usable, data should have a plurality of accurate and relevant attributes, be released with a clear and accessible data usage license, have provence information associated with the data (who owns the data, how was it created, research questions, etc.) and meet domain or community of practice standards and best practices.</p>
+<p>As I mentioned earlier FAIR is one example of a set of best practices that is general enough that it can be applied to any project or data set. These principles would be applied throughout the data life cycle while data are gathered and organized, documented and described, and prepared for ingest and preservation. FAIR is one set of best practices that we will review this semester.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="whats-in-common" class="slide level2">
+<h2>What’s In Common?</h2>
+<ul>
+<li><p>These models are all descriptive tools to understand digital curation and preservation needs, assist in planning and evaluating different solutions</p></li>
+<li><p>They are not checklists or how-to guides</p></li>
+</ul>
+<aside class="notes">
+<p>So, what do these models all share?</p>
+<p>While some come from the research community while others are more driven by data curators, they are all descriptive tools to understand digital curation and preservation needs, and assist in planning and evaluating different solutions.</p>
+<p>They are not checklists or how-to guides but rather frameworks to guide decision-making in a given organization.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="digital-curation-standards" class="title-slide slide level1 center">
+<h1>Digital Curation Standards</h1>
+<aside class="notes">
+<p>Now, I will introduce three standards used in the digital curation community:</p>
+<ul>
+<li><p>Trustworthy Repositories Audit and Certification standard</p></li>
+<li><p>CoreTrustSeal</p></li>
+<li><p>Levels of Digital Preservation matrix</p></li>
+</ul>
+<p>These standards represent some degree of formal benchmark for organizations that manage, preserve, and provide access to digital information. We’ll proceed from the highest bar standard, represented by TRAC, to the lowest bar with the Levels of Preservation matrix.</p>
+<p>For each, repository management can look to these tools for more specific guidance about the policies and procedures expected of a given repository</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="traciso-16363" class="slide level2 smaller">
+<h2>TRAC/ISO 16363</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Trustworthy Repositories Audit and Certification</p></li>
+<li><p>Based on OAIS Reference Model</p></li>
+<li><p>ISO 16363 accepted in 2012</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p><code>Section A</code></p>
+<ul>
+<li>Organizational</li>
+<li>Infrastructure</li>
+</ul></li>
+<li><p><code>Section B</code></p>
+<ul>
+<li>Digital Object</li>
+<li>Management</li>
+</ul></li>
+<li><p><code>Section C</code></p>
+<ul>
+<li>Technologies</li>
+<li>Technical</li>
+<li>Infrastructure</li>
+<li>Security</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://www.dcc.ac.uk/resources/repository-audit-and-assessment/trustworthy-repositories" class="uri">https://www.dcc.ac.uk/resources/repository-audit-and-assessment/trustworthy-repositories</a></p>
+</div>
+<aside class="notes">
+<p>We begin with the Trustworthy Repositories Audit and Certification standard, often referred to as TRAC.</p>
+<p>This standard was developed out of the OAIS reference model which we discussed in the last lecture. In 2012, it was formalized and adopted by the International Standards Organization, or ISO, as ISO 16363.</p>
+<p>This represents broad international consensus on the best practices for the trustworthy management of digital information.</p>
+<p>As for the standard itself, the requirements and specifications are too numerous to recap in totality in this lecture. The standard is organized into three sections:</p>
+<ul>
+<li>Section A. Organizational Infrastructure</li>
+<li>Section B. Digital Object Management</li>
+<li>Section C. Technologies, Technical Infrastructure, and Security</li>
+</ul>
+<p>In each, a series of specifications are outlined for the policies and procedures that would be expected of a TRAC-compliant organization.</p>
+<p>Achieving this certification requires a somewhat costly process but many organizations use the criteria to conduct self-audits and understand where they stand relative to this benchmark.</p>
+<p>To date, six repositories have been granted TRAC Certification, including the Chronopolis Digital Repository at the University of California San Diego.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="coretrustseal" class="slide level2">
+<h2>CoreTrustSeal</h2>
+<ul>
+<li><p>Peer-reviewed, international standard for digital preservation</p></li>
+<li><p>Evaluation based on organizational answers to 16 requirements</p></li>
+<li><p>Focus on organizational and infrastructural issues rather than technology</p></li>
+</ul>
+<div class="footer">
+<p><a href="https://www.coretrustseal.org/" class="uri">https://www.coretrustseal.org/</a></p>
+</div>
+<aside class="notes">
+<p>Moving from this highest bar, the CoreTrustSeal is a peer-reviewed standard for responsible data management in use around the world. Evaluation is based on how an organization responds to 16 requirements, which are available online and the link is shown on the slide in the footer.</p>
+<p>CoreTrustSeal requirements focus on organizational and infrastructural issues rather than technology, as this is not a proscriptive standard but rather one that recognizes that there is many ways to achieve the goal of trustworthy and responsible data management.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ndsa-levels-of-preservation" class="slide level2">
+<h2>NDSA Levels of Preservation</h2>
+
+<img data-src="images/clipboard-254019578.png" class="r-stretch"><div class="footer">
+<p><a href="https://ndsa.org/publications/levels-of-digital-preservation/">National Digital Stewardship Alliance Digital Library Federation</a></p>
+</div>
+<aside class="notes">
+<p>Finally, we’ve got the Levels of Preservation Matrix. Originally developed by the National Digital Stewardship Alliance and Library of Congress, the entire matrix is visible on this slide.</p>
+<p>The matrix provides a series of simple, manageable steps that organizations can take across four functional areas to improve and strengthen their digital curation and preservation practice.</p>
+<p>In storage, information integrity, control, metadata, and content, the matrix meets organizations wherever they are, and provides different levels to guide curation of digital information. It is also flexible enough to recognize that, while an organization might be doing a great job with metadata, they may not be as robust in their data storage capabilities.</p>
+<p>This matrix provides discrete steps to consider for any organization looking to increase their levels and manage digital data more effectively.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="best-practices" class="slide level2 smaller">
+<h2>Best Practices</h2>
+<ul>
+<li>Best practices are developed within a community of practice, a discipline, a group with a common purpose</li>
+<li>Best practices are one way to assure that data are organized, described and documented consistently</li>
+<li>Best practices make it possible to use, analyze, share, re-use data by researchers and others</li>
+<li>Best practices may also be required by institutions, funding agencies, publishers, businesses, etc.</li>
+<li>There are many sets of best practices developed by disciplinary communities but science disciplines are leading the way</li>
+<li>Best practices tend to be extensible to many contexts and projects</li>
+</ul>
+<aside class="notes">
+<p>Following best practices can benefit the researcher, their institution, discipline, and others who may use the research in the future. Best practices are a set of common practices or, in some cases, requirements that are developed within a community of practice or a group with common goals.</p>
+<p>Best practices are one way to assure that data are organized, described and documented consistently, and that data are useable, analyzable, shareable and re-useable by researchers and others. Best practices may also be required by institutions, funding agencies, publishers, businesses, etc.</p>
+<p>There are many sets of best practices developed by disciplinary communities, but science disciplines are leading the way in developing best practices for data stewardship. Most best practices tend to be extensible to many contexts and projects.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="best-practices-individuals" class="slide level2">
+<h2>Best Practices: Individuals</h2>
+<ul>
+<li>Best practices make it possible for everyone working on a project to collect, find, understand, and analyze the data</li>
+<li>Well documented data makes it quicker and easier to locate and clean the data</li>
+<li>Properly documented data is easier to share with others</li>
+<li>It saves time and money if data is organized consistently</li>
+<li>Well documented data makes it easier to prove results and to show how results were reached</li>
+<li>Following best practices is usually required by funding agencies, repositories, publishers, etc.</li>
+</ul>
+<aside class="notes">
+<p>There are best practices that apply to individuals, institutions and funders, publishers and repositories. We will look at the benefits of best practices to each of these groups and then focus on specific best practices throughout the data life cycle as we learn about each step the rest of the semester.</p>
+<p>Best practices make it possible for data to be used by many, not just the original researcher(s). Best practices make it possible for everyone working on a project to collect, find, understand, and analyze the data.</p>
+<p>Well documented data makes it quicker and easier to locate and clean the data and properly documented data is easier to share with others. Further, it saves time and money if data is organized consistently so the research does not have to be conducted more than once.</p>
+<p>Well documented data makes it easier to prove results and to show how results were reached to the community or business. It is also important to note that following best practices is usually required by funding agencies or foundations, repositories, and publishers.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="best-practices-institutions-and-funders" class="slide level2 smaller">
+<h2>Best Practices: Institutions and Funders</h2>
+<ul>
+<li>Some institutions have developed data policies for documenting, describing, storing, sharing, and re-using data <a href="https://libraries.ou.edu/" class="uri">https://libraries.ou.edu/</a>content/research-data-management</li>
+<li>Intellectual property issues may be resolved with a comprehensive data policy</li>
+<li>Institutions may have policies and best practices for retention of data (what to keep, how long to keep, where to keep, backups, etc.), or where and by whom data can be shared and re-used</li>
+<li>Funders may require discipline-specific data organization, metadata schemes, data sharing and retention, data re-use requirements (required within data management plans), and may require all data to be publicly accessible</li>
+</ul>
+<aside class="notes">
+<p>Many institutions, including universities, private business, and others have developed best practices or reporting and data access polices. The open science movement which is concerned with open access of scientific results and data has been the leader of developing best practices and data policies to ensure that any project funded by the government is openly accessible to the public.</p>
+<p>Some institutions have developed data policies for documenting, describing, storing, sharing, and re-using data. The link on the slide is to the OU Libraries page about research data management at OU. This page provides useful information about services and tools for OU researchers. OU does not have a specific data management policy but has MANY other policies related to research practices.</p>
+<p>See the links on the page to the Vice President for Research offices for more on policies. <a href="https://libraries.ou.edu/content/research-data-management" class="uri">https://libraries.ou.edu/content/research-data-management</a></p>
+<p>Intellectual property issues may be resolved with a comprehensive data policy as the policy would detail who owns the data and who and how it can be used. Often this information about the data is added to the metadata of the data set.</p>
+<p>Institutions may also have policies and best practices for retention of data (what to keep, how long to keep, where to keep, backups, etc.), or where and by whom data can be shared and re-used.</p>
+<p>Funders may require discipline-specific data organization, metadata schemes, data sharing and retention, data re-use requirements (required within data management plans) and may require all data to be publicly accessible. We will learn more about funder requirements and best practices as we work through the data life cycle steps this semester.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="best-practices-publishers-and-repositories" class="slide level2 smaller">
+<h2>Best Practices: Publishers and Repositories</h2>
+<ul>
+<li>Many publishers may require submission of the data set as part of the publication and may store it in a publicly accessible data repository</li>
+<li>Intellectual property issues may be resolved with a comprehensive data policy (who owns the data in the publication and data store)</li>
+<li>Publishers and repositories may have their own specifications on how data are described and documented, metadata scheme to use, and access requirements</li>
+<li>Repositories may require additional preparation of data, such as storing in an easily shareable data format, specific metadata scheme, cleaning of data, etc. OU’s is called ShareOK available at:
+<ul>
+<li><a href="https://shareok.org/" class="uri">https://shareok.org/</a></li>
+<li><a href="https://lib.ou.edu/documents/OU_OSU_IR_Policies_V5.pdf" class="uri">https://lib.ou.edu/documents/OU_OSU_IR_Policies_V5.pdf</a></li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>Publisher and repositories also have their own sets of best practices or requirements for depositing data sets. Many publishers may require submission of the data set as part of the publication and may store it in a publicly accessible data repository.</p>
+<p>Intellectual property issues may crop up when publishing data within publications (who owns the data in the publication and data store).</p>
+<p>A great resource for learning more about publishers’ data policies is available at:<a href="http://oad.simmons.edu/oadwiki/Main_Page" class="uri">http://oad.simmons.edu/oadwiki/Main_Page</a> and <a href="https://jordproject.wordpress.com/project-data/social-science-journals-that-have-a-research-data-policy/" class="uri">https://jordproject.wordpress.com/project-data/social-science-journals-that-have-a-research-data-policy/</a></p>
+<p>The Center for Open Science (<a href="https://cos.io/blog/landscape-open-data-policies/" class="uri">https://cos.io/blog/landscape-open-data-policies/</a>) includes many useful posts about data polices of journals publishers.</p>
+<p>Publishers and repositories may have their own specifications on how data are described and documented, metadata scheme to use, and access requirements.</p>
+<p>Repositories may require additional preparation of data, such as storing in an easily shareable data format, specific metadata scheme, cleaning of data, etc. OU has an institutional repository called ShareOK, which is available at: <a href="https://shareok.org/" class="uri">https://shareok.org/</a></p>
+<p>Check out the site to see what can be accessed publicly. The policies used within ShareOK are also available at: <a href="https://lib.ou.edu/documents/OU_OSU_IR_Policies_V5.pdf" class="uri">https://lib.ou.edu/documents/OU_OSU_IR_Policies_V5.pdf</a></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="concluding-thoughts" class="slide level2">
+<h2>Concluding Thoughts</h2>
+<ul>
+<li>This week you learned more about the data life cycle through the models in the readings and this lecture. Take some time to think about the models might apply to your own context AND how you might change or adapt them for your purposes.</li>
+<li>Also consider the role that best practices play in data stewardship and how the FAIR Guiding Principles may be used in multiple contexts.</li>
+<li>Next week we will begin the more practical topics of data stewardship, beginning with how data stewards support the research stage of Collecting Data by organizing, structuring, and storing data during the research project.</li>
+</ul>
+<aside class="notes">
+<p>This week you will learn more about the data life cycle through the models in the readings and this lecture. Take some time to think about the models might apply to your own context AND how you might change or adapt them for your purposes.</p>
+<p>Also, consider the role that best practices play in data stewardship and how the FAIR Guiding Principles may be used in multiple contexts.</p>
+<p>Next week we will begin the more practical topics of data stewardship, beginning with how data stewards support the research stage of Collecting Data by organizing, structuring, and storing data during the research project. Be sure that you read the assigned readings and web links to learn more about the data life cycle and best practices.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="quarto-auto-generated-content">
+<p><img src="images/ou.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true,"theme":"whiteboard"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: "separate-page",
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

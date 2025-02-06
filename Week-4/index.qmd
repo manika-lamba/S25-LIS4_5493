@@ -1,0 +1,737 @@
+---
+title: "Data Life Cycle Models"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+Data "lives" through what is called a Data Life Cycle Model. There are
+several conceptual models that describe the data life cycle, some from a
+data curation focus and others from a data management focus. You will
+also see some that are discipline-specific such as those focused on
+scientific research and data, and others related to social science data.
+
+Each different perspective on data management, as defined in Module 1,
+has its own view of the data life cycle and the phases within it. Also,
+each phase contains specific activities and roles for data stewards.
+
+In this module, we will examine the more widely cited and used data life
+cycle models and how each presents a slightly different, though
+overlapping approach to the stewardship, curation, and management of
+data, along with best practices, tools, and processes for each stage.
+
+We will review how the data life cycle models guide researchers, data
+stewards, users of data; and also discuss best practices and the
+importance of adhering to best practices.
+
+Lastly, we will review the FAIR Guiding Principles as one example of
+data management best practices that can be used in any context or
+project.
+:::
+
+## Communities of Practice
+
+![](images/dc.png){fig-align="center" width="500"}
+
+::: notes
+The data curation community lies at the intersection of a number of
+related disciplines and professional communities. These include
+archives, **digital curation, data management, and digital
+preservation.**
+
+Each of these traditions draw from similar contexts but approach the
+work involved around stewarding digital objects from slightly different
+perspectives. For example,
+
+-   an **archival perspective** might value provenance and the origin of
+    a given record more than other factors informing its management
+-   a **digital curation perspective** might emphasize a series of
+    interventions and policies across the lifecycle of a digital object
+-   a **data management perspective** might focus most on the metadata
+    that serves the research needs of the scientist or lab group that
+    created the dataset, or complies with funding regulations
+-   a **digital preservation approach** would begin with a focus on the
+    technical needs to sustain the digital objects over time
+
+And each of these perspectives have something valuable to offer us when
+considering the preservation, archiving, and curation of scientific
+research data.
+:::
+
+## What is the Value of Models and Standards? {.smaller}
+
+::: columns
+::: {.column width="50%"}
+`Frameworks provide basic guidance to organizations seeking to expand work in these areas`
+
+Many decisions around data curation and archival work are highly
+dependent on specific conditions within a given organization
+:::
+
+::: {.column width="50%"}
+![](images/clipboard-697570218.png){width="266"}
+:::
+:::
+
+::: notes
+Why do we use standards and models to understand how to approach this
+work from a practical perspective?
+
+As the saying goes “all models are wrong, but some are useful,” and that
+certainly applies here.
+
+While no model is capable of covering every situation or possibility
+when it comes to data management work, these standards and frameworks
+provide some level of basic guidance for individuals or organizations
+seeking to expand their work in this area.
+
+If you wonder which standard or framework will work best about a
+specific situation at your organization or one that you’ve encountered
+in your work. The answer is - - *it depends!*
+
+This is because so many of the decisions around data curation and
+archival work are highly dependent on specific conditions within a given
+organization.
+
+What makes sense for your organization may not work in a different
+context. This is just something to keep in mind as we move forward!
+:::
+
+## Decisions, Decisions, and More Decisions!
+
+-   Open source vs. commercial software
+
+-   Cloud vs. locally hosted
+
+-   Consortial models vs. in-house services
+
+-   Metadata standards
+
+::: notes
+To illustrate this point, I want to highlight just a few of the types of
+choices organizations are faced with when building data management
+capacity:
+
+-   Do they want to employ open-source software or use a commercial
+    product?
+
+-   Do they want to host the system in the cloud or run it off of local
+    servers managed by their organization?
+
+-   Should they join some type of consortium to share resources or go
+    their own way and do it themselves?
+
+-   What metadata standards should they use in a potential data
+    repository?
+
+These choices, and more, will be addressed as we continue in this
+module.
+:::
+
+# Digital Curation LifeCycle Models
+
+::: notes
+Now, we will examine some common data life cycle models that are\
+used in scientific, social science, and humanities contexts. These data
+life cycle models are also useful for business and other contexts as
+well.
+
+However, as you will see with each of these models, it is generic enough
+that it can be used by any type of research project and in any venue.
+You will no doubt see many similarities and overlaps between the models
+as you review them.
+
+For example they each begin with a Planning step. Some of the models
+give a detailed accounting of what should happen at this step, such as
+developing a Data Management Plan, writing a research proposal or
+research plan, determining data methods to use, sample for data
+collection, etc. What is most important in this step is to plan out the
+entire project, including how the data will be managed and by whom.
+:::
+
+## Open Archival Information System (OAIS)
+
+![](images/clipboard-370621759.png){fig-align="center"}
+
+::: notes
+We’ll begin with the Open Archival Information System Reference Model,
+often referred to by the acronym OAIS.
+
+This model was developed by the Consultative Committee for Space Data
+Systems in service of the digital preservation of astronomy data but has
+since been widely used as a guide for any organization doing digital
+preservation.
+
+The model itself represents the theoretical space of a digital
+repository, as signaled by the rectangle within the model image. On the
+left, an information flow begins when a data producer deposits a
+submission information package, or SIP, into the repository.
+
+This SIP is then ingested into the repository and transformed into an
+archival information package, or AIP, via the addition of things like
+technical metadata, additional file formats, or creation of preservation
+copies.
+
+Within the repository a number of maintenance and administrative tasks
+can take place until a data consumer or user comes along and queries the
+access system to return relevant results based on their needs.
+
+The data package downloaded by this user is called the dissemination
+information package or DIP, and might, for example, consist of a lower
+image quality intended for distribution while the largest files remain
+on the repository server.
+
+Now, this was only the briefest introduction to OAIS but the thing to
+keep in mind is that this model is characterized by those other acronyms
+SIPs, AIPs, and DIPs.
+:::
+
+## Digital Curation Centre Lifecycle
+
+![](images/dcc.png){fig-align="center" width="700"}
+
+::: notes
+Our next model is the Digital Curation lifecycle model, sometimes
+referred to as the DCC model.
+
+This model was developed in the United Kingdom and presents curation
+work as a cycle, with differing levels of interpretation. At the center
+of the model lies a digital object, in our case we can think about it as
+a data file or dataset.
+
+This model includes both Full cycle steps or activities as well as
+Sequential ones. It also includes concentric circles or rings to show
+the activities within each step.
+
+Full cycle steps include Description and Representation of Information
+activities, Presentation Planning, Community Watch and Participation,
+and Curate and Preserve. Thus, here we add descriptive information,
+metadata, preservation planning and policies, as well as the idea that
+repositories engage with and learn from their user communities about
+what services are most needed.
+
+Sequential steps include Conceptualize, Appraise, Ingest, Preservation,
+Store, Access, Use & Re-Use, and Transform where we see a series of
+tasks moving in an iterative circle, from creating and receiving data,
+to appraising, selecting, ingesting, preserving, storage, managing,
+accessing, and transforming data.\
+
+Sequential steps or activities would be conducted at specific junctures
+of the project and may occur either during research or after research
+but are primarily curation-related activities.
+
+The DCC Model is informed by archival and library science perspectives
+while being focused on research data, which can make for a complicated
+image but a comprehensive view of digital curation work.
+:::
+
+## DataONE Data Life Cycle
+
+![](images/clipboard-2743969177.png){fig-align="center"}
+
+::: notes
+Like the DCC Model, this circular representation in DataONE lifecycle
+moves around from planning for data curation to collecting data,
+assuring its integrity, describing it, preserving and making it
+discoverable, and finally, integrating and analyzing it. This data life
+cycle model is used in scientific communities and was developed with
+this audience in mind.
+
+What is unique in this model in particular is that it includes an
+Assurance step where quality assurance procedures are conducted with
+data that were previously collected. The Analyze step also is much later
+in the cycle than in other models.
+
+Just as DataONE represents a partnership between researchers and data
+curators, so too does this model encompass curation and access aspects
+of research data.
+:::
+
+## FAIR Data Principles
+
+![](images/fair.jpg){fig-align="center"}
+
+::: footer
+<https://force11.org/info/the-fair-data-principles/>
+:::
+
+::: notes
+Next, we’ve got the FAIR data principles. These were developed by
+scientists and first introduced in a Nature article in 2016. FAIR is
+both the intention of the initiative and an acronym, standing for
+FINDABLE, ACCESSIBLE, INTEROPERABLE, and REUSABLE data.
+
+These principles are a bit more theoretical and focused on issues
+related to accessing data, reflecting their origin in the scientific
+community. Still, the value here can be for data curators to ask
+themselves when working with a given dataset:
+
+-   Is this data FAIR?
+
+-   What steps could I take to increase any aspect of these principles
+    through additional curation steps?
+:::
+
+## FAIR Principle: Findable
+
+![](images/clipboard-2975423192.png)
+
+::: notes
+The FAIR Principles are designed to assure good data management for both
+humans and computational stakeholders (computers or other machine-aided
+processes). This slide presents the first of the FAIR principles:
+`To be FINDABLE`.
+
+To assure findability data and metadata (both referred to as metadata in
+FAIR) should be assigned a globally unique and eternally persistent
+identifier. A DOI is an example of this principle.
+
+Data should also be described with rich metadata so that it is easily
+searchable by humans and computational stakeholders. Metadata is
+registered or indexed in a searchable resource, and lastly, that the
+metadata specific the data identifier. As you think back to AE#1 can you
+see the importance of these principles to your own process of finding
+data sets?
+:::
+
+## FAIR Principle: Accessible
+
+![](images/clipboard-384362981.png)
+
+::: notes
+`To be ACCESSIBLE`: The second set of principles includes further best
+practices for making data accessible to users. (Meta)data are
+retrievable by their identifier using a standardized communications
+protocol, meaning that data and metadata should be accessible via the
+web, web encoding standards such as XML, that are retrieval using web
+resources.
+
+Further, the protocol is open, free, and easily implementable and should
+allow for an authentication and authorization procedure if necessary.
+Lastly, the metadata should remain accessible even after the data are no
+longer available.
+:::
+
+## FAIR Principle: Interoperable
+
+![](images/clipboard-1169169633.png)
+
+::: notes
+`To be INTEROPERABLE:` Interoperability means that systems can
+communicate with each other, therefore making data and metadata
+searchable and accessible. (Meta)data use a formal, accessible, shared,
+and broadly applicable language for knowledge representation.
+
+This would apply to the metadata scheme used as well as any agreed upon
+set of terms to represent concepts within the community. There are many
+discipline-specific metadata schemes that could be used. Individual
+projects should consider one of these metadata schemes so that the data
+can be shared easily.
+
+(Meta)data use vocabularies that follow FAIR principles or those
+established within the community to ensure that systems can easily
+search the metadata fields and metadata. Lastly, (meta)data include
+qualified references to other (meta)data that is easily searchable
+within many systems. Using a standardized metadata scheme such as Darwin
+Core in natural science collections, or Dublin Core in humanities
+collections will ensure that systems can communicate and make data
+accessible.
+:::
+
+## FAIR Principle: Re-Usable
+
+![](images/clipboard-3598184918.png)
+
+::: notes
+`To be RE-USABLE:` To have continued utility for other researchers and
+even for the original researcher, data have to be re-usable. To be
+re-usable, data should have a plurality of accurate and relevant
+attributes, be released with a clear and accessible data usage license,
+have provence information associated with the data (who owns the data,
+how was it created, research questions, etc.) and meet domain or
+community of practice standards and best practices.
+
+As I mentioned earlier FAIR is one example of a set of best practices
+that is general enough that it can be applied to any project or data
+set. These principles would be applied throughout the data life cycle
+while data are gathered and organized, documented and described, and
+prepared for ingest and preservation. FAIR is one set of best practices
+that we will review this semester.
+:::
+
+## What's In Common?
+
+-   These models are all descriptive tools to understand digital
+    curation and preservation needs, assist in planning and evaluating
+    different solutions
+
+-   They are not checklists or how-to guides
+
+::: notes
+So, what do these models all share?
+
+While some come from the research community while others are more driven
+by data curators, they are all descriptive tools to understand digital
+curation and preservation needs, and assist in planning and evaluating
+different solutions.
+
+They are not checklists or how-to guides but rather frameworks to guide
+decision-making in a given organization.
+:::
+
+# Digital Curation Standards
+
+::: notes
+Now, I will introduce three standards used in the digital curation
+community:
+
+-   Trustworthy Repositories Audit and Certification standard
+
+-   CoreTrustSeal
+
+-   Levels of Digital Preservation matrix
+
+These standards represent some degree of formal benchmark for
+organizations that manage, preserve, and provide access to digital
+information. We’ll proceed from the highest bar standard, represented by
+TRAC, to the lowest bar with the Levels of Preservation matrix.
+
+For each, repository management can look to these tools for more
+specific guidance about the policies and procedures expected of a given
+repository
+:::
+
+## TRAC/ISO 16363 {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   Trustworthy Repositories Audit and Certification
+
+-   Based on OAIS Reference Model
+
+-   ISO 16363 accepted in 2012
+:::
+
+::: {.column width="50%"}
+-   `Section A`
+
+    -   Organizational
+    -   Infrastructure
+
+-   `Section B`
+
+    -   Digital Object
+    -   Management
+
+-   `Section C`
+
+    -   Technologies
+    -   Technical
+    -   Infrastructure
+    -   Security
+:::
+:::
+
+::: footer
+<https://www.dcc.ac.uk/resources/repository-audit-and-assessment/trustworthy-repositories>
+:::
+
+::: notes
+We begin with the Trustworthy Repositories Audit and Certification
+standard, often referred to as TRAC.
+
+This standard was developed out of the OAIS reference model which we
+discussed in the last lecture. In 2012, it was formalized and adopted by
+the International Standards Organization, or ISO, as ISO 16363.
+
+This represents broad international consensus on the best practices for
+the trustworthy management of digital information.
+
+As for the standard itself, the requirements and specifications are too
+numerous to recap in totality in this lecture. The standard is organized
+into three sections:
+
+-   Section A. Organizational Infrastructure
+-   Section B. Digital Object Management
+-   Section C. Technologies, Technical Infrastructure, and Security
+
+In each, a series of specifications are outlined for the policies and
+procedures that would be expected of a TRAC-compliant organization.
+
+Achieving this certification requires a somewhat costly process but many
+organizations use the criteria to conduct self-audits and understand
+where they stand relative to this benchmark.
+
+To date, six repositories have been granted TRAC Certification,
+including the Chronopolis Digital Repository at the University of
+California San Diego.
+:::
+
+## CoreTrustSeal
+
+-   Peer-reviewed, international standard for digital preservation
+
+-   Evaluation based on organizational answers to 16 requirements
+
+-   Focus on organizational and infrastructural issues rather than
+    technology
+
+::: footer
+<https://www.coretrustseal.org/>
+:::
+
+::: notes
+Moving from this highest bar, the CoreTrustSeal is a peer-reviewed
+standard for responsible data management in use around the world.
+Evaluation is based on how an organization responds to 16 requirements,
+which are available online and the link is shown on the slide in the
+footer.
+
+CoreTrustSeal requirements focus on organizational and infrastructural
+issues rather than technology, as this is not a proscriptive standard
+but rather one that recognizes that there is many ways to achieve the
+goal of trustworthy and responsible data management.
+:::
+
+## NDSA Levels of Preservation
+
+![](images/clipboard-254019578.png)
+
+::: footer
+[National Digital Stewardship Alliance Digital Library
+Federation](https://ndsa.org/publications/levels-of-digital-preservation/)
+:::
+
+::: notes
+Finally, we’ve got the Levels of Preservation Matrix. Originally
+developed by the National Digital Stewardship Alliance and Library of
+Congress, the entire matrix is visible on this slide.
+
+The matrix provides a series of simple, manageable steps that
+organizations can take across four functional areas to improve and
+strengthen their digital curation and preservation practice.
+
+In storage, information integrity, control, metadata, and content, the
+matrix meets organizations wherever they are, and provides different
+levels to guide curation of digital information. It is also flexible
+enough to recognize that, while an organization might be doing a great
+job with metadata, they may not be as robust in their data storage
+capabilities.
+
+This matrix provides discrete steps to consider for any organization
+looking to increase their levels and manage digital data more
+effectively.
+:::
+
+## Best Practices {.smaller}
+
+-   Best practices are developed within a community of practice, a
+    discipline, a group with a common purpose
+-   Best practices are one way to assure that data are organized,
+    described and documented consistently
+-   Best practices make it possible to use, analyze, share, re-use data
+    by researchers and others
+-   Best practices may also be required by institutions, funding
+    agencies, publishers, businesses, etc.
+-   There are many sets of best practices developed by disciplinary
+    communities but science disciplines are leading the way
+-   Best practices tend to be extensible to many contexts and projects
+
+::: notes
+Following best practices can benefit the researcher, their institution,
+discipline, and others who may use the research in the future. Best
+practices are a set of common practices or, in some cases, requirements
+that are developed within a community of practice or a group with common
+goals.
+
+Best practices are one way to assure that data are organized, described
+and documented consistently, and that data are useable, analyzable,
+shareable and re-useable by researchers and others. Best practices may
+also be required by institutions, funding agencies, publishers,
+businesses, etc.
+
+There are many sets of best practices developed by disciplinary
+communities, but science disciplines are leading the way in developing
+best practices for data stewardship. Most best practices tend to be
+extensible to many contexts and projects.
+:::
+
+## Best Practices: Individuals
+
+-   Best practices make it possible for everyone working on a project to
+    collect, find, understand, and analyze the data
+-   Well documented data makes it quicker and easier to locate and clean
+    the data
+-   Properly documented data is easier to share with others
+-   It saves time and money if data is organized consistently
+-   Well documented data makes it easier to prove results and to show
+    how results were reached
+-   Following best practices is usually required by funding agencies,
+    repositories, publishers, etc.
+
+::: notes
+There are best practices that apply to individuals, institutions and
+funders, publishers and repositories. We will look at the benefits of
+best practices to each of these groups and then focus on specific best
+practices throughout the data life cycle as we learn about each step the
+rest of the semester.
+
+Best practices make it possible for data to be used by many, not just
+the original researcher(s). Best practices make it possible for everyone
+working on a project to collect, find, understand, and analyze the data.
+
+Well documented data makes it quicker and easier to locate and clean the
+data and properly documented data is easier to share with others.
+Further, it saves time and money if data is organized consistently so
+the research does not have to be conducted more than once.
+
+Well documented data makes it easier to prove results and to show how
+results were reached to the community or business. It is also important
+to note that following best practices is usually required by funding
+agencies or foundations, repositories, and publishers.
+:::
+
+## Best Practices: Institutions and Funders {.smaller}
+
+-   Some institutions have developed data policies for documenting,
+    describing, storing, sharing, and re-using data
+    <https://libraries.ou.edu/>content/research-data-management
+-   Intellectual property issues may be resolved with a comprehensive
+    data policy
+-   Institutions may have policies and best practices for retention of
+    data (what to keep, how long to keep, where to keep, backups, etc.),
+    or where and by whom data can be shared and re-used
+-   Funders may require discipline-specific data organization, metadata
+    schemes, data sharing and retention, data re-use requirements
+    (required within data management plans), and may require all data to
+    be publicly accessible
+
+::: notes
+Many institutions, including universities, private business, and others
+have developed best practices or reporting and data access polices. The
+open science movement which is concerned with open access of scientific
+results and data has been the leader of developing best practices and
+data policies to ensure that any project funded by the government is
+openly accessible to the public.
+
+Some institutions have developed data policies for documenting,
+describing, storing, sharing, and re-using data. The link on the slide
+is to the OU Libraries page about research data management at OU. This
+page provides useful information about services and tools for OU
+researchers. OU does not have a specific data management policy but has
+MANY other policies related to research practices.
+
+See the links on the page to the Vice President for Research offices for
+more on policies.
+<https://libraries.ou.edu/content/research-data-management>
+
+Intellectual property issues may be resolved with a comprehensive data
+policy as the policy would detail who owns the data and who and how it
+can be used. Often this information about the data is added to the
+metadata of the data set.
+
+Institutions may also have policies and best practices for retention of
+data (what to keep, how long to keep, where to keep, backups, etc.), or
+where and by whom data can be shared and re-used.
+
+Funders may require discipline-specific data organization, metadata
+schemes, data sharing and retention, data re-use requirements (required
+within data management plans) and may require all data to be publicly
+accessible. We will learn more about funder requirements and best
+practices as we work through the data life cycle steps this semester.
+:::
+
+## Best Practices: Publishers and Repositories {.smaller}
+
+-   Many publishers may require submission of the data set as part of
+    the publication and may store it in a publicly accessible data
+    repository
+-   Intellectual property issues may be resolved with a comprehensive
+    data policy (who owns the data in the publication and data store)
+-   Publishers and repositories may have their own specifications on how
+    data are described and documented, metadata scheme to use, and
+    access requirements
+-   Repositories may require additional preparation of data, such as
+    storing in an easily shareable data format, specific metadata
+    scheme, cleaning of data, etc. OU’s is called ShareOK available at:
+    -   <https://shareok.org/>
+    -   <https://lib.ou.edu/documents/OU_OSU_IR_Policies_V5.pdf>
+
+::: notes
+Publisher and repositories also have their own sets of best practices or
+requirements for depositing data sets. Many publishers may require
+submission of the data set as part of the publication and may store it
+in a publicly accessible data repository.
+
+Intellectual property issues may crop up when publishing data within
+publications (who owns the data in the publication and data store).
+
+A great resource for learning more about publishers’ data policies is
+available at:<http://oad.simmons.edu/oadwiki/Main_Page> and
+<https://jordproject.wordpress.com/project-data/social-science-journals-that-have-a-research-data-policy/>
+
+The Center for Open Science
+(<https://cos.io/blog/landscape-open-data-policies/>) includes many
+useful posts about data polices of journals publishers.
+
+Publishers and repositories may have their own specifications on how
+data are described and documented, metadata scheme to use, and access
+requirements.
+
+Repositories may require additional preparation of data, such as storing
+in an easily shareable data format, specific metadata scheme, cleaning
+of data, etc. OU has an institutional repository called ShareOK, which
+is available at: <https://shareok.org/>
+
+Check out the site to see what can be accessed publicly. The policies
+used within ShareOK are also available at:
+<https://lib.ou.edu/documents/OU_OSU_IR_Policies_V5.pdf>
+:::
+
+## Concluding Thoughts
+
+-   This week you learned more about the data life cycle through the
+    models in the readings and this lecture. Take some time to think
+    about the models might apply to your own context AND how you might
+    change or adapt them for your purposes.
+-   Also consider the role that best practices play in data stewardship
+    and how the FAIR Guiding Principles may be used in multiple
+    contexts.
+-   Next week we will begin the more practical topics of data
+    stewardship, beginning with how data stewards support the research
+    stage of Collecting Data by organizing, structuring, and storing
+    data during the research project.
+
+::: notes
+This week you will learn more about the data life cycle through the
+models in the readings and this lecture. Take some time to think about
+the models might apply to your own context AND how you might change or
+adapt them for your purposes.
+
+Also, consider the role that best practices play in data stewardship and
+how the FAIR Guiding Principles may be used in multiple contexts.
+
+Next week we will begin the more practical topics of data stewardship,
+beginning with how data stewards support the research stage of
+Collecting Data by organizing, structuring, and storing data during the
+research project. Be sure that you read the assigned readings and web
+links to learn more about the data life cycle and best practices.
+:::
