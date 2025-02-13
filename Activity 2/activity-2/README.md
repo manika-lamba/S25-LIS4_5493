@@ -12,5 +12,3 @@ In this activity, we are going to get you started with using version control fro
 * Step 6: [Getting our project under version control](./version_control.md) - First step into a larger world
 * Step 7: [Making a change](./making_change.md) - Making our script more useful
 * Step 8: [Committing our change](./commit.md) - How to commit a change
-* Step 9: [The example repo](./created_earlier.md) - My version of the repo we've created today
-* Step 10: [Things we haven't told you](./next_steps.md) - Steps to further learning
