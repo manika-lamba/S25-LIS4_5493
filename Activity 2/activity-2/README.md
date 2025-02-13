@@ -1,13 +1,6 @@
-# Citing this work
-
-You are free to use this work in your own projects. However, we would appreciate a citation: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.61435.svg)](https://doi.org/10.5281/zenodo.61435)
-
-
 # Introduction to Reproducible Research in R and R Studio.
 
 In this session, we are going to get you started with using version control from within RStudio. 
-
-The material is self-paced and includes a worked-example. It is suggested that you work through the sections in order.
 
 ## Version control with git and github
 

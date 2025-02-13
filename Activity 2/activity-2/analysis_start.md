@@ -1,6 +1,6 @@
 # Starting our analysis project
 
-The purpose of this tutorial is to teach you version control. In order to do this, however, we'll need to make up a simple project that needs controlling!
+The purpose of this activity is to teach you version control. In order to do this, however, we'll need to make up a simple project that needs controlling!
 
 Our initial project will be extremely simple -- a very small data file and a script that loads and plots it. Later, we'll add code to fit a nonlinear curve to it. (Based on the tutorial at http://www.walkingrandomly.com/?p=5254)
 
