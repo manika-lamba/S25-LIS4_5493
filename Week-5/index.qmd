@@ -1,0 +1,453 @@
+---
+title: "Supporting Data Collection: Organizing Structuring and Storing Data"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+![](images/clipboard-3172885141.png){fig-align="center"}
+
+::: notes
+Beginning this week we will begin to learn more about the practical
+aspects of the data life cycle.
+
+In Module 4.1, we will learn about how to support research or
+researchers as data stewards. The first phase of the data life cycle
+after planning the project is to `COLLECT` the data.
+
+Data stewards support researchers and research projects by providing
+guidance about how to `ORGANIZE, STRUCTURE, AND STORE` the data of the
+project. In this lecture, I will introduce you to these three aspects of
+supporting the collection of data, as well as best practices and common
+issues.
+
+We are going to take a user-centered approach to organizing and
+structuring the data. We will discuss data interviews and we will
+examine different data structures and how to decide which is best to use
+for collecting the data.
+
+You will also learn about common errors in data. The DataOne lecture
+will provide additional examples of data structural issues and common
+errors in data files.
+
+Lastly, we will examine data storage options and best practices related
+to storing data.
+:::
+
+## Organizing Data
+
+![](images/clipboard-3642868022.png){fig-align="center"}
+
+::: notes
+Data stewards support the collection of data by assisting the researcher
+in developing structures for organizing and structuring the data.
+
+They also provide best practices for storing data. Borgman and her
+colleagues have conducted research studies to learn more about how
+specific groups of researchers develop research projects and the unique
+data life cycle needs of these groups. Read the Borgman reading to learn
+more.
+
+As you read think about the issues associated with developing research
+specific data structure(s) versus using those used by others in the
+discipline. Are there any issues you can think of related to customized
+data structures?
+
+Some common questions asked by data stewards during data interviews are
+shown on this slide. For example,
+
+-   what is the story behind the data and how will it be used?
+-   what is the form and format of the data?
+-   who are the potential audiences for the data?
+-   what is the expected lifespan of the dataset(s)?
+-   how will the data be used, re-used, or repurposed?
+
+These are all important questions to ask when beginning a conversation
+about the data of a research project and the researcher’s expectations
+for data throughout the data life cycle.
+
+These questions are helpful when guiding the organization, structuring
+and storage of data, as well as when developing a data management plan.
+:::
+
+## Organizing Data (Cont.) {.smaller}
+
+`Henderson (2017)`
+
+-   How large is the data set(s) and what is expected rate of growth?
+
+-   Does the data contain sensitive information?
+
+-   What publications or discoveries have resulted from the data?
+
+-   How should the data be made accessible?
+
+-   Who owns the data?
+
+-   Types of data created or captured (experimental, qualitative,
+    modeling, etc.) and how will it be captured or processed?
+
+-   Contextual details about the data to make it meaningful to other
+    users (metadata, file formatting, naming conventions)?
+
+-   Storage, backup, and security plans (Where and on what media will it
+    be stored? Backup plans for the data? How will data security be
+    managed and by whom?)
+
+-   Privacy/Protection (Ethical and privacy concerns, sensitive data,
+    IRB issues, anonymization of data?)
+
+-   Policies and restrictions related to access and re-use (gaining
+    access to the data)?
+
+-   Long term plan for preservation and maintenance of data?
+
+::: notes
+This slide presents other important, more in depth questions that would
+be asked of researchers to determine the data organization needs such as
+
+-   who owns the data?
+-   does the data contain sensitive information that should be
+    anonymized?
+-   how large is the dataset(s)?
+-   what is the expected rate of growth; as well as questions related to
+    outcomes of the research?
+
+Other critical questions to ask. For example, types of data that will be
+captured is an important starting point to determine appropriate data
+software or file formats to use for organizing data.
+
+Adding in metadata and following consistent file formatting and naming
+conventions are also important to provide context to data and make it
+useful to many users and uses.
+
+Policies and plans for data storage, backup, and security should be
+established early in the project. It is essential to know who is
+responsible for storage, backup and securing the data.
+
+Other policies related to access and re-use and long time preservation
+should be determined early but may also change as the project moves out
+of the research stage and into the preservation stage.
+:::
+
+## Organizing Data Best Practices
+
+![](images/clipboard-2366412557.png){fig-align="center"}
+
+::: notes
+Henderson, Ch-3 presents these useful best practices when working with
+data. These best practices should guide all stages of the data life
+cycle during the research project.
+
+One best practice that is essential is to preserve raw data files and
+only work on copies of the file, ensuring that if errors result in the
+data then the raw data is still available to use to start over.
+
+This preserves the integrity of the data for future users/uses. See also
+the RDM for Busy People file on the Canvas site for this module for a
+useful handout on data organization practices.
+
+One additional comment, funders or institutions may have additional
+requirements for how data are organized. Be sure you are aware of these
+expectations.
+:::
+
+## Structuring Data
+
+`The structure of the data should be based on the project, audience, uses of the data and expected research outcomes`
+
+-   Choose a structure or software that is appropriate to the type(s) of
+    data being collected AND how it will be analyzed
+-   Be aware of common issues of data structuring
+-   Adhere to best practices for using raw and processed data files
+-   Document any processing done to files, copies made, new files
+    developed, etc.
+
+::: notes
+Now let’s talk about guiding the researcher’s choice for structuring the
+data. The structure of the data should be based on the project,
+audience, uses of the data and expected research outcomes.
+
+You should choose a structure or software that is appropriate to the
+type(s) of data being collected AND how it will be analyzed. Data
+stewards also need to be aware of common issues of data structuring,
+which we will discuss on the next few slides and in the DataOne lecture
+assigned for this module.
+
+They should also adhere to best practices for using raw and processed
+data files and document any processing done to files, copies made, new
+files developed, etc. Developing a data dictionary to accompany the
+files not only provides needed context for the file but also is a
+history of any processing, changes, etc. done to the file.
+:::
+
+## Common Issues in Data Structuring
+
+![](images/clipboard-3739627788.png){fig-align="center"}
+
+::: notes
+Common issues in data structuring are presented on this slide. The
+DataOne lecture, Hogarth chapters and Broman and Woo 2018 article
+explain these in more depth as well as provide solutions for each.
+:::
+
+## Examples {.smaller}
+
+**Ensure Data is Machine Readable**
+
+`Bad`
+
+::: r-stack
+![](images/clipboard-1222092450.png){.fragment width="800" height="500"}
+
+![](images/clipboard-2331275672.png){.fragment width="900" height="500"}
+:::
+
+## Examples {.smaller}
+
+**Ensure Data is Machine Readable**
+
+`Good`
+
+![](images/clipboard-2491711902.png)
+
+## Examples {.smaller}
+
+**Ensure Data is Machine Readable**
+
+`Ok`
+
+![](images/clipboard-2932492010.png)
+
+-   could help data entry
+
+-   `.csv` or `.tsv` copy would need to be saved.
+
+## Choosing Structure/Software
+
+`Predominant structures for organizing data are:`
+
+-   Spreadsheets
+-   Databases
+-   Text files
+-   Instrument-dependent data outputs that may be spreadsheets or
+    databases
+
+::: notes
+Choosing the appropriate structure or software for data collection is
+critical to the successful use, analysis, and re-use of the data and
+outcomes of the research project.
+
+There some predominant structures for organizing data that you have
+probably used in projects, such as:
+
+\- Spreadsheets
+
+\- Databases
+
+\- Text files
+
+\- Instrument-dependent data outputs that may be spreadsheets or
+databases or some other format specific to the instrument and data
+collecting method
+
+Choosing which of these to use is dependent on many variables of the
+project, its audience, and desired uses and outputs.
+:::
+
+## Spreadsheets vs. Databases
+
+::: columns
+::: {.column width="50%"}
+`Spreadsheets`
+
+-   Mostly numeric data
+
+-   Data requires calculations
+
+-   Statistics and/or statistical analysis is needed
+
+-   Data is non-relational
+
+-   Few people need to work on the data
+:::
+
+::: {.column width="50%"}
+`Databases`
+
+-   Large amount of data
+
+-   Long strings of data in a field
+
+-   Records require the use of a primary key or unique identifier
+
+-   Requires relational abilities
+
+-   Many people need to work with the data
+:::
+:::
+
+::: notes
+The two most common forms of data collection are spreadsheets like Excel
+or databases like Access or MySQL. The next two slides present guidance
+on how to determine which is most appropriate for the data of the
+project. You also may need to use more than one form, depending on the
+project needs and types of data gathered. Also refer to Hogarth chapters
+3 and 4 and the DataOne lecture.
+:::
+
+## Spreadsheets vs. Databases (Cont.)
+
+::: columns
+::: {.column width="50%"}
+`Spreadsheets`
+
+-   Great for charts, graphs, calculations
+
+-   Flexible about cell content type – cells in same column can contain
+    numbers or text
+
+-   Lack record integrity – can sort a column independently of all
+    others
+
+-   Easy to use - but harder to maintain as complexity and size of data
+    grows
+:::
+
+::: {.column width="50%"}
+`Databases`
+
+-   Easy to query to select portions of data
+
+-   Data fields are typed. For example, only integers are allowed in
+    integer fields
+
+-   Columns cannot be sorted independently of each other
+
+-   Steeper learning curve than a spreadsheet
+:::
+:::
+
+::: notes
+Read the Slides.
+:::
+
+## Structuring Data
+
+![](images/clipboard-367526936.png){fig-align="center"}
+
+::: notes
+This helpful table is from the UK Data Archive’s publication (available
+in this module’s readings) and presents recommended file formats
+specific to type of data.
+
+This guide is useful during and after the research project and as one
+plans for long-term preservation of the data. It covers quantitative,
+qualitative, textual, and image and video file formats.
+:::
+
+## Storing Data
+
+`There are many options for storing data, some better than others`
+
+-   Personal laptops and computers
+-   Network storage
+-   External storage devices
+-   Removable storage devices
+-   Remote storage
+-   Physical storage
+-   Cloud storage
+-   LOCKSS
+
+::: notes
+Storing data is the third aspect of organizing data we will discuss in
+this module.
+
+There are many options for storing data during the research project,
+some better than others. Long-term storage of data includes additional
+options not listed on this slide such as an institutional repository,
+like ShareOK that you learned about last module, or a discipline
+specific repository. We will address how to choose long-term storage
+options later in the semester.
+
+As you review these options think about the potential issues of data
+loss, data corruption, data security and access related to each.
+
+For example, what are the possible issues with using a personal laptop
+or desktop computer for storing the research data? Is using a removable
+storage device like a USB drive a safe option?
+
+The last bullet on this slide is [LOCKSS (Lots of Copies Saves
+Stuff)](https://www.lockss.org/) or Saves Sanity!. Best practice is to
+make several copies (at a minimum three copies) of the data files (raw
+and any copies made) and storing them in different places, such as off
+site, in the cloud, etc.
+
+The Henderson and Oliver & Harvey chapters provide more discussion on
+storage options and potential issues with each.
+:::
+
+## Storing Data (Cont.)
+
+`Backing up raw and copies of data is essential!`
+
+-   Full backup of all files
+
+-   Differential incremental backup of files changed since last
+    incremental or full backup
+
+-   Cumulative incremental backup of files changed since last full
+    backup
+
+::: notes
+Henderson Ch. 5 and Oliver & Harvey, Ch. 14 discuss the importance of
+backing up data at all stages of the data life cycle.
+
+As noted on the last slide, it is important to have more than one copy
+of each file. It is critical to BACK UP each of the files and to do so
+on a regular basis. There are both FULL and INCREMENTAL backups that
+should be scheduled.
+
+It is also essential to know who is responsible for conducting the
+backups and to set up a schedule that is followed. In a full backup the
+entire set of files are backed up.
+
+A full backup should be done at least every six months though some best
+practices call for monthly full backups. A differential incremental
+backup is done in between a full backup and only backs up any files that
+have changed since the last incremental backup or full backup.
+
+A cumulative incremental backup is of files changed since the last full
+back up, not the last incremental backup. See the Henderson and Oliver &
+Harvey chapters for further discussion on types of backups and best
+practices.
+:::
+
+# Going Forward
+
+::: notes
+In the next module, we will continue our discussion on how to support
+researchers in the collection of data by documenting and describing the
+dataset(s) during research.
+
+We will review documentation best practices (data dictionaries and
+README files), and potential metadata schemes to use to ensure use,
+re-use, sharing, and interoperability.
+:::
