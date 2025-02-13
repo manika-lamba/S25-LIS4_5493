@@ -11,7 +11,7 @@ Create a new R script in RStudio. **File** -> **New File** -> **R script**
 Enter the following commands into your new RScript
 
 ```
-yourname = read.csv("example_data.csv")
+myscript = read.csv("example_data.csv")
 plot(mydata$xdata,mydata$ydata)
 ```
 
