@@ -15,7 +15,7 @@ yourname = read.csv("example_data.csv")
 plot(mydata$xdata,mydata$ydata)
 ```
 
-Save the R Script as `myscript.R`. When you run it, it should load and plot the data.
+Save the R Script as `yourname.R`. When you run it, it should load and plot the data.
 
 Your directory should now contain 4 files:
 
