@@ -1,4 +1,4 @@
-# Introduction to Reproducible Research in R and R Studio Activity
+# Activity-2
 
 In this activity, we are going to get you started with using version control from within RStudio. 
 
