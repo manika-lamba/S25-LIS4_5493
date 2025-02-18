@@ -4,7 +4,7 @@ The purpose of this activity is to teach you version control. In order to do thi
 
 Our initial project will be extremely simple -- a very small data file and a script that loads and plots it. Later, we'll add code to fit a nonlinear curve to it. 
 
-Download this data to your project folder: [Example data](https://github.com/manika-lamba/S25-LIS4_5493/tree/main/Activity%202/activity-2/example)
+Download this data to your project folder: [Example data](https://github.com/manika-lamba/S25-LIS4_5493/tree/main/Activity-2/instructions/example)
 
 Create a new R script in RStudio. **File** -> **New File** -> **R script**
 
