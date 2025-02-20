@@ -1,0 +1,136 @@
+---
+title: "Activity 3: Creating Metadata with `dataspice`"
+format:
+  html:
+    toc: true
+    code-fold: true
+    embed-resources: true
+---
+
+## Prerequisites
+
+Before we begin, ensure you have the following:
+
+-   **R and RStudio**: Make sure you have R installed on your system, and RStudio is recommended for an integrated development environment.
+
+-   **dataspice package**: Install the `dataspice` package from CRAN by running
+
+``` r
+install.packages("dataspice")
+```
+
+## Step 1: Setting Up Your Project
+
+1.  **Create a New R Project**: Organize your work by creating a new RStudio project. This helps in managing your files and maintaining a clean workspace.
+
+2.  **Organize Your Data**: Place your dataset(s) in a folder named `data` within your project directory. This standardization aids in seamless metadata creation.
+
+## Step 2: Initializing the Metadata Structure
+
+Use `dataspice` to create the necessary metadata templates:
+
+``` r
+library(dataspice)
+create_spice(dir = "data")
+```
+
+This command generates a `metadata` folder inside your `data` directory, containing four CSV files:
+
+-   `access.csv`: Details about data accessibility.
+
+-   `attributes.csv`: Information about variables in your dataset.
+
+-   `biblio.csv`: Dataset-level metadata such as title, description, license, and coverage.
+
+-   `creators.csv`: Information about the dataset's creators.
+
+## Step 3: Populating Metadata Files
+
+You can edit these CSV files manually or use `dataspice`'s interactive functions.
+
+1.  **Editing `creators.csv`**:
+
+Launch the interactive editor to add information about the dataset's creators:
+
+``` r
+edit_creators()
+```
+
+Fill in the required fields and save your changes.
+
+2.  **Preparing `access.csv`**:
+
+Populate `access.csv` with details from your data files:
+
+``` r
+prep_access()
+```
+
+After running this, you can manually add URLs or DOIs where the data can be accessed.
+
+3.  **Editing `biblio.csv`**:
+
+Provide high-level information about your dataset, including title, description, license, and spatial/temporal coverage.
+
+Use the interactive editor:
+
+``` r
+edit_biblio()
+```
+
+4.  **Editing `attributes.csv`**:
+
+Document each variable in your dataset, including its name, description, and data type.
+
+Use the interactive editor:
+
+``` r
+edit_attributes()
+```
+
+Ensure each variable is clearly described to aid future users in understanding the dataset.
+
+**Step 4: Creating a JSON-LD Metadata File**
+
+Now that all our metadata files are complete, we can **compile it all into a structured `dataspice.json` file** in our `data/metadata/` folder.
+
+``` r
+write_spice()
+```
+
+install.packages(c("jsonlite", "listviewer"))
+
+``` r
+jsonlite::read_json(here::here("data", "metadata", "dataspice.json")) %>% 
+    listviewer::jsonedit()
+```
+
+It will look like this:
+
+![](images/clipboard-1590333401.png)
+
+## Build README site
+
+Finally, we can **use the `dataspice.json` file** we just created to **produce an informative README web page** to include with our dataset for humans to enjoy! 🤩
+
+We use function **`dataspice::build_site()`** which **creates file `index.html`** in the `docs/` folder of your project (which it creates if it doesn’t already exist).
+
+``` r
+build_site()
+```
+
+### View the resulting file [here](https://annakrystalli.me/rrresearchACCE20/dataspice/index.html)
+
+Here’s a screen shot!
+
+![](images/clipboard-107325230.png)
+
+### Example completed metadata files
+
+-   [`access.csv`](https://github.com/annakrystalli/rrresearchACCE20/blob/master/data/metadata/access.csv)
+
+-   [`attributes.csv`](https://github.com/annakrystalli/rrresearchACCE20/blob/master/data/metadata/attributes.csv)
+
+-   [`biblio.csv`](https://github.com/annakrystalli/rrresearchACCE20/blob/master/data/metadata/biblio.csv)
+
+-   [`creators.csv`](https://github.com/annakrystalli/rrresearchACCE20/blob/master/data/data/metadata/creators.csv)
