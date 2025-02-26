@@ -58,15 +58,15 @@ edit_creators()
 
 Fill in the required fields and save your changes.
 
-2.  **Preparing `access.csv`**:
+2.  **Editing** `access.csv:`
 
-Populate `access.csv` with details from your data files:
+The `access.csv` contains details about **where the data can be accessed**.\
 
-``` r
-prep_access()
+Use the interactive editor:
+
+``` R
+edit_access()
 ```
-
-After running this, you can manually add URLs or DOIs where the data can be accessed.
 
 3.  **Editing `biblio.csv`**:
 
@@ -98,7 +98,19 @@ Now that all our metadata files are complete, we can **compile it all into a str
 write_spice()
 ```
 
-install.packages(c("jsonlite", "listviewer"))
+Install and call the required libraries:
+
+``` r
+install.packages(c("jsonlite", "listviewer", "here", "magrittr", "pkgdown")
+```
+
+``` R
+library(jsonlite) 
+library(listviewer) 
+library(here) 
+library(magrittr) 
+library(pkgdown)
+```
 
 ``` r
 jsonlite::read_json(here::here("data", "metadata", "dataspice.json")) %>% 
@@ -109,14 +121,17 @@ It will look like this:
 
 ![](images/clipboard-1590333401.png)
 
-## Build README site
+## Step 4: Build README site
 
 Finally, we can **use the `dataspice.json` file** we just created to **produce an informative README web page** to include with our dataset for humans to enjoy! 🤩
 
 We use function **`dataspice::build_site()`** which **creates file `index.html`** in the `docs/` folder of your project (which it creates if it doesn’t already exist).
 
 ``` r
-build_site()
+dataspice::build_site(path = "data/metadata/dataspice.json",
+  template_path = system.file("template.html5", package = "dataspice"),
+  out_path = "docs/index.html"
+)
 ```
 
 ### View the resulting file [here](https://annakrystalli.me/rrresearchACCE20/dataspice/index.html)
@@ -124,6 +139,10 @@ build_site()
 Here’s a screen shot!
 
 ![](images/clipboard-107325230.png)
+
+### Step 5: Add a READMe File 
+
+### Step 6: Publish the index.html on GitHub
 
 ### Example completed metadata files
 
