@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.555">
+
+  <meta name="author" content="Dr.&nbsp;Manika Lamba">
+  <title>Supporting Analyzing Data</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Supporting Analyzing Data</h1>
+  <p class="subtitle">LIS 4/5493: Data Stewardship</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Manika Lamba 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+<aside class="notes">
+<p>Data stewards support research and researchers in many ways as we have already learned in modules 4.1 and 4.2. They also assist researchers in the analysis of data by suggesting software and methods for analyzing data.</p>
+<p>However, before data can be analyzed it is critical that it be cleaned and not include errors that can be corrected. There are tools and methods that data stewards use to clean common errors in data.</p>
+<p>In this module, we will learn more about cleaning data, exploratory data analysis and visualization.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="images/intro.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>Data analysis is not just about collecting numbers—it’s about transforming raw data into meaningful insights, knowledge, and ultimately, impact. However, misinterpretation or excessive manipulation can lead to misleading conclusions.</p>
+<p>In this lecture, we will explore:</p>
+<ul>
+<li>The journey from raw data to actionable insights</li>
+<li>How to structure and interpret data effectively</li>
+<li>Avoiding pitfalls in data manipulation and bias</li>
+<li>Turning insights into meaningful decisions</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-driven-vs.-theory-driven" class="slide level2">
+<h2>Data-Driven vs.&nbsp;Theory-Driven</h2>
+
+<img data-src="images/2.png" class="r-stretch"><aside class="notes">
+<p>There are two fundamental approaches to analyzing data: (i) Theory-Driven Analysis and (ii) Data-Driven Analysis.</p>
+<p>These approaches shape how we interpret data, build models, and make decisions across various fields, including science, engineering, business, and social sciences. Understanding the difference between them is crucial for determining the best method to use when approaching a research question or real-world problem.</p>
+<p><strong>Theory-driven analysis</strong> starts with a well-established theory or hypothesis before looking at the data. In this approach, we define a research question based on existing knowledge, frameworks, or mathematical models and then analyze the data to validate or refine our theory. This method is commonly used in disciplines like physics, economics, and psychology, where researchers develop models based on principles and then test them using empirical data.</p>
+<p>For example, in economics, supply and demand theory predicts that when the price of a product increases, demand decreases. A theory-driven approach would involve collecting data on prices and sales and then using statistical methods to test whether the observed trend aligns with the theoretical prediction. Similarly, in physics, the laws of motion describe how objects behave under force, and data is analyzed within the framework of these principles to verify or refine existing models.</p>
+<p>The main advantage of theory-driven analysis is interpretability—since the model is grounded in well-understood principles, we can explain why a certain relationship exists. However, a major limitation is that it can be rigid—if the real-world data does not fit the theory, we might miss important insights or fail to capture hidden complexities.</p>
+<p>On the other hand, <strong>data-driven analysis</strong> does not start with a predefined theory but instead lets the data reveal patterns, relationships, and trends. This approach is widely used in machine learning, artificial intelligence, and big data analytics, where large datasets are processed using algorithms that can uncover hidden patterns without relying on prior theoretical assumptions.</p>
+<p>For instance, in healthcare, machine learning models can analyze thousands of patient records to detect disease patterns that doctors might not have predicted using traditional medical theories. Similarly, in marketing, businesses use customer behavior data to identify purchasing trends and optimize their strategies without starting with a predefined hypothesis about consumer behavior.</p>
+<p>The strength of data-driven analysis is that it is flexible and adaptable—it can detect patterns and relationships that traditional theory-driven approaches might overlook.</p>
+<p>However, a major drawback is that these models often lack interpretability—while they might make accurate predictions, we may not fully understand why certain patterns emerge. Additionally, data-driven approaches require large datasets, and poor data quality can lead to misleading conclusions.</p>
+<p>Neither approach is universally better than the other; the choice depends on the problem at hand. Theory-driven analysis is ideal when we have a strong theoretical foundation and need to validate or refine it. Data-driven analysis is useful when dealing with complex, high-dimensional data where traditional models may fall short.</p>
+<p>In practice, a hybrid approach often works best. Many modern research and industrial applications combine theory-driven insights with data-driven methods. For example, in climate science, researchers use established atmospheric physics models (theory-driven) alongside machine learning techniques (data-driven) to improve weather predictions.</p>
+<p>As you advance in your studies and careers, consider how these two approaches complement each other and how you can use them effectively in your own data analysis.</p>
+<p>Can you think of any examples from your own experiences where one approach worked better than the other?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-science-as-an-interdisciplinary-field" class="slide level2">
+<h2>Data Science as an Interdisciplinary Field</h2>
+
+<img data-src="images/3.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>Many people think data science is just about coding or working with big datasets, but in reality, it is a combination of multiple fields that work together to extract meaningful insights from data.</p>
+<p>At the core of data science, we have <strong>mathematics and statistics</strong>, which provide the theoretical foundation for analyzing data, understanding patterns, and making predictions. Without statistical methods, we wouldn’t be able to validate our findings or measure uncertainty.</p>
+<p>Next, we have <strong>computer science and data engineering</strong>, which are essential for collecting, storing, and processing large amounts of data efficiently. Think about companies like Google or Netflix—they deal with massive datasets, and without proper data engineering, it would be impossible to manage them.</p>
+<p>Another key element is <strong>domain expertise</strong>—which means understanding the specific field where data science is applied. For example, if you’re working in healthcare, you need to understand medical data; if you’re in finance, you need knowledge of economic trends. Data science is not just about numbers; it’s about applying the right techniques to solve real-world problems.</p>
+<p>Then, we have <strong>scientific methods</strong>—a structured way of testing hypotheses and ensuring our analysis is reliable. Whether you’re running an A/B test for a website or experimenting with machine learning models, following scientific principles ensures accuracy.</p>
+<p>High-performance computing (HPC) plays a role when dealing with massive datasets and complex algorithms that require significant computational power. For instance, training a deep learning model on millions of images requires specialized hardware and efficient computing techniques.</p>
+<p>Finally, data visualization is crucial. Even the most sophisticated analysis is useless if you can’t communicate it effectively. Good visualizations make complex insights easy to understand and help drive better decision-making.</p>
+<p>So, as you can see, data science is much more than just programming or statistics—it’s an interdisciplinary field that brings together knowledge from different domains.</p>
+<p>Understanding this interconnectedness is key to becoming a successful data scientist.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-analysis-vs.-data-analytics" class="slide level2">
+<h2>Data Analysis vs.&nbsp;Data Analytics</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><code>Data Analysis</code></p>
+<p>The process of breaking down data collected about things that have already happened to find patterns</p>
+<ul>
+<li><p>Organizing Data</p></li>
+<li><p>Start looking for Patterns</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><code>Data Analytics</code></p>
+<p>The process of using insights gained from past data to make decisions about the future</p>
+<ul>
+<li><p>Larger in Scope</p></li>
+<li><p>Making Decisions</p></li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>It would be easy to confuse data analysis and data analytics as the same. But while they’re definitely related, there are some key distinguishing characteristics.</p>
+<p>We’re going to explore what makes them different. Let’s start with a definition of each.</p>
+<p><strong>Data analysis</strong> is the process of breaking down data about things that have already happened and trying to find patterns that could lead to meaningful insights. It’s a way of taking raw data and turning it into useful information.</p>
+<p>As an example, a clothing manufacturer might use data analysis to find out that sales of bathing suits depends on the temperature outside. The hotter it is, the more the bathing suits sold.</p>
+<p>While data analysis focuses on data collected in the past, <strong>data analytics</strong> is about using what we learn about the past to help us predict what could happen next in the future.</p>
+<p>Using the clothing manufacturer again, knowing that bathing suit sales depend on the temperature, they might plan their manufacturing process to meet seasonal bathing suit demands. Producing and shipping higher numbers of them as the temperature starts to go up and slowing down production during the colder time of the year.</p>
+<p>Now, lets break down their difference a little further.</p>
+<p><strong>Data analysis</strong> includes organizing and cleaning raw data and finding patterns. It’s about getting a good understanding of what the data is actually telling you.</p>
+<p>While <strong>data analytics</strong> is larger in scope, it takes the findings from your data analysis and uses them to make informed decisions or solve problems. It’s about applying those insights to real-world scenarios.</p>
+<p>So which one is better? Well, it depends.</p>
+<p><strong>Data analysis is the foundation</strong> and <strong>data analytics builds on top of it</strong>.</p>
+<p>In the real world, you’ll likely use both approaches together. Data analysis helps you understand the data and data analytics helps you use that understanding to make a real impact. Let’s move forward and keep understanding these concepts in using data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="exploratory-data-analysis-eda" class="slide level2 smaller">
+<h2>Exploratory Data Analysis (EDA)</h2>
+<p><code>EDA involves the initial exploration and examination of data to gain insights and formulate hypotheses</code></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Benefits of EDA</strong></p>
+<ul>
+<li>Provides an understanding of data</li>
+<li>Identifies outliers</li>
+<li>Facilitates the generation of hypotheses</li>
+</ul>
+<p><strong>Benefits of Using Visualization in EDA</strong></p>
+<ul>
+<li>Visualizations make complex datasets more accessible</li>
+<li>Allows for the detection of patterns, rends, and outliers</li>
+<li>Supports data-driven decision-making</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Limitations of EDA</strong></p>
+<ul>
+<li>Time-consuming</li>
+<li>Can be misleading or incomplete</li>
+<li>Can be difficult to communicate or reproduce</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>Exploratory data analysis, or EDA, is a crucial step in the data analysis process, allowing analysts to understand the structure, patterns, and relationships within datasets.</p>
+<p>Exploratory data analysis involves the initial exploration and examination of data to gain insights and formulate hypotheses. It includes techniques such as summary statistics, data visualization, and correlation analysis.</p>
+<p>EDA has plenty of benefits as a form of data analysis. Let’s examine some of them.</p>
+<p>One benefit is that EDA provides a comprehensive understanding of the characteristics and distributions of variables within the data set.</p>
+<p>It can also help identify outliers, which are missing values and data inconsistencies that may affect some subsequent analysis.</p>
+<p>Finally, EDA facilitates the generation of hypotheses and formulation of research questions based on observed patterns and trends.</p>
+<p>Visualizations are an important component of EDA, allowing analysts to explore the relationships between variables and uncover patterns visually.</p>
+<p>Techniques such as histograms, scatterplots, and boxplots are commonly used to visualize data distributions and relationships.</p>
+<p>Let’s explore some key benefits of using visualizations in exploratory data analysis.</p>
+<p>Visualizations make complex datasets more accessible and understandable, enabling stakeholders to grasp valuable insights quickly.</p>
+<p>Visualizations also help when trying to detect patterns, trends, and outliers that may not be apparent from numerical summaries alone.</p>
+<p>Another benefit is that they support data driven decision making. They do this by providing compelling visual evidence to support hypotheses and conclusions.</p>
+<p>Exploratory data analysis is a starting point when working with a set of data and is less structured than more in depth analysis, as the intent is to just find initial ideas to explore further.</p>
+<p>With that in mind, there are some limitations to exploratory data analysis.</p>
+<p>One is that it can be very time consuming when first examining data with no idea where to start.</p>
+<p>Digging through the pile of data and trying different combinations of variables to evaluate can take a significant amount of time.</p>
+<p>Another is that it can be misleading or incomplete.</p>
+<p>Initial impressions of the data being analyzed can indicate one conclusion or way of thinking that may be invalidated as more data is uncovered and evaluated and the findings and methods can be difficult to communicate or reproduce.</p>
+<p>Exploratory data analysis is less structured than a more in depth investigation into a specific finding, so depending on the methods taken and the amount of documentation generated about the way the data was analyzed, it can be very hard to explain or share what was found.</p>
+<p>In summary, exploratory data analysis is a critical phase in the data analysis process, providing valuable insights into the structure and characteristics of datasets.</p>
+<p>While EDA has its advantages and limitations, when conducted effectively, it serves as a foundational step for further analysis and hypothesis formulation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="common-tools-used-in-data-analysis-and-exploration" class="slide level2">
+<h2>Common Tools Used in Data Analysis and Exploration</h2>
+
+<img data-src="images/16.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>The days of working with data with paper and pencil are long gone. Today, we’re lucky to have many digital applications to help us.</p>
+<p>We’ll discuss common tools for analyzing and exploring data, starting with spreadsheets.</p>
+<p>A spreadsheet is an application that’s used to organize, store, and analyze data in a grid like structure of rows and columns. Microsoft Excel and Google sheets are examples of very popular Spreadsheet applications that are in use today.</p>
+<p>Some of the benefits of Spreadsheets are, Spreadsheets are easy to use, they’re relatively simple to use for basic data analysis tasks. And have many built-in functions for sorting, analyzing, and performing calculations. They also offer visualizations, allowing you to create charts and graphs to present data.</p>
+<p>It’s common for Spreadsheets to be included in existing software suites like Microsoft Office and Google Workspace, helping to make them a cost effective tool.</p>
+<p>While Spreadsheets are good enough for some datasets and analysis needs, there are some limitations.</p>
+<p>A data set size is a big one, managing large datasets in a Spreadsheet can become cumbersome, slowing down and requiring more time to process functions like sorting and calculations.</p>
+<p>They also have limitations on how much data they can hold. Collaboration is another possible challenge, Spreadsheets can often be difficult to share and collaborate on complex analyses in real time.</p>
+<p>Spreadsheets historically have not offered as advanced data analysis and visualization capabilities of some of the other tools.</p>
+<p>But new capabilities are being developed and added constantly, so if they can’t do it now, they might be able to do it tomorrow. Spreadsheets help make data tools accessible for all budgets and all levels of experience. However, they might not be enough if needing advanced visualization capabilities.</p>
+<p>More purpose built data analysis tools like Tableau, PowerBI, and QlikView offer more advanced visuals than Spreadsheets. They can help you create interactive charts, graphs, and dashboards to tell compelling data stories. They also provide the ability to explore data, offering intuitive drag and drop features that facilitate data exploration and discovery of trends and patterns.</p>
+<p>These tools offer collaboration features as well, this enables seamless sharing and discussion of data insights with colleagues.</p>
+<p>Data visualization tools might not be an ideal fit for everyone. There’s a learning curve for one, using an application like Tableau or PowerBI will require some training, even more so if mastering the more advanced capabilities is needed.</p>
+<p>And then there’s the cost, is there enough budget available to pay for the costs of these tools?</p>
+<p>While Spreadsheets are included in software suites that are already commonly used, these tools will require additional costs in many cases.</p>
+<p>Some tools can be expensive, especially for enterprise level deployments. Spreadsheets and data visualization tools are excellent for data analysis and exploration, but they are applications with predefined options and functionality.</p>
+<p>This brings limitations that the use of programming languages like Python and R do not have. Programming languages provide for greater control over data manipulation, analysis, and visualization. They also offer advanced features, typically supporting complex statistical analysis, machine learning algorithms, and data modeling techniques.</p>
+<p>Many programming languages are freely available with a large and supportive community of programmers contributing to an open source environment of advanced technologies that can be utilized to enhance your data analysis and exploration efforts.</p>
+<p>Now, let’s examine the benefits and limitations of using programming languages. Programming languages offer significant advantages, they offer versatility.</p>
+<p>Programming languages can handle a wide range of data analysis tasks, from simple to highly complex. They are also significantly more scalable than spreadsheets and other analysis tools.</p>
+<p>They can perform analysis on much larger datasets than a spreadsheet and can be used in conjunction with many different tools and workflows.</p>
+<p>They also have automation potential, programming languages automate repetitive data cleaning and analysis processes. While very powerful, using a programming language like R or Python presents significant challenges compared with Spreadsheets or tools like Tableau and PowerBI.</p>
+<p>With programming languages, there is a steeper learning curve. Programming languages require coding skills and more fundamental knowledge of data science concepts. There is also time investment, learning a new programming language and becoming proficient with it in data analysis takes time and dedication.</p>
+<p>This can be significant, especially if only basic data analysis tasks are needed. Programming is prone to errors introduced typically during development and debugging code can also be time consuming.</p>
+<p>Even a small error in your code can lead to inaccurate results or program crashes. While programming languages offer a powerful and versatile toolkit for data analysis and exploration, they are not a one size fits all solution.</p>
+<p>So, which of the tools we discussed is the best? The answer is, it depends. Spreadsheets are great if the need is simple and the dataset is not very large.</p>
+<p>However, if you’re working with a large dataset or need more advanced visualization capabilities than spreadsheets can offer, using a more specialized data visualization tool like Tableau might be necessary.</p>
+<p>Finally, if you need additional capability and coding in R or Python is not a problem, then using a programming language might be the best fit.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-preparation---a-labor-intensive-work" class="slide level2">
+<h2>Data Preparation - a Labor Intensive Work</h2>
+
+<img data-src="images/5.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>Read the Slides</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="raw-vs.-tidy-data" class="slide level2">
+<h2>Raw vs.&nbsp;Tidy Data</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><code>Raw (or Primary) Data</code></p>
+<ul>
+<li><p>In its original form after collection</p></li>
+<li><p>Might contains missing data points and errors</p></li>
+<li><p>“Raw” is relative</p></li>
+<li><p>Shall keep a copy of whenever possible</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><code>Tidy (or Clean) Data</code></p>
+<ul>
+<li><p>In a processed or predefined form</p></li>
+<li><p>Missing data is marked and errors are removed</p></li>
+<li><p>“Tidy” is relative</p></li>
+<li><p>Shall keep a copy whenever possible with version tags</p></li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p><strong>Raw data</strong>, also known as primary data, is the unprocessed information collected directly from a source. It remains in its original form and may contain missing data points, errors, or inconsistencies due to factors like faulty sensors or manual entry mistakes. The term “raw” is relative, as what one researcher considers raw may already be slightly processed for another. Since raw data serves as the foundation for analysis, it is crucial to keep a copy whenever possible to ensure that the original data is always accessible.</p>
+<p>On the other hand, <strong>tidy data</strong>, also referred to as clean data, has undergone processing to fit a predefined structure, making it more suitable for analysis. In this form, missing data is identified, and errors are removed to improve accuracy and reliability. Like raw data, “tidy” is also a relative term, as different analyses may require further refinements. A best practice in data management is to maintain copies of tidy data with version tags to track modifications and ensure reproducibility.</p>
+<p>In essence, raw data is like unprocessed ingredients before cooking—it may contain impurities and inconsistencies. Tidy data, in contrast, is the final dish, ready for consumption and analysis.</p>
+<p>Converting raw data into tidy data is a fundamental step in any data-driven workflow, ensuring clarity and usability for further insights.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="quartz-guide-to-bad-data" class="slide level2">
+<h2>Quartz Guide to Bad Data</h2>
+<p><code>What Should we Do with Bad Data?</code></p>
+<ul>
+<li>Issues that your source should solve
+<ul>
+<li>missing values, inconsistency, duplicates, etc.</li>
+</ul></li>
+<li>Issues that you should solve
+<ul>
+<li>data in binary formats, annotations, formats, etc.</li>
+</ul></li>
+<li>Issues a third-party expert should help you solve
+<ul>
+<li>untrustworthy source,</li>
+</ul></li>
+<li>Issues a programmer should help you solve
+<ul>
+<li>data in scanned documents, wrong aggregation, etc.</li>
+</ul></li>
+</ul>
+<div class="footer">
+<p>Credit: <a href="https://github.com/Quartz/bad-data-guide?tab=readme-ov-file" class="uri">https://github.com/Quartz/bad-data-guide?tab=readme-ov-file</a></p>
+</div>
+<aside class="notes">
+<p>Now, we are going to discuss how to handle <strong>bad data</strong> using the framework. Bad data is inevitable, but knowing <strong>who should handle different issues</strong> makes the cleaning process more efficient. Some issues belong to the data provider, while others require analysts, experts, or programmers to fix.</p>
+<p>Not all data is perfect, and dealing with bad data is an essential part of working in analytics, research, and data science. Understanding <strong>who should handle different types of data issues</strong> can help us clean and process data efficiently. By assigning responsibilities appropriately, we ensure that data is as clean, reliable, and usable as possible for decision-making.</p>
+<p><strong>What Should We Do with Bad Data?</strong><br>
+Bad data can take many forms, such as missing values, inconsistencies, incorrect formats, and untrustworthy sources. Depending on the type of issue, different people or teams should handle the problem.</p>
+<ul>
+<li><p><strong>Issues that your source should solve</strong>: These include missing values, inconsistent records, and duplicate entries. If the problem comes from the original data provider, they should take responsibility for fixing it at the source. For example, a survey company should ensure responses are complete before delivering the data.</p></li>
+<li><p><strong>Issues that you should solve</strong>: Some problems, such as data stored in binary formats, incorrect annotations, or formatting inconsistencies, fall under your responsibility. As a data analyst or scientist or data steward, you must clean and restructure this data so it can be used for analysis.</p></li>
+<li><p><strong>Issues a third-party expert should help you solve</strong>: When dealing with <strong>an untrustworthy data source</strong>, you may need an external expert to verify or validate the data. If a dataset is unreliable or questionable, an expert in the field can assess whether it should be used or discarded.</p></li>
+<li><p><strong>Issues a programmer should help you solve</strong>: Some data problems require technical solutions beyond a typical analyst’s skill set. These include <strong>data trapped in scanned documents (OCR processing), wrongly aggregated data, or improperly structured databases</strong>. In such cases, a programmer can write scripts or develop tools to extract and correct the data.<br>
+</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-components-of-tidy-dataset" class="slide level2 smaller">
+<h2>Key Components of Tidy Dataset</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><code>Metadata</code> that include the description about the variables, units, summary choices, and experimental study design to make the work reproducible</p></li>
+<li><p><code>Processing script or information about the software used</code> to process the data</p></li>
+<li><p><code>Standardized format</code> to make it more efficient to process</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/6.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>A <strong>tidy dataset</strong> is structured in a way that makes it easier to analyze, process, and reproduce results. One key component of a tidy dataset is <strong>metadata</strong>, which provides essential background information about the data. Metadata includes descriptions of variables, their units, summary choices, and details of the experimental study design. This ensures that anyone using the dataset understands its context and can replicate the study if needed.</p>
+<p>Another important component is a <strong>processing script</strong> or documentation about the software used to clean and manipulate the data. Keeping track of these details allows others to follow the same steps to obtain consistent results, making the research more transparent and reliable.</p>
+<p>Finally, tidy datasets follow a <strong>standardized format</strong>, where each variable is stored in its own column, and each observation is stored in its own row. This structure makes data easier to manage, analyze, and share across different software and platforms. By maintaining these principles, data remains organized, reproducible, and ready for meaningful insights.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="types-of-data-science-problems" class="slide level2 smaller">
+<h2>Types of Data Science Problems</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><strong>Descriptive</strong> (summaries)</p></li>
+<li><p><strong>Exploratory</strong> (search for unknown)</p></li>
+<li><p><strong>Inferential</strong> (find correlations)</p></li>
+<li><p><strong>Predictive</strong> (make predictions)</p></li>
+<li><p><strong>Casual</strong> (explore causations)</p></li>
+<li><p><strong>Mechanistic</strong> (determine governing principles)</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/7.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>In data science, different types of analyses serve specific purposes, helping us derive insights and make informed decisions.</p>
+<p><strong>Descriptive analysis</strong> focuses on summarizing data through averages, percentages, and other statistical measures, presenting findings without interpretation or prediction. For instance, reporting the average test scores of students in a school falls under this category.</p>
+<p>When searching for hidden patterns or trends without prior assumptions, we turn to <strong>exploratory analysis</strong>, which is commonly used to uncover insights, such as analyzing customer purchase behavior to detect trends.</p>
+<p>Moving beyond summaries, <strong>inferential analysis</strong> allows us to determine if findings from a sample can be generalized to a larger population. It often involves hypothesis testing, as seen in medical studies evaluating the effectiveness of new drugs.</p>
+<p>If the goal is to forecast future outcomes based on past data, <strong>predictive analysis</strong> is used, typically through machine learning models. A bank assessing whether a customer is likely to default on a loan based on their credit history is a classic example.</p>
+<p>For deeper insights, <strong>causal analysis</strong> helps determine whether one variable directly influences another, establishing cause-and-effect relationships. Unlike simple correlation, this approach examines direct impact, such as studying how regular exercise affects weight loss.</p>
+<p>Taking this a step further, <strong>mechanistic analysis</strong> seeks to uncover the fundamental principles governing these relationships. This is especially important in fields like biology and engineering, where researchers aim to understand how a drug interacts with the human body at a molecular level.</p>
+<p>Each of these analytical approaches plays a crucial role in data science, from simple data summaries to in-depth explorations of causality and governing mechanisms. Selecting the right type of analysis depends on the specific question being addressed, ensuring meaningful and actionable insights.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-science-project-lifecycle" class="slide level2">
+<h2>Data Science Project Lifecycle</h2>
+
+<img data-src="images/8.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>The <strong>Data Science Project Lifecycle</strong> consists of a structured process that ensures data-driven insights are accurate, meaningful, and actionable. This lifecycle follows the <strong>OSEMN</strong> framework, which includes five key steps: Obtain, Scrub, Explore, Model, and Interpret.</p>
+<p>The first step, <strong>Obtain</strong>, involves gathering data from relevant sources such as databases, APIs, or external datasets. This data serves as the foundation for the entire project.</p>
+<p>Once collected, the data is often messy and unstructured, requiring the <strong>Scrub</strong> phase. Here, data is cleaned and transformed into a format that machines can understand by handling missing values, removing duplicates, and standardizing formats.</p>
+<p>After cleaning, the <strong>Explore</strong> phase begins, where analysts and data scientists search for patterns, trends, and relationships within the data using statistical methods and visualizations. This exploratory analysis helps to shape hypotheses and guide further modeling.</p>
+<p>In the <strong>Model</strong> phase, machine learning or statistical models are constructed to predict or forecast outcomes based on the data. This step is crucial in transforming insights into actionable intelligence.</p>
+<p>Finally, the <strong>Interpret</strong> phase ensures that the results are put to good use by translating the model’s output into meaningful business decisions, reports, or automated systems.</p>
+<p>Each step in this lifecycle is essential for ensuring the accuracy, reliability, and impact of data science projects. By following this structured approach, data scientists can derive valuable insights and drive data-informed decision-making.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="visualization-for-exploratory-data-analysis" class="title-slide slide level1 center">
+<h1>Visualization for Exploratory Data Analysis</h1>
+<aside class="notes">
+<p>Visualization is an essential part of exploratory data analysis, enabling faster comprehension, better decision-making, and more impactful storytelling with data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="a-picture-is-worth-a-thousand-words" class="slide level2">
+<h2>A Picture Is Worth a Thousand Words</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Our brains have been evolved to be very efficient in visual analysis</p>
+<p>Visualization helps us to:</p>
+<ul>
+<li><p>absorbs information quickly</p></li>
+<li><p>connect the dots</p></li>
+<li><p>find patterns and outliers</p></li>
+<li><p>acquire &amp; share insights</p></li>
+<li><p>attract audience</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/9.png"></p>
+</div>
+</div>
+<aside class="notes">
+<p>The saying <em>“A picture is worth a thousand words”</em> holds true in data analysis because our brains are naturally wired to process visual information quickly and efficiently.</p>
+<p>Instead of sifting through raw numbers, visual representations such as graphs, charts, and plots help us absorb information at a glance.</p>
+<p>Through visualization, we can easily identify patterns, trends, and outliers that might otherwise be overlooked in tabular data. It allows us to connect the dots between different variables, uncover hidden relationships, and gain meaningful insights.</p>
+<p>Additionally, visualization is a valuable tool for sharing findings, as it makes complex data more accessible and engaging for others.</p>
+<p>Whether presenting data to a technical audience or a general audience, clear and well-designed visuals help communicate insights effectively and capture attention.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="types-of-visualizations" class="slide level2">
+<h2>Types of Visualizations</h2>
+
+<img data-src="images/10.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<p>Credit: <a href="https://datavizcatalogue.com/" class="uri">https://datavizcatalogue.com/</a></p>
+<p>Python Users: <a href="https://python-graph-gallery.com/" class="uri">https://python-graph-gallery.com/</a></p>
+</div>
+<aside class="notes">
+<p>Data visualization comes in various forms, each serving a specific purpose depending on the type of data being analyzed and the insights we seek. There are many types of visualization that you can choose from once you know more about your data after the EDA process.</p>
+<p>Some of the most common ones are:</p>
+<ol type="1">
+<li><p><strong>Histograms</strong> display the distribution of numerical data, helping us understand the frequency and spread of values.</p></li>
+<li><p><strong>Bar charts</strong> are useful for comparing categorical data, showing differences between groups or trends over time.</p></li>
+<li><p><strong>Pie charts</strong> are commonly used for showing proportions, though they are best for simple comparisons rather than detailed analysis.</p></li>
+<li><p><strong>Line charts</strong> are effective for tracking changes and trends, especially in time-series data.</p></li>
+<li><p><strong>Scatter plots</strong> help visualize relationships between two numerical variables, making it easier to identify correlations and patterns.</p></li>
+<li><p>More advanced visualizations include <strong>heatmaps</strong>, which use color intensity to represent data values and highlight patterns across a matrix, and <strong>box plots</strong>, which summarize data distribution, outliers, and variability.</p></li>
+<li><p><strong>Tree maps</strong> and <strong>word clouds</strong> are great for hierarchical and text-based data, respectively.</p></li>
+</ol>
+<p>Choosing the right visualization depends on the data and the story we want to tell, as each type enhances our ability to interpret information and make informed decisions.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="one-variable-graph" class="slide level2 smaller">
+<h2>One-Variable Graph</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><strong>Histogram</strong> shows distribution and concentration of data</p></li>
+<li><p><strong>Bar Plot</strong> compares the same variable across different groups and shows how the data distributed among the groups</p></li>
+<li><p><strong>Pie Chart</strong> shows the groups of what your data is made, allows you to see the most and least as well as everything in-between, and shows the distribution of the data among groups</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/11.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>One-variable visualization, also known as <strong>univariate visualization</strong>, focuses on analyzing a single variable to understand its distribution, central tendency, and spread. A common method for visualizing one-variable data is a <strong>histogram</strong>, which groups numerical data into bins and displays the frequency of values within each bin. This helps us see patterns such as whether the data is normally distributed, skewed, or contains outliers.</p>
+<p><strong>Bar charts</strong> are another option when dealing with categorical data, showing the frequency of different categories using bars of varying heights.</p>
+<p>Using these visualizations, we can quickly interpret key characteristics of a dataset, such as its shape, spread, and any anomalies, making them essential tools for exploratory data analysis.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="two-variable-graph" class="slide level2 smaller">
+<h2>Two-Variable Graph</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/12.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p><strong>Scatter Plot</strong> shows all the data on the plot, you can see the distribution, correlations, and the spread of the data between two variables</p></li>
+<li><p><strong>Line Plot</strong> similar to scatter plot but the points are connected, make it easier to see the trends and evolution</p></li>
+<li><p><strong>2D Histogram</strong> shows distribution of two variables related to each other</p></li>
+<li><p><strong>Box or Whisker Plot</strong> shows spread of data and statistical information</p></li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>Two-variable visualization, also known as <strong>bivariate visualization</strong>, is used to explore the relationship between two different variables. The choice of visualization depends on the type of data—whether both variables are numerical, categorical, or a mix of both.</p>
+<p>One of the most common ways to visualize two numerical variables is a <strong>scatter plot</strong>, which displays individual data points on a graph with one variable on the x-axis and the other on the y-axis. This helps identify correlations, trends, or clusters in the data. For example, a scatter plot can show whether an increase in one variable leads to an increase or decrease in another.</p>
+<p>Another effective visualization is a <strong>box plot (or box-and-whisker plot)</strong>, which provides a summary of the data’s median, quartiles, and potential outliers. It is particularly useful for detecting variability and spotting extreme values.</p>
+<p>By using these techniques, we can better understand how two variables interact, uncover trends, and gain deeper insights from the data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="three-variable-graph" class="slide level2 smaller">
+<h2>Three Variable Graph</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p><strong>Heatmap</strong> shows two variables and other quantity (amount, intensity, height) with a colormap</p></li>
+<li><p><strong>Multiple-variable bar plot</strong> shows multiple variables for multiple groups</p></li>
+<li><p><strong>3D Plot</strong> shows the 3rd variable on surface in 3D plot</p></li>
+</ul>
+<p>For high-dimensional datasets, applying the t-Distributed Stochastic Neighbor Embedding (t-SNE) algorithm and alike to reduce the dimension.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/13.png"></p>
+</div>
+</div>
+<aside class="notes">
+<p>When we analyze data, sometimes we need to explore the relationship between three different variables simultaneously. This is called <strong>multivariate visualization</strong>, and it helps us uncover more complex patterns and interactions that might not be visible with just one or two variables.</p>
+<p>One common method for visualizing three variables is a <strong>bubble chart</strong>. A bubble chart is similar to a scatter plot, where two numerical variables are plotted on the x and y axes, but a third variable is represented by the size of the bubbles. For example, if we were analyzing cities, the x-axis could represent population, the y-axis could represent average income, and the bubble size could represent the crime rate.</p>
+<p>Another useful visualization is the <strong>3D scatter plot</strong>, which extends a regular scatter plot by adding a third axis (z-axis). This is helpful when we want to see how three numerical variables interact, but it can sometimes be difficult to interpret without interactive tools.</p>
+<p>When both variables are categorical, a <strong>stacked bar chart</strong> or a <strong>heatmap</strong> is useful. These visualizations display how frequently different categories appear together, helping identify patterns and relationships in the data. For a combination of categorical and numerical variables, a <strong>stacked bar chart</strong> can be effective. Here, the x-axis might represent categories (e.g., different product types), the y-axis could show total sales, and the bars can be divided into segments representing a third categorical variable, such as different regions.</p>
+<p>Using three-variable visualizations allows us to gain deeper insights into data relationships, helping us make more informed decisions and detect more complex trends.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="python-visualization-landscape" class="slide level2">
+<h2>Python Visualization Landscape</h2>
+
+<img data-src="images/14.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>This slides shows the popular visualization libraries names in Python.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="key-plotting-concepts-in-matplotlib" class="slide level2 smaller">
+<h2>Key Plotting Concepts in <code>matplotlib</code></h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/15.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<aside class="notes">
+<p>This slide shows the important object names while using matplotlib for visualization in Python.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="quarto-auto-generated-content">
+<p><img src="images/ou.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true,"theme":"whiteboard"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: "separate-page",
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

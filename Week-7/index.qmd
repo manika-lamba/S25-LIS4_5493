@@ -1,0 +1,1016 @@
+---
+title: "Supporting Analyzing Data"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+Data stewards support research and researchers in many ways as we have
+already learned in modules 4.1 and 4.2. They also assist researchers in
+the analysis of data by suggesting software and methods for analyzing
+data.
+
+However, before data can be analyzed it is critical that it be cleaned
+and not include errors that can be corrected. There are tools and
+methods that data stewards use to clean common errors in data.
+
+In this module, we will learn more about cleaning data, exploratory data
+analysis and visualization.
+:::
+
+## 
+
+![](images/intro.png){fig-align="center"}
+
+::: notes
+Data analysis is not just about collecting numbers—it's about
+transforming raw data into meaningful insights, knowledge, and
+ultimately, impact. However, misinterpretation or excessive manipulation
+can lead to misleading conclusions.
+
+In this lecture, we will explore:
+
+-   The journey from raw data to actionable insights
+-   How to structure and interpret data effectively
+-   Avoiding pitfalls in data manipulation and bias
+-   Turning insights into meaningful decisions
+:::
+
+## Data-Driven vs. Theory-Driven
+
+![](images/2.png)
+
+::: notes
+There are two fundamental approaches to analyzing data: (i)
+Theory-Driven Analysis and (ii) Data-Driven Analysis.
+
+These approaches shape how we interpret data, build models, and make
+decisions across various fields, including science, engineering,
+business, and social sciences. Understanding the difference between them
+is crucial for determining the best method to use when approaching a
+research question or real-world problem.
+
+**Theory-driven analysis** starts with a well-established theory or
+hypothesis before looking at the data. In this approach, we define a
+research question based on existing knowledge, frameworks, or
+mathematical models and then analyze the data to validate or refine our
+theory. This method is commonly used in disciplines like physics,
+economics, and psychology, where researchers develop models based on
+principles and then test them using empirical data.
+
+For example, in economics, supply and demand theory predicts that when
+the price of a product increases, demand decreases. A theory-driven
+approach would involve collecting data on prices and sales and then
+using statistical methods to test whether the observed trend aligns with
+the theoretical prediction. Similarly, in physics, the laws of motion
+describe how objects behave under force, and data is analyzed within the
+framework of these principles to verify or refine existing models.
+
+The main advantage of theory-driven analysis is interpretability—since
+the model is grounded in well-understood principles, we can explain why
+a certain relationship exists. However, a major limitation is that it
+can be rigid—if the real-world data does not fit the theory, we might
+miss important insights or fail to capture hidden complexities.
+
+On the other hand, **data-driven analysis** does not start with a
+predefined theory but instead lets the data reveal patterns,
+relationships, and trends. This approach is widely used in machine
+learning, artificial intelligence, and big data analytics, where large
+datasets are processed using algorithms that can uncover hidden patterns
+without relying on prior theoretical assumptions.
+
+For instance, in healthcare, machine learning models can analyze
+thousands of patient records to detect disease patterns that doctors
+might not have predicted using traditional medical theories. Similarly,
+in marketing, businesses use customer behavior data to identify
+purchasing trends and optimize their strategies without starting with a
+predefined hypothesis about consumer behavior.
+
+The strength of data-driven analysis is that it is flexible and
+adaptable—it can detect patterns and relationships that traditional
+theory-driven approaches might overlook.
+
+However, a major drawback is that these models often lack
+interpretability—while they might make accurate predictions, we may not
+fully understand why certain patterns emerge. Additionally, data-driven
+approaches require large datasets, and poor data quality can lead to
+misleading conclusions.
+
+Neither approach is universally better than the other; the choice
+depends on the problem at hand. Theory-driven analysis is ideal when we
+have a strong theoretical foundation and need to validate or refine it.
+Data-driven analysis is useful when dealing with complex,
+high-dimensional data where traditional models may fall short.
+
+In practice, a hybrid approach often works best. Many modern research
+and industrial applications combine theory-driven insights with
+data-driven methods. For example, in climate science, researchers use
+established atmospheric physics models (theory-driven) alongside machine
+learning techniques (data-driven) to improve weather predictions.
+
+As you advance in your studies and careers, consider how these two
+approaches complement each other and how you can use them effectively in
+your own data analysis.
+
+Can you think of any examples from your own experiences where one
+approach worked better than the other?
+:::
+
+## Data Science as an Interdisciplinary Field
+
+![](images/3.png){fig-align="center"}
+
+::: notes
+Many people think data science is just about coding or working with big
+datasets, but in reality, it is a combination of multiple fields that
+work together to extract meaningful insights from data.
+
+At the core of data science, we have **mathematics and statistics**,
+which provide the theoretical foundation for analyzing data,
+understanding patterns, and making predictions. Without statistical
+methods, we wouldn’t be able to validate our findings or measure
+uncertainty.
+
+Next, we have **computer science and data engineering**, which are
+essential for collecting, storing, and processing large amounts of data
+efficiently. Think about companies like Google or Netflix—they deal with
+massive datasets, and without proper data engineering, it would be
+impossible to manage them.
+
+Another key element is **domain expertise**—which means understanding
+the specific field where data science is applied. For example, if you’re
+working in healthcare, you need to understand medical data; if you're in
+finance, you need knowledge of economic trends. Data science is not just
+about numbers; it’s about applying the right techniques to solve
+real-world problems.
+
+Then, we have **scientific methods**—a structured way of testing
+hypotheses and ensuring our analysis is reliable. Whether you’re running
+an A/B test for a website or experimenting with machine learning models,
+following scientific principles ensures accuracy.
+
+High-performance computing (HPC) plays a role when dealing with massive
+datasets and complex algorithms that require significant computational
+power. For instance, training a deep learning model on millions of
+images requires specialized hardware and efficient computing techniques.
+
+Finally, data visualization is crucial. Even the most sophisticated
+analysis is useless if you can’t communicate it effectively. Good
+visualizations make complex insights easy to understand and help drive
+better decision-making.
+
+So, as you can see, data science is much more than just programming or
+statistics—it’s an interdisciplinary field that brings together
+knowledge from different domains.
+
+Understanding this interconnectedness is key to becoming a successful
+data scientist.
+:::
+
+## Data Analysis vs. Data Analytics
+
+::: columns
+::: {.column width="50%"}
+`Data Analysis`
+
+The process of breaking down data collected about things that have
+already happened to find patterns
+
+-   Organizing Data
+
+-   Start looking for Patterns
+:::
+
+::: {.column width="50%"}
+`Data Analytics`
+
+The process of using insights gained from past data to make decisions
+about the future
+
+-   Larger in Scope
+
+-   Making Decisions
+:::
+:::
+
+::: notes
+It would be easy to confuse data analysis and data analytics as the
+same. But while they're definitely related, there are some key
+distinguishing characteristics.
+
+We're going to explore what makes them different. Let's start with a
+definition of each.
+
+**Data analysis** is the process of breaking down data about things that
+have already happened and trying to find patterns that could lead to
+meaningful insights. It's a way of taking raw data and turning it into
+useful information.
+
+As an example, a clothing manufacturer might use data analysis to find
+out that sales of bathing suits depends on the temperature outside. The
+hotter it is, the more the bathing suits sold.
+
+While data analysis focuses on data collected in the past, **data
+analytics** is about using what we learn about the past to help us
+predict what could happen next in the future.
+
+Using the clothing manufacturer again, knowing that bathing suit sales
+depend on the temperature, they might plan their manufacturing process
+to meet seasonal bathing suit demands. Producing and shipping higher
+numbers of them as the temperature starts to go up and slowing down
+production during the colder time of the year.
+
+Now, lets break down their difference a little further.
+
+**Data analysis** includes organizing and cleaning raw data and finding
+patterns. It's about getting a good understanding of what the data is
+actually telling you.
+
+While **data analytics** is larger in scope, it takes the findings from
+your data analysis and uses them to make informed decisions or solve
+problems. It's about applying those insights to real-world scenarios.
+
+So which one is better? Well, it depends.
+
+**Data analysis is the foundation** and **data analytics builds on top
+of it**.
+
+In the real world, you'll likely use both approaches together. Data
+analysis helps you understand the data and data analytics helps you use
+that understanding to make a real impact. Let's move forward and keep
+understanding these concepts in using data.
+:::
+
+## Exploratory Data Analysis (EDA) {.smaller}
+
+`EDA involves the initial exploration and examination of data to gain insights and formulate hypotheses`
+
+::: columns
+::: {.column width="50%"}
+**Benefits of EDA**
+
+-   Provides an understanding of data
+-   Identifies outliers
+-   Facilitates the generation of hypotheses
+
+**Benefits of Using Visualization in EDA**
+
+-   Visualizations make complex datasets more accessible
+-   Allows for the detection of patterns, rends, and outliers
+-   Supports data-driven decision-making
+:::
+
+::: {.column width="50%"}
+**Limitations of EDA**
+
+-   Time-consuming
+-   Can be misleading or incomplete
+-   Can be difficult to communicate or reproduce
+:::
+:::
+
+::: notes
+Exploratory data analysis, or EDA, is a crucial step in the data
+analysis process, allowing analysts to understand the structure,
+patterns, and relationships within datasets.
+
+Exploratory data analysis involves the initial exploration and
+examination of data to gain insights and formulate hypotheses. It
+includes techniques such as summary statistics, data visualization, and
+correlation analysis.
+
+EDA has plenty of benefits as a form of data analysis. Let's examine
+some of them.
+
+One benefit is that EDA provides a comprehensive understanding of the
+characteristics and distributions of variables within the data set.
+
+It can also help identify outliers, which are missing values and data
+inconsistencies that may affect some subsequent analysis.
+
+Finally, EDA facilitates the generation of hypotheses and formulation of
+research questions based on observed patterns and trends.
+
+Visualizations are an important component of EDA, allowing analysts to
+explore the relationships between variables and uncover patterns
+visually.
+
+Techniques such as histograms, scatterplots, and boxplots are commonly
+used to visualize data distributions and relationships.
+
+Let's explore some key benefits of using visualizations in exploratory
+data analysis.
+
+Visualizations make complex datasets more accessible and understandable,
+enabling stakeholders to grasp valuable insights quickly.
+
+Visualizations also help when trying to detect patterns, trends, and
+outliers that may not be apparent from numerical summaries alone.
+
+Another benefit is that they support data driven decision making. They
+do this by providing compelling visual evidence to support hypotheses
+and conclusions.
+
+Exploratory data analysis is a starting point when working with a set of
+data and is less structured than more in depth analysis, as the intent
+is to just find initial ideas to explore further.
+
+With that in mind, there are some limitations to exploratory data
+analysis.
+
+One is that it can be very time consuming when first examining data with
+no idea where to start.
+
+Digging through the pile of data and trying different combinations of
+variables to evaluate can take a significant amount of time.
+
+Another is that it can be misleading or incomplete.
+
+Initial impressions of the data being analyzed can indicate one
+conclusion or way of thinking that may be invalidated as more data is
+uncovered and evaluated and the findings and methods can be difficult to
+communicate or reproduce.
+
+Exploratory data analysis is less structured than a more in depth
+investigation into a specific finding, so depending on the methods taken
+and the amount of documentation generated about the way the data was
+analyzed, it can be very hard to explain or share what was found.
+
+In summary, exploratory data analysis is a critical phase in the data
+analysis process, providing valuable insights into the structure and
+characteristics of datasets.
+
+While EDA has its advantages and limitations, when conducted
+effectively, it serves as a foundational step for further analysis and
+hypothesis formulation.
+:::
+
+## Common Tools Used in Data Analysis and Exploration
+
+![](images/16.png){fig-align="center"}
+
+::: notes
+The days of working with data with paper and pencil are long gone.
+Today, we're lucky to have many digital applications to help us.
+
+We'll discuss common tools for analyzing and exploring data, starting
+with spreadsheets.
+
+A spreadsheet is an application that's used to organize, store, and
+analyze data in a grid like structure of rows and columns. Microsoft
+Excel and Google sheets are examples of very popular Spreadsheet
+applications that are in use today.
+
+Some of the benefits of Spreadsheets are, Spreadsheets are easy to use,
+they're relatively simple to use for basic data analysis tasks. And have
+many built-in functions for sorting, analyzing, and performing
+calculations. They also offer visualizations, allowing you to create
+charts and graphs to present data.
+
+It's common for Spreadsheets to be included in existing software suites
+like Microsoft Office and Google Workspace, helping to make them a cost
+effective tool.
+
+While Spreadsheets are good enough for some datasets and analysis needs,
+there are some limitations.
+
+A data set size is a big one, managing large datasets in a Spreadsheet
+can become cumbersome, slowing down and requiring more time to process
+functions like sorting and calculations.
+
+They also have limitations on how much data they can hold. Collaboration
+is another possible challenge, Spreadsheets can often be difficult to
+share and collaborate on complex analyses in real time.
+
+Spreadsheets historically have not offered as advanced data analysis and
+visualization capabilities of some of the other tools.
+
+But new capabilities are being developed and added constantly, so if
+they can't do it now, they might be able to do it tomorrow. Spreadsheets
+help make data tools accessible for all budgets and all levels of
+experience. However, they might not be enough if needing advanced
+visualization capabilities.
+
+More purpose built data analysis tools like Tableau, PowerBI, and
+QlikView offer more advanced visuals than Spreadsheets. They can help
+you create interactive charts, graphs, and dashboards to tell compelling
+data stories. They also provide the ability to explore data, offering
+intuitive drag and drop features that facilitate data exploration and
+discovery of trends and patterns.
+
+These tools offer collaboration features as well, this enables seamless
+sharing and discussion of data insights with colleagues.
+
+Data visualization tools might not be an ideal fit for everyone. There's
+a learning curve for one, using an application like Tableau or PowerBI
+will require some training, even more so if mastering the more advanced
+capabilities is needed.
+
+And then there's the cost, is there enough budget available to pay for
+the costs of these tools?
+
+While Spreadsheets are included in software suites that are already
+commonly used, these tools will require additional costs in many cases.
+
+Some tools can be expensive, especially for enterprise level
+deployments. Spreadsheets and data visualization tools are excellent for
+data analysis and exploration, but they are applications with predefined
+options and functionality.
+
+This brings limitations that the use of programming languages like
+Python and R do not have. Programming languages provide for greater
+control over data manipulation, analysis, and visualization. They also
+offer advanced features, typically supporting complex statistical
+analysis, machine learning algorithms, and data modeling techniques.
+
+Many programming languages are freely available with a large and
+supportive community of programmers contributing to an open source
+environment of advanced technologies that can be utilized to enhance
+your data analysis and exploration efforts.
+
+Now, let's examine the benefits and limitations of using programming
+languages. Programming languages offer significant advantages, they
+offer versatility.
+
+Programming languages can handle a wide range of data analysis tasks,
+from simple to highly complex. They are also significantly more scalable
+than spreadsheets and other analysis tools.
+
+They can perform analysis on much larger datasets than a spreadsheet and
+can be used in conjunction with many different tools and workflows.
+
+They also have automation potential, programming languages automate
+repetitive data cleaning and analysis processes. While very powerful,
+using a programming language like R or Python presents significant
+challenges compared with Spreadsheets or tools like Tableau and PowerBI.
+
+With programming languages, there is a steeper learning curve.
+Programming languages require coding skills and more fundamental
+knowledge of data science concepts. There is also time investment,
+learning a new programming language and becoming proficient with it in
+data analysis takes time and dedication.
+
+This can be significant, especially if only basic data analysis tasks
+are needed. Programming is prone to errors introduced typically during
+development and debugging code can also be time consuming.
+
+Even a small error in your code can lead to inaccurate results or
+program crashes. While programming languages offer a powerful and
+versatile toolkit for data analysis and exploration, they are not a one
+size fits all solution.
+
+So, which of the tools we discussed is the best? The answer is, it
+depends. Spreadsheets are great if the need is simple and the dataset is
+not very large.
+
+However, if you're working with a large dataset or need more advanced
+visualization capabilities than spreadsheets can offer, using a more
+specialized data visualization tool like Tableau might be necessary.
+
+Finally, if you need additional capability and coding in R or Python is
+not a problem, then using a programming language might be the best fit.
+:::
+
+## Data Preparation - a Labor Intensive Work
+
+![](images/5.png){fig-align="center"}
+
+::: notes
+Read the Slides
+:::
+
+## Raw vs. Tidy Data
+
+::: columns
+::: {.column width="50%"}
+`Raw (or Primary) Data`
+
+-   In its original form after collection
+
+-   Might contains missing data points and errors
+
+-   "Raw" is relative
+
+-   Shall keep a copy of whenever possible
+:::
+
+::: {.column width="50%"}
+`Tidy (or Clean) Data`
+
+-   In a processed or predefined form
+
+-   Missing data is marked and errors are removed
+
+-   "Tidy" is relative
+
+-   Shall keep a copy whenever possible with version tags
+:::
+:::
+
+::: notes
+**Raw data**, also known as primary data, is the unprocessed information
+collected directly from a source. It remains in its original form and
+may contain missing data points, errors, or inconsistencies due to
+factors like faulty sensors or manual entry mistakes. The term "raw" is
+relative, as what one researcher considers raw may already be slightly
+processed for another. Since raw data serves as the foundation for
+analysis, it is crucial to keep a copy whenever possible to ensure that
+the original data is always accessible.
+
+On the other hand, **tidy data**, also referred to as clean data, has
+undergone processing to fit a predefined structure, making it more
+suitable for analysis. In this form, missing data is identified, and
+errors are removed to improve accuracy and reliability. Like raw data,
+"tidy" is also a relative term, as different analyses may require
+further refinements. A best practice in data management is to maintain
+copies of tidy data with version tags to track modifications and ensure
+reproducibility.
+
+In essence, raw data is like unprocessed ingredients before cooking—it
+may contain impurities and inconsistencies. Tidy data, in contrast, is
+the final dish, ready for consumption and analysis.
+
+Converting raw data into tidy data is a fundamental step in any
+data-driven workflow, ensuring clarity and usability for further
+insights.
+:::
+
+## Quartz Guide to Bad Data
+
+`What Should we Do with Bad Data?`
+
+-   Issues that your source should solve
+    -   missing values, inconsistency, duplicates, etc.
+-   Issues that you should solve
+    -   data in binary formats, annotations, formats, etc.
+-   Issues a third-party expert should help you solve
+    -   untrustworthy source,
+-   Issues a programmer should help you solve
+    -   data in scanned documents, wrong aggregation, etc.
+
+::: footer
+Credit: <https://github.com/Quartz/bad-data-guide?tab=readme-ov-file>
+:::
+
+::: notes
+Now, we are going to discuss how to handle **bad data** using the
+framework. Bad data is inevitable, but knowing **who should handle
+different issues** makes the cleaning process more efficient. Some
+issues belong to the data provider, while others require analysts,
+experts, or programmers to fix.
+
+Not all data is perfect, and dealing with bad data is an essential part
+of working in analytics, research, and data science. Understanding **who
+should handle different types of data issues** can help us clean and
+process data efficiently. By assigning responsibilities appropriately,
+we ensure that data is as clean, reliable, and usable as possible for
+decision-making.
+
+**What Should We Do with Bad Data?**\
+Bad data can take many forms, such as missing values, inconsistencies,
+incorrect formats, and untrustworthy sources. Depending on the type of
+issue, different people or teams should handle the problem.
+
+-   **Issues that your source should solve**: These include missing
+    values, inconsistent records, and duplicate entries. If the problem
+    comes from the original data provider, they should take
+    responsibility for fixing it at the source. For example, a survey
+    company should ensure responses are complete before delivering the
+    data.
+
+-   **Issues that you should solve**: Some problems, such as data stored
+    in binary formats, incorrect annotations, or formatting
+    inconsistencies, fall under your responsibility. As a data analyst
+    or scientist or data steward, you must clean and restructure this
+    data so it can be used for analysis.
+
+-   **Issues a third-party expert should help you solve**: When dealing
+    with **an untrustworthy data source**, you may need an external
+    expert to verify or validate the data. If a dataset is unreliable or
+    questionable, an expert in the field can assess whether it should be
+    used or discarded.
+
+-   **Issues a programmer should help you solve**: Some data problems
+    require technical solutions beyond a typical analyst’s skill set.
+    These include **data trapped in scanned documents (OCR processing),
+    wrongly aggregated data, or improperly structured databases**. In
+    such cases, a programmer can write scripts or develop tools to
+    extract and correct the data.\
+:::
+
+## Key Components of Tidy Dataset {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   `Metadata` that include the description about the variables, units,
+    summary choices, and experimental study design to make the work
+    reproducible
+
+-   `Processing script or information about the software used` to
+    process the data
+
+-   `Standardized format` to make it more efficient to process
+:::
+
+::: {.column width="50%"}
+![](images/6.png){fig-align="center"}
+:::
+:::
+
+::: notes
+A **tidy dataset** is structured in a way that makes it easier to
+analyze, process, and reproduce results. One key component of a tidy
+dataset is **metadata**, which provides essential background information
+about the data. Metadata includes descriptions of variables, their
+units, summary choices, and details of the experimental study design.
+This ensures that anyone using the dataset understands its context and
+can replicate the study if needed.
+
+Another important component is a **processing script** or documentation
+about the software used to clean and manipulate the data. Keeping track
+of these details allows others to follow the same steps to obtain
+consistent results, making the research more transparent and reliable.
+
+Finally, tidy datasets follow a **standardized format**, where each
+variable is stored in its own column, and each observation is stored in
+its own row. This structure makes data easier to manage, analyze, and
+share across different software and platforms. By maintaining these
+principles, data remains organized, reproducible, and ready for
+meaningful insights.
+:::
+
+## Types of Data Science Problems {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   **Descriptive** (summaries)
+
+-   **Exploratory** (search for unknown)
+
+-   **Inferential** (find correlations)
+
+-   **Predictive** (make predictions)
+
+-   **Casual** (explore causations)
+
+-   **Mechanistic** (determine governing principles)
+:::
+
+::: {.column width="50%"}
+![](images/7.png){fig-align="center"}
+:::
+:::
+
+::: notes
+In data science, different types of analyses serve specific purposes,
+helping us derive insights and make informed decisions.
+
+**Descriptive analysis** focuses on summarizing data through averages,
+percentages, and other statistical measures, presenting findings without
+interpretation or prediction. For instance, reporting the average test
+scores of students in a school falls under this category.
+
+When searching for hidden patterns or trends without prior assumptions,
+we turn to **exploratory analysis**, which is commonly used to uncover
+insights, such as analyzing customer purchase behavior to detect trends.
+
+Moving beyond summaries, **inferential analysis** allows us to determine
+if findings from a sample can be generalized to a larger population. It
+often involves hypothesis testing, as seen in medical studies evaluating
+the effectiveness of new drugs.
+
+If the goal is to forecast future outcomes based on past data,
+**predictive analysis** is used, typically through machine learning
+models. A bank assessing whether a customer is likely to default on a
+loan based on their credit history is a classic example.
+
+For deeper insights, **causal analysis** helps determine whether one
+variable directly influences another, establishing cause-and-effect
+relationships. Unlike simple correlation, this approach examines direct
+impact, such as studying how regular exercise affects weight loss.
+
+Taking this a step further, **mechanistic analysis** seeks to uncover
+the fundamental principles governing these relationships. This is
+especially important in fields like biology and engineering, where
+researchers aim to understand how a drug interacts with the human body
+at a molecular level.
+
+Each of these analytical approaches plays a crucial role in data
+science, from simple data summaries to in-depth explorations of
+causality and governing mechanisms. Selecting the right type of analysis
+depends on the specific question being addressed, ensuring meaningful
+and actionable insights.
+:::
+
+## Data Science Project Lifecycle
+
+![](images/8.png){fig-align="center"}
+
+::: notes
+The **Data Science Project Lifecycle** consists of a structured process
+that ensures data-driven insights are accurate, meaningful, and
+actionable. This lifecycle follows the **OSEMN** framework, which
+includes five key steps: Obtain, Scrub, Explore, Model, and Interpret.
+
+The first step, **Obtain**, involves gathering data from relevant
+sources such as databases, APIs, or external datasets. This data serves
+as the foundation for the entire project.
+
+Once collected, the data is often messy and unstructured, requiring the
+**Scrub** phase. Here, data is cleaned and transformed into a format
+that machines can understand by handling missing values, removing
+duplicates, and standardizing formats.
+
+After cleaning, the **Explore** phase begins, where analysts and data
+scientists search for patterns, trends, and relationships within the
+data using statistical methods and visualizations. This exploratory
+analysis helps to shape hypotheses and guide further modeling.
+
+In the **Model** phase, machine learning or statistical models are
+constructed to predict or forecast outcomes based on the data. This step
+is crucial in transforming insights into actionable intelligence.
+
+Finally, the **Interpret** phase ensures that the results are put to
+good use by translating the model’s output into meaningful business
+decisions, reports, or automated systems.
+
+Each step in this lifecycle is essential for ensuring the accuracy,
+reliability, and impact of data science projects. By following this
+structured approach, data scientists can derive valuable insights and
+drive data-informed decision-making.
+:::
+
+# Visualization for Exploratory Data Analysis
+
+::: notes
+Visualization is an essential part of exploratory data analysis,
+enabling faster comprehension, better decision-making, and more
+impactful storytelling with data.
+:::
+
+## A Picture Is Worth a Thousand Words
+
+::: columns
+::: {.column width="50%"}
+Our brains have been evolved to be very efficient in visual analysis
+
+Visualization helps us to:
+
+-   absorbs information quickly
+
+-   connect the dots
+
+-   find patterns and outliers
+
+-   acquire & share insights
+
+-   attract audience
+:::
+
+::: {.column width="50%"}
+![](images/9.png)
+:::
+:::
+
+::: notes
+The saying *"A picture is worth a thousand words"* holds true in data
+analysis because our brains are naturally wired to process visual
+information quickly and efficiently.
+
+Instead of sifting through raw numbers, visual representations such as
+graphs, charts, and plots help us absorb information at a glance.
+
+Through visualization, we can easily identify patterns, trends, and
+outliers that might otherwise be overlooked in tabular data. It allows
+us to connect the dots between different variables, uncover hidden
+relationships, and gain meaningful insights.
+
+Additionally, visualization is a valuable tool for sharing findings, as
+it makes complex data more accessible and engaging for others.
+
+Whether presenting data to a technical audience or a general audience,
+clear and well-designed visuals help communicate insights effectively
+and capture attention.
+:::
+
+## Types of Visualizations
+
+![](images/10.png){fig-align="center"}
+
+::: footer
+Credit: <https://datavizcatalogue.com/>
+
+Python Users: <https://python-graph-gallery.com/>
+:::
+
+::: notes
+Data visualization comes in various forms, each serving a specific
+purpose depending on the type of data being analyzed and the insights we
+seek. There are many types of visualization that you can choose from
+once you know more about your data after the EDA process.
+
+Some of the most common ones are:
+
+1.  **Histograms** display the distribution of numerical data, helping
+    us understand the frequency and spread of values.
+
+2.  **Bar charts** are useful for comparing categorical data, showing
+    differences between groups or trends over time.
+
+3.  **Pie charts** are commonly used for showing proportions, though
+    they are best for simple comparisons rather than detailed analysis.
+
+4.  **Line charts** are effective for tracking changes and trends,
+    especially in time-series data.
+
+5.  **Scatter plots** help visualize relationships between two numerical
+    variables, making it easier to identify correlations and patterns.
+
+6.  More advanced visualizations include **heatmaps**, which use color
+    intensity to represent data values and highlight patterns across a
+    matrix, and **box plots**, which summarize data distribution,
+    outliers, and variability.
+
+7.  **Tree maps** and **word clouds** are great for hierarchical and
+    text-based data, respectively.
+
+Choosing the right visualization depends on the data and the story we
+want to tell, as each type enhances our ability to interpret information
+and make informed decisions.
+:::
+
+## One-Variable Graph {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   **Histogram** shows distribution and concentration of data
+
+-   **Bar Plot** compares the same variable across different groups and
+    shows how the data distributed among the groups
+
+-   **Pie Chart** shows the groups of what your data is made, allows you
+    to see the most and least as well as everything in-between, and
+    shows the distribution of the data among groups
+:::
+
+::: {.column width="50%"}
+![](images/11.png){fig-align="center"}
+:::
+:::
+
+::: notes
+One-variable visualization, also known as **univariate visualization**,
+focuses on analyzing a single variable to understand its distribution,
+central tendency, and spread. A common method for visualizing
+one-variable data is a **histogram**, which groups numerical data into
+bins and displays the frequency of values within each bin. This helps us
+see patterns such as whether the data is normally distributed, skewed,
+or contains outliers.
+
+**Bar charts** are another option when dealing with categorical data,
+showing the frequency of different categories using bars of varying
+heights.
+
+Using these visualizations, we can quickly interpret key characteristics
+of a dataset, such as its shape, spread, and any anomalies, making them
+essential tools for exploratory data analysis.
+:::
+
+## Two-Variable Graph {.smaller}
+
+::: columns
+::: {.column width="50%"}
+![](images/12.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+-   **Scatter Plot** shows all the data on the plot, you can see the
+    distribution, correlations, and the spread of the data between two
+    variables
+
+-   **Line Plot** similar to scatter plot but the points are connected,
+    make it easier to see the trends and evolution
+
+-   **2D Histogram** shows distribution of two variables related to each
+    other
+
+-   **Box or Whisker Plot** shows spread of data and statistical
+    information
+:::
+:::
+
+::: notes
+Two-variable visualization, also known as **bivariate visualization**,
+is used to explore the relationship between two different variables. The
+choice of visualization depends on the type of data—whether both
+variables are numerical, categorical, or a mix of both.
+
+One of the most common ways to visualize two numerical variables is a
+**scatter plot**, which displays individual data points on a graph with
+one variable on the x-axis and the other on the y-axis. This helps
+identify correlations, trends, or clusters in the data. For example, a
+scatter plot can show whether an increase in one variable leads to an
+increase or decrease in another.
+
+Another effective visualization is a **box plot (or box-and-whisker
+plot)**, which provides a summary of the data's median, quartiles, and
+potential outliers. It is particularly useful for detecting variability
+and spotting extreme values.
+
+By using these techniques, we can better understand how two variables
+interact, uncover trends, and gain deeper insights from the data.
+:::
+
+## Three Variable Graph {.smaller}
+
+::: columns
+::: {.column width="50%"}
+-   **Heatmap** shows two variables and other quantity (amount,
+    intensity, height) with a colormap
+
+-   **Multiple-variable bar plot** shows multiple variables for multiple
+    groups
+
+-   **3D Plot** shows the 3rd variable on surface in 3D plot
+
+For high-dimensional datasets, applying the t-Distributed Stochastic
+Neighbor Embedding (t-SNE) algorithm and alike to reduce the dimension.
+:::
+
+::: {.column width="50%"}
+![](images/13.png)
+:::
+:::
+
+::: notes
+When we analyze data, sometimes we need to explore the relationship
+between three different variables simultaneously. This is called
+**multivariate visualization**, and it helps us uncover more complex
+patterns and interactions that might not be visible with just one or two
+variables.
+
+One common method for visualizing three variables is a **bubble chart**.
+A bubble chart is similar to a scatter plot, where two numerical
+variables are plotted on the x and y axes, but a third variable is
+represented by the size of the bubbles. For example, if we were
+analyzing cities, the x-axis could represent population, the y-axis
+could represent average income, and the bubble size could represent the
+crime rate.
+
+Another useful visualization is the **3D scatter plot**, which extends a
+regular scatter plot by adding a third axis (z-axis). This is helpful
+when we want to see how three numerical variables interact, but it can
+sometimes be difficult to interpret without interactive tools.
+
+When both variables are categorical, a **stacked bar chart** or a
+**heatmap** is useful. These visualizations display how frequently
+different categories appear together, helping identify patterns and
+relationships in the data. For a combination of categorical and
+numerical variables, a **stacked bar chart** can be effective. Here, the
+x-axis might represent categories (e.g., different product types), the
+y-axis could show total sales, and the bars can be divided into segments
+representing a third categorical variable, such as different regions.
+
+Using three-variable visualizations allows us to gain deeper insights
+into data relationships, helping us make more informed decisions and
+detect more complex trends.
+:::
+
+## Python Visualization Landscape
+
+![](images/14.png){fig-align="center"}
+
+:::notes
+
+This slides shows the popular visualization libraries names in Python.
+
+:::
+
+## Key Plotting Concepts in `matplotlib` {.smaller}
+
+![](images/15.png){fig-align="center"}
+
+:::notes
+
+This slide shows the important object names while using matplotlib for
+visualization in Python.
+
+:::

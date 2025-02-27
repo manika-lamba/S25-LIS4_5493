@@ -64,7 +64,7 @@ The `access.csv` contains details about **where the data can be accessed**.\
 
 Use the interactive editor:
 
-``` R
+``` r
 edit_access()
 ```
 
@@ -104,7 +104,7 @@ Install and call the required libraries:
 install.packages(c("jsonlite", "listviewer", "here", "magrittr", "pkgdown")
 ```
 
-``` R
+``` r
 library(jsonlite) 
 library(listviewer) 
 library(here) 
@@ -140,7 +140,7 @@ Here’s a screen shot!
 
 ![](images/clipboard-107325230.png)
 
-### Step 5: Add a READMe File 
+### Step 5: Add a READMe File
 
 ### Step 6: Publish the index.html on GitHub
 
