@@ -1,5 +1,5 @@
 ---
-title: "Supporting Analyzing Data"
+title: "Supporting Data Analysis"
 subtitle: "LIS 4/5493: Data Stewardship"
 author: 
   - Dr. Manika Lamba
@@ -998,19 +998,15 @@ detect more complex trends.
 
 ![](images/14.png){fig-align="center"}
 
-:::notes
-
+::: notes
 This slides shows the popular visualization libraries names in Python.
-
 :::
 
 ## Key Plotting Concepts in `matplotlib` {.smaller}
 
 ![](images/15.png){fig-align="center"}
 
-:::notes
-
+::: notes
 This slide shows the important object names while using matplotlib for
 visualization in Python.
-
 :::
