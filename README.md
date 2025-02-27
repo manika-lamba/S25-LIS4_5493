@@ -6,3 +6,4 @@
 - [Week 4 Data Life Cycle Models](https://manika-lamba.github.io/S25-LIS4_5493/Week-4/#/title-slide)
 - [Week 5 Supporting Data Collection: Organizing Structuring and Storing Data](https://manika-lamba.github.io/S25-LIS4_5493/Week-5/#/title-slide)
 - [Week 6 Supporting Data Collection: Documenting and Describing Data](https://manika-lamba.github.io/S25-LIS4_5493/Week-6/#/title-slide)
+- [Week 7 Supporting Data Analysis](https://manika-lamba.github.io/S25-LIS4_5493/Week-7/#/title-slide)
