@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <meta name="author" content="Dr.&nbsp;Manika Lamba">
+  <title>Publishing Results and Datasets</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Publishing Results and Datasets</h1>
+  <p class="subtitle">LIS 4/5493: Data Stewardship</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Dr.&nbsp;Manika Lamba 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section id="introduction" class="title-slide slide level1 center">
+<h1>Introduction</h1>
+<aside class="notes">
+<p>The outcome of gathering and analyzing data is to publish the results and the dataset(s) associated with the research. There are two parts to Module 6.</p>
+<p>In Module 6.1, I will introduce you to the publication process and issues and considerations when publishing results and datasets.</p>
+<p>In Module 6.2 we will learn about sharing datasets, choosing appropriate options for storing data, and guidelines for determining which data to keep and store.</p>
+<p>In this week’s module, we will review the outcome of gathering and analyzing the data, the publication of the results in research articles or if in nonacademic contexts, products or services developed as the result of the research. Publishing the datasets is also part of this phase of the research cycle.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="publishing-the-results" class="slide level2">
+<h2>Publishing the Results</h2>
+
+<img data-src="images/1.png" class="quarto-figure quarto-figure-center r-stretch"><div class="footer">
+<p>Henderson, M. (2017). Best practices for working with research data. In Data management: A practical guide for librarians, p.&nbsp;28.</p>
+</div>
+<aside class="notes">
+<p>Henderson presents this snapshot of the data life cycle during the research process.</p>
+<p>One of the outcomes of the research cycle, which occurs near the end of the research life cycle, is to publish the results or findings from the research in a publication or series of publications. A second outcome is to publish the dataset.</p>
+<p>The data steward is generally not part of the publication of the results, however, they play a very important role in publishing the dataset. Datasets may, however, be published with the article, depending on the journal or other venue in which results are published.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="where-is-data-published" class="slide level2">
+<h2>Where is Data Published?</h2>
+<ul>
+<li>In a journal’s digital library or repository (if available)</li>
+<li>On the academic researcher’s website</li>
+<li>In the institutional repository of the university</li>
+<li>In a discipline-specific repository</li>
+<li>In an open science repository</li>
+<li>In a private company repository (in non-academic contexts)</li>
+</ul>
+<aside class="notes">
+<p>In AE#1, you were tasked with finding research articles that made use of datasets or that published data within the article. The research articles or studies you found for the exercise are examples of how researchers publish their findings/results in scholarly journals or research reports.</p>
+<p>In non-academic contexts, the research results may be “published” or used to develop a product or service for the company’s customers. These are just a few examples of how the data in either context could be used. I am sure you can think of others.</p>
+<p>There are several options for where datasets can be published. In an academic environment, datasets are often published with the article in the publisher’s digital library or repository but this is not always the case as you also experienced in AE#1.</p>
+<p>Some academic researchers publish their data on their personal/university website (though this is NOT recommended). Others deposit their data in either their university’s institutional repository or in one specific to their discipline.</p>
+<p>You have reviewed examples of these options in an earlier module. OU’s institutional repository is called ShareOK. Additionally, some funding agencies also require academic researchers to publish their data in open source/open access repositories.</p>
+<p>The DataOne repository or others you have used in AE#1 are examples of open access/open science repositories.</p>
+<p>In a non-academic context, data may be stored on a company’s server or in a cloud repository. It may also be stored on individual computer hard drives or external drives, though this is NOT best practice and could create problems for storing and accessing the data in the future.</p>
+<p>Regardless of where the datasets are stored, the data steward will play an integral role in making sure the data are prepared and ready for ingest into the storage option. We will focus more on preparing and ingesting the data in Module 7.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="registry-of-research-data-repositories" class="slide level2 smaller">
+<h2>Registry of Research Data Repositories</h2>
+<p><a href="https://www.re3data.org/" class="uri">https://www.re3data.org/</a></p>
+<p><img data-src="images/clipboard-2997698225.png" width="131"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>List over 2,000 data repositories</p></li>
+<li><p>Multidisciplinary</p></li>
+<li><p>Details about the repositories</p>
+<ul>
+<li>terms of use</li>
+<li>standards</li>
+<li>persistent identifiers</li>
+<li>software</li>
+<li>version control, etc.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/9.png"></p>
+</div></div>
+<aside class="notes">
+<p>The Registry of Research Data Repositories, also known as re3data, is a multidisciplinary Open Science tool that indexes existing international repositories for research data. As per 2020, re3data lists well over 2,500 data repositories.</p>
+<p>In order to be listed in re3data, a repository needs to meet certain requirements. It needs to be run by a legal entity, such as a sustainable institution (for example a library or a university), and the repository needs to clarify access conditions to the data and repository as well as the terms of use, and have a focus on research data.</p>
+<p>Re3data is a rather user-friendly tool, which allows users to quickly navigate between an array of different data repositories, all over the world. In this session we will go through some of the basic features of re3data. We will start off by using the browse function. Here you can choose between three categories: ‘subject’, ‘content type’ or ‘country’.</p>
+<p>If you click the ‘country’ option, a world map appears, where all the areas in green mark all the countries from which data repositories are included in the registry. By hovering over a country, you will see the number of repositories included in the registry from that particular country. If you prefer, you can also click the ‘text’ tab, in order to display a list over the countries and the number of repositories from each country, listed according to alphabetical order. Once you click a country, a list with the repositories from the selected country appears. This is particularly useful if you are looking into using a repository from a specific country or region.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="re3data" class="slide level2 smaller">
+<h2>re3data</h2>
+<p><code>Browse by Disciplines</code></p>
+
+<img data-src="images/10.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<p>If we go back to the start page, we will look at another feature of the browse function. This time we will try the subject browser.</p>
+<p>Once you click on the ‘subjects’ button a colourful wheel appears, which features the major disciplines included in the repository registry. If you click one of the overarching disciplines, for example the humanities and social sciences, the wheel changes, and the subjects become more specialised.</p>
+<p>Every time you click on a subject on the next level, the wheel changes, until you reach the final level. You can always go back by clicking at the centre of the wheel. Once you have reached the last sub-discipline a list appears, which features all the repositories specialising in that particular topic. If you prefer, you can also browse using the ‘text’ version, instead of the graphical version, which simply lists all the subjects available.</p>
+<p>If you know what you are looking for already from the start, you can skip taking the detour via the browse function and instead go directly to the search function on the start page. Here you can enter keywords, geographical terms or subjects. If you type ‘linguistics’ for example, a list of repositories welcoming datasets within the field of language studies will appear. Be mindful of your search criteria.</p>
+<p>Sometimes you may involuntarily exclude relevant results by being too specific.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-search-engines" class="slide level2">
+<h2>Data Search Engines</h2>
+
+<img data-src="images/3.png" class="r-stretch"><aside class="notes">
+<p>A data search engine is a tool that will allow you to locate published research data, either entire data repositories or individual datasets. In other words, just like any other search engine, the data search engines will index relevant data archives and direct you to where you will find the requested data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-search-engines-cont." class="slide level2">
+<h2>Data Search Engines (Cont.)</h2>
+<ul>
+<li>Indexes content from data archives/repositories</li>
+<li>Allows you to search for data repositories or datasets</li>
+<li>Directs you to where the data is archived</li>
+</ul>
+<aside class="notes">
+<p>As a rule of thumb, it is only open metadata that will be harvested by data search engines, and thereby become visible. A search engine will point you to where the data is archived, hopefully with a permanent identifier and link. Depending on which data search engine you are using, the search results generated will differ from search engine to search engine.</p>
+<p>Some data search engines specialize in datasets, while others are more inclusive and will direct you to data repositories as well as published articles and research projects. The search engines have the same overarching purposes but have different qualities and functionalities.In this presentation, we will be looking into three of the most commonly used data search engines.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="datacite" class="slide level2">
+<h2>DataCite</h2>
+<p><a href="https://datacite.org/" class="uri">https://datacite.org/</a></p>
+<ul>
+<li><p>Multi-disciplinary search engine</p></li>
+<li><p>Aims to improve data citation</p></li>
+<li><p>Gathers metadata for each DOI assigned to an object</p></li>
+<li><p>Provides persistent identifiers (DOI) for research data</p></li>
+<li><p>Search for repositories, researchers as well as datasets and published research</p></li>
+</ul>
+<aside class="notes">
+<p>The first data search engine we will have a closer look at is called DataCite. DataCite is a widely used, multidisciplinary search engine that allows you to search for datasets equipped with a DOI as their persistent digital identifier. DataCite gathers metadata associated with existing datasets and whenever a new dataset with a DOI-link is posted, it will automatically become indexed in DataCite.</p>
+<p>Apart from datasets, DataCite also indexes other kinds of works, more broadly defined, including audiovisual material, articles, as well as data repositories, and also allows the user to search for individual researchers. The search function is, however, far from flawless.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="base" class="slide level2">
+<h2>BASE</h2>
+<p><a href="https://base-search.net/" class="uri">https://base-search.net/</a></p>
+<ul>
+<li>Multi-disciplinary search engine</li>
+<li>Harvests metadata from different repositories and search providers (including DataCite)</li>
+<li>Indexes resources providing an Open Archives Initiative interface</li>
+<li>Metadata free to access</li>
+<li>Refined search options</li>
+</ul>
+<aside class="notes">
+<p>The next data search engine we will look at is Bielefeld Academic Search Engine, commonly referred to simply as BASE. BASE is operated by Bielefeld University Library and provides access to hundreds of millions of documents and datasets.</p>
+<p>It has similar qualities to DataCite, but harvests metadata directly from thousands of repositories, including DataCite, which means that it will also pick up datasets that are not equipped with a DOI as their persistent identifier.</p>
+<p>Just like in DataCite, the BASE search engine makes it possible to search not only for datasets, but for articles, entire books, authors, and research projects, as well as other audiovisual material.</p>
+<p>BASE offers a much more refined search function than DataCite and is thereby more user friendly, although the search function for BASE is not without flaws either.</p>
+<p>BASE harvests resources from archives that operate with an Open Archive Initiative. This means that the majority of the indexed documents and datasets are available under Open Access licenses.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="google-dataset-search" class="slide level2">
+<h2>Google Dataset Search</h2>
+<p><a href="https://datasetsearch.research.google.com/" class="uri">https://datasetsearch.research.google.com/</a></p>
+<ul>
+<li>Multi-disciplinary search engine</li>
+<li>Complements Google Scholar</li>
+<li>Targeted at Scientists and Data Journalists</li>
+<li>Open data and metadata</li>
+<li>Indexes data from DataCite and others</li>
+<li>Launched 2018, out of beta 2020</li>
+</ul>
+<aside class="notes">
+<p>The third and last data search engine we will look at is Google dataset search, which was launched in 2018 and moved out of beta in 2020.</p>
+<p>Google dataset search shares features and qualities with the widely used search engine Google scholar, and it is another service created by the search engine giant and directed towards the global research community, intended to complement Google scholar.</p>
+<p>The aim of Google dataset search is to unify the many thousands of different repositories for datasets and make all data searchable, without moving the actual data. Google thereby seeks to address the issue of the fragmented platform for dataset publication.</p>
+<p>Google dataset search engine bears striking resemblance to the google search engine we are all accustomed to, but the functionality and purpose is much more specialised.</p>
+<p>The search engine is a rather user-friendly system, and the fact that it indexes datasets only makes it a little more user friendly than both DataCite and BASE, at least for users who are looking for datasets only. Google dataset search shows where the original data is stored, where it can be accessed, available formats, information about funders, and a short description.</p>
+<p>The search engine is compatible with Google scholar, which allows users smooth access to information regarding any citations of the data and any associated publications.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-archivesrepositories" class="slide level2">
+<h2>Data Archives/Repositories</h2>
+<ul>
+<li>Appropriate, subject-specific location where you can submit or access data</li>
+<li>Subject specific or multidisciplinary</li>
+<li>Small or large</li>
+<li>Open or closed</li>
+<li>Who is allowed to deposit/access data?</li>
+</ul>
+<aside class="notes">
+<p>Now, you will learn about data archives or data repositories. The data archive is where the datasets are stored and you will find the actual data. Different data archives have different qualities and functionalities and it is beneficial to consider which archive is best suited for your data.</p>
+<p>The words ‘repository’ and ‘archive’ are sometimes used interchangeably. Curious about the differences between them? Read more about them <a href="https://www.umu.se/en/library/research-data/share-and-publish/">here</a>.</p>
+<p>The repository is where the datasets are stored, and you will find the actual data. Data repositories come in all sizes. At one end there are small institutional repositories which store a few dozen datasets, and at the other end the major international repositories, which boast tens of thousands of datasets. There are both multidisciplinary and subject specific repositories and most of them are free to use and specialise in open research data.</p>
+<p>Many research institutions have their own data archives, often referred to as institutional data repositories. The same goes for many companies, but the data stored here is often not as easily accessible to members of the public.</p>
+<p>Researchers are often free to choose if they want to deposit their data in the institutional repository or somewhere else. Most institutional repositories only welcome research data from their own researchers.</p>
+<p>However, within certain disciplines, there are institutional repositories that welcome research data from scholars worldwide, independent of any institutional affiliation. Once the data has been shared in the data repository anyone is free to access them.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-archivesrepositories-cont." class="slide level2">
+<h2>Data Archives/Repositories (Cont.)</h2>
+
+<img data-src="images/6.png" class="r-stretch"><ul>
+<li><p>Internationally widely used repositories</p></li>
+<li><p>Multidisciplinary</p></li>
+<li><p>Free</p></li>
+<li><p>Institutional data repositories</p></li>
+<li><p>ORCID</p></li>
+</ul>
+<aside class="notes">
+<p>For those who lack access to institutional repositories, such as independent scholars, the independent research repositories constitute a good alternative. Zenodo, Figshare, and Dryad are some of the best-known independent repositories.</p>
+<p>The independent repositories allow anyone to deposit their data and thereby make it possible for independent scholars to comply with data sharing requirements.</p>
+<p>Zenodo is one of the major players among data repositories. It is an open access-repository, which was developed under the OpenAIRE program, and it is operated by the European Organisation for Nuclear Research (CERN). Zenodo welcomes research data within all disciplines from researchers all over the world, and does not have any requirements when it comes to format, size, access restrictions or licenses. The repository provides access to research data as well as articles, conference objects, and other objects associated more generally with research. All submissions to Zenodo are assigned a DOI as a persistent identifier, which facilitates data citation. The citation information is also passed on to DataCite and other data search engines, which makes the data easily findable.</p>
+<p>Zenodo collaborates with another major data repository, Dryad. Dryad is another open-access repository which shares a lot of features with Zenodo. In terms of subject specialisation Dryad focuses more on scientific data and medical sciences and is particularly strong when it comes to a number of specific subjects. All data deposited in Dryad are associated with a published article and are available under a Creative Commons Zero license (CC-0), which makes the data public domain. Dryad encourages not only the researchers themselves, but also encourages institutions, journals, learned societies and publishers to share their data.</p>
+<p>Figshare is an online open access repository that was launched in 2011. It shares features with both ZENODO and Dryad and operates with creative commons licenses. All datasets are available under a Creative Commons Zero license (CC-0), and Figshare welcomes all kinds of different research outputs, regardless of file format. Figshare is backed by a long line of institutions and research associations, but the repository can be used by researchers regardless of institutional affiliation.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-archivesrepositories-cont.-1" class="slide level2">
+<h2>Data Archives/Repositories (Cont.)</h2>
+
+<img data-src="images/7.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li><p>Internationally widely used repositories</p></li>
+<li><p>Multidisciplinary</p></li>
+<li><p>Free</p></li>
+<li><p>Institutional data repositories</p></li>
+<li><p>ORCID</p></li>
+</ul>
+<aside class="notes">
+<p>Another example of a major player in the field of data repositories is the Harvard Dataverse, which is open to all kinds of research data from scholars from all over the world, both within and outside the Harvard community. Dataverse is an open source software installation, which is used by research repositories all over the world. All the Dataverses share the same interface and system, but each individual Dataverse installation may have a specific focus.</p>
+<p>There are national Dataverses, for example the Dataverse for the Netherlands (DataverseNL) or the Dataverse for Norway (DataverseNO), as well as Dataverses for specific institutions, or even for specific departments within these institutions. Each of these Dataverses may in turn host Dataverses on their own, for specific research groups, and so forth.</p>
+<p>All of these data repositories are compatible with the identification system ORCID. ORCID is an alphanumeric code that is unique for every academic author and research contributor. In some cases, researchers are required to register with ORCID in order to submit data to a repository.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="importance-of-data-citing" class="slide level2 smaller">
+<h2>Importance of Data Citing</h2>
+<ul>
+<li><p>Good research practice</p></li>
+<li><p>Transparency</p></li>
+<li><p>Increased visibility and citation</p></li>
+<li><p>Highlights the entire research process</p></li>
+<li><p>Strengthens the ties between data and publications</p></li>
+</ul>
+<aside class="notes">
+<p>Citing research data is an important part of the research process, since it fosters good research practices, and it is crucial for achieving transparency. Getting cited also creates an incentive to share data, which leads to positive reinforcement, which in turn strengthens the research community in general and the open science community in particular.</p>
+<p>It is just as important to properly cite research data as when using any other kind of source and resource, and just like any other source, the cited data should be included in the list of references.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="citing-research-data" class="slide level2">
+<h2>Citing Research Data</h2>
+
+<img data-src="images/clipboard-3036581338.png" class="r-stretch"><div class="footer">
+<p>https://www.usgs.gov/media/images/data-citation-diagram</p>
+</div>
+<aside class="notes">
+<p>The basic citation principles when using research data or published resources are the same, and at a glance it may appear that there is little difference between the citation of a published article and a dataset. The mandatory parts of the citation are the same when citing a paper or a dataset, but there are also a few differences. Author, year of publication, title, identifier and publisher are examples of components you should find in any kind of reference. Also keep in mind that special requirements may apply when working with multiple datasets, so-called derived data.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="bibliographic-reference" class="slide level2">
+<h2>Bibliographic Reference</h2>
+<p>Author. Publication year. Title. Version. Archive. Type data. Identifier. (DataCite, cf.&nbsp;Starr &amp; Gastl, 2011)</p>
+
+<img data-src="images/clipboard-1290939431.png" class="r-stretch"><div class="footer">
+<p>https://force11.github.io/data-citation-primer/authors/</p>
+</div>
+<aside class="notes">
+<p>When we break down the components of a bibliographic reference for a dataset, it is only two components, the version and the name of the archive, that reveals that this is not a citation of a published resource. When citing a dataset, it is crucial to include the persistent identifier (for example a handle or the DOI), since the dataset can only be accessed online. The DOI-link at the very end is the barcode of the dataset.</p>
+<p>A few components in the reference are only used in data citations. These include the name of the data archive where the dataset can be found, and which version of the dataset has been used. This is a particularly important piece of information if the dataset has undergone change or revision since it was first published.</p>
+<p>The type of data used is also an important piece of information, for example if you have used the raw data or processed data. In some data archives, the individual files within a dataset will have their own unique identifiers, which is particularly useful if you want to cite specific files. In such cases, the related identifier that leads to the full dataset can be relevant to also include in a reference.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section" class="slide level2">
+<h2><img data-src="images/8.png"></h2>
+<aside class="notes">
+<p>It has become increasingly common that a citation for a particular dataset can be automatically generated directly via the data repository where the dataset is stored, or via the data search engine you are using, just as you often are able to do when you look up a published resource in a library catalogue. When you find a dataset in the data search engine DataCite for example, you can click on the button “cite” at the bottom, whereupon a reference will be automatically generated.</p>
+<p>You can choose which citation standard you want to use. Most of the major research repositories, for example Zenodo, Dryad, and any Dataverse-based repository, also offer a similar service with auto- generated data references. However, you have to make sure that the auto-generated reference contains all the necessary information. If something’s missing you will have to add it manually.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-citation" class="slide level2 smaller">
+<h2>Data Citation</h2>
+<p><code>Why Cite Data?</code></p>
+<p>By providing a citation for your data, you make it easier for other users to identify and acknowledge it. Data citation helps promote the reproduceability of research results, it allows us to track the usage and impact of data and it provides a structure by which we can recognize and reward data creators.</p>
+<p><code>Citation Elements</code></p>
+<ul>
+<li>Creater (Publication Year). Title. Publisher. Identifier.</li>
+</ul>
+<p>Richardson, Elizabeth A. (2019). Carstairs deprivation scores for Scotland by CATT2, 1981, 1991, 2001 [Dataset]. University of Edinburgh. School of GeoSciences. http://hdl.handle.net/10283/19</p>
+<p><code>Accession Numbers</code></p>
+<ul>
+<li><p>European Nucleotide Archive accession number CY115901</p></li>
+<li><p>NCBI SNP database accession number SS472331023</p></li>
+</ul>
+<p><code>Unpublished Data</code></p>
+<p>May, Suzzanne. 2004. Email message. (Communications Officer, Advisory Services, Statistics Canada). June 16.</p>
+<aside class="notes">
+<p>In 2014, a group called Force11 issued the Joint Declaration on Data Citation Principles. This has been endorsed by a number of scientific bodies and publishers, as well as individuals.</p>
+<p><strong>So why cite data?</strong></p>
+<p>By providing a citation for your data, you make it easier for other users to identify and acknowledge it. Data citation helps promote the reproduceability of research results, it allows us to track the usage and impact of data and it provides a structure by which we can recognize and reward data creators.</p>
+<p><strong>So whats the best practice in citing a data set?</strong></p>
+<p>As a general rule of thumb you want to make sure you include enough information for another use to be able to locate the data set or the part of the database that you’re referring to.</p>
+<p>DataCite, an international standards body founded in 2009, recommends the following five minimum citation elements:</p>
+<ul>
+<li><p><em>creator</em></p></li>
+<li><p><em>year of publication</em></p></li>
+<li><p><em>title</em></p></li>
+<li><p><em>publisher</em></p></li>
+<li><p><em>identifier</em></p></li>
+</ul>
+<p>Here, identifier refers to any persistent ID which uniquely identifies the object, including a DOI or even a URL, though this may be less persistent.</p>
+<p>Two additional properties which may be added are <strong>Version</strong> and <strong>ResourceType</strong>. <code>ResourceType</code> refers to the class of object that is being citied, such as a dataset, database, map, sound file or website. The UK data service recommends using a title that indicates the subject matter, geography and time period that the data covers (see slide for example).</p>
+<p>When citing data it makes sense to try and adopt the same style and order of references as your other works. Bibliographic style guides and reference management software may help.</p>
+<p>But inevitably, some judgment may be called for. If so, err on the side of caution, and always provide more information than less to help the users find the data.</p>
+<p>In the case of a dynamic database, that is continually updated, it may be near impossible to refer back to the exact version that you used. In such circumstances always include a date of download. In the life sciences, it’s common to include an accession number with the database name when you’re referencing sequence data. You can see this in the examples on screen.</p>
+<p><strong>So what if you’re using an unpublished data source?</strong></p>
+<p>Informal data sharing is relatively common. But even if the data are unpublished, the citation principles still applies. If somebody shared data with you, for example, via an email attachment, you can reference this as a private communication (see slide for example).</p>
+<p>Last but not least, good practice in data documentation and citation can contribute to reaching a better standard of reproducibility of research. Reproducibility is a fundamental principle of the scientific method.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="data-citation-practices" class="slide level2 smaller">
+<h2>Data Citation Practices</h2>
+<ul>
+<li><p>Data citation practices are being developed by many communities of practice or disciplines</p></li>
+<li><p><a href="https://www.force11.org/datacitation">Force11 Joint Declaration of Data Citation Principles</a>is the most widely used data citation principles within academic and scientific communities</p></li>
+<li><p>Other disciplines or communities of practice use citation styles common to their discipline when citing data (APA, MLA, Chicago, etc.)</p></li>
+<li><p>Repositories, funders, or publishers may also have their own data citation style to use</p></li>
+<li><p>Use of DOI and ORCID ID’s for researchers is becoming common practice</p></li>
+</ul>
+<aside class="notes">
+<p>Disciplines such as the social sciences and humanities are also developing citation practices for data, however, these disciplines’ common practice currently is to use a citation style manual that is already used by the discipline, such as APA, MLA, Chicago, among others.</p>
+<p>Lastly, institutional or discipline-specific repositories, funding agencies or foundations AND publishers may have their own data citation style that they prefer authors to use.</p>
+<p>Henderson, Chapter 7 and the other readings introduce other citation standards that are becoming part of current practice, such as DOI or ORCID ID’s for researchers. The DataOne lecture also explains these practices more fully.</p>
+<p>Be sure to complete the readings and review the DataOne lecture for more discussion on each of the issues introduced in this lecture. In Module 6.2 next week we will learn more about sharing datasets, variables to consider when choosing a repository, and assessing which data to keep.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div class="quarto-auto-generated-content">
+<p><img src="images/ou.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': false,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true,"theme":"whiteboard"},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: true,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: "separate-page",
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

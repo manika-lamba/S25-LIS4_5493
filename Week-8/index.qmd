@@ -1,0 +1,720 @@
+---
+title: "Publishing Results and Datasets"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+The outcome of gathering and analyzing data is to publish the results
+and the dataset(s) associated with the research. There are two parts to
+Module 6.
+
+In Module 6.1, I will introduce you to the publication process and
+issues and considerations when publishing results and datasets.
+
+In Module 6.2 we will learn about sharing datasets, choosing appropriate
+options for storing data, and guidelines for determining which data to
+keep and store.
+
+In this week's module, we will review the outcome of gathering and
+analyzing the data, the publication of the results in research articles
+or if in nonacademic contexts, products or services developed as the
+result of the research. Publishing the datasets is also part of this
+phase of the research cycle.
+:::
+
+## Publishing the Results
+
+![](images/1.png){fig-align="center"}
+
+::: footer
+Henderson, M. (2017). Best practices for working with research data. In
+Data management: A practical guide for librarians, p. 28.
+:::
+
+::: notes
+Henderson presents this snapshot of the data life cycle during the
+research process.
+
+One of the outcomes of the research cycle, which occurs near the end of
+the research life cycle, is to publish the results or findings from the
+research in a publication or series of publications. A second outcome is
+to publish the dataset.
+
+The data steward is generally not part of the publication of the
+results, however, they play a very important role in publishing the
+dataset. Datasets may, however, be published with the article, depending
+on the journal or other venue in which results are published.
+:::
+
+## Where is Data Published?
+
+-   In a journal's digital library or repository (if available)
+-   On the academic researcher's website
+-   In the institutional repository of the university
+-   In a discipline-specific repository
+-   In an open science repository
+-   In a private company repository (in non-academic contexts)
+
+::: notes
+In AE#1, you were tasked with finding research articles that made use of
+datasets or that published data within the article. The research
+articles or studies you found for the exercise are examples of how
+researchers publish their findings/results in scholarly journals or
+research reports.
+
+In non-academic contexts, the research results may be “published” or
+used to develop a product or service for the company’s customers. These
+are just a few examples of how the data in either context could be used.
+I am sure you can think of others.
+
+There are several options for where datasets can be published. In an
+academic environment, datasets are often published with the article in
+the publisher’s digital library or repository but this is not always the
+case as you also experienced in AE#1.
+
+Some academic researchers publish their data on their
+personal/university website (though this is NOT recommended). Others
+deposit their data in either their university’s institutional repository
+or in one specific to their discipline.
+
+You have reviewed examples of these options in an earlier module. OU’s
+institutional repository is called ShareOK. Additionally, some funding
+agencies also require academic researchers to publish their data in open
+source/open access repositories.
+
+The DataOne repository or others you have used in AE#1 are examples of
+open access/open science repositories.
+
+In a non-academic context, data may be stored on a company’s server or
+in a cloud repository. It may also be stored on individual computer hard
+drives or external drives, though this is NOT best practice and could
+create problems for storing and accessing the data in the future.
+
+Regardless of where the datasets are stored, the data steward will play
+an integral role in making sure the data are prepared and ready for
+ingest into the storage option. We will focus more on preparing and
+ingesting the data in Module 7.
+:::
+
+## Registry of Research Data Repositories {.smaller}
+
+<https://www.re3data.org/>
+
+![](images/clipboard-2997698225.png){width="131"}
+
+::::: columns
+::: {.column width="50%"}
+-   List over 2,000 data repositories
+
+-   Multidisciplinary
+
+-   Details about the repositories
+
+    -   terms of use
+    -   standards
+    -   persistent identifiers
+    -   software
+    -   version control, etc.
+:::
+
+::: {.column width="50%"}
+![](images/9.png)
+:::
+:::::
+
+::: notes
+The Registry of Research Data Repositories, also known as re3data, is a
+multidisciplinary Open Science tool that indexes existing international
+repositories for research data. As per 2020, re3data lists well over
+2,500 data repositories.
+
+In order to be listed in re3data, a repository needs to meet certain
+requirements. It needs to be run by a legal entity, such as a
+sustainable institution (for example a library or a university), and the
+repository needs to clarify access conditions to the data and repository
+as well as the terms of use, and have a focus on research data.
+
+Re3data is a rather user-friendly tool, which allows users to quickly
+navigate between an array of different data repositories, all over the
+world. In this session we will go through some of the basic features of
+re3data. We will start off by using the browse function. Here you can
+choose between three categories: ‘subject’, ‘content type’ or ‘country’.
+
+If you click the ‘country’ option, a world map appears, where all the
+areas in green mark all the countries from which data repositories are
+included in the registry. By hovering over a country, you will see the
+number of repositories included in the registry from that particular
+country. If you prefer, you can also click the ‘text’ tab, in order to
+display a list over the countries and the number of repositories from
+each country, listed according to alphabetical order. Once you click a
+country, a list with the repositories from the selected country appears.
+This is particularly useful if you are looking into using a repository
+from a specific country or region.
+:::
+
+## re3data {.smaller}
+
+`Browse by Disciplines`
+
+![](images/10.png){fig-align="center"}
+
+::: notes
+If we go back to the start page, we will look at another feature of the
+browse function. This time we will try the subject browser.
+
+Once you click on the ‘subjects’ button a colourful wheel appears, which
+features the major disciplines included in the repository registry. If
+you click one of the overarching disciplines, for example the humanities
+and social sciences, the wheel changes, and the subjects become more
+specialised.
+
+Every time you click on a subject on the next level, the wheel changes,
+until you reach the final level. You can always go back by clicking at
+the centre of the wheel. Once you have reached the last sub-discipline a
+list appears, which features all the repositories specialising in that
+particular topic. If you prefer, you can also browse using the ‘text’
+version, instead of the graphical version, which simply lists all the
+subjects available.
+
+If you know what you are looking for already from the start, you can
+skip taking the detour via the browse function and instead go directly
+to the search function on the start page. Here you can enter keywords,
+geographical terms or subjects. If you type ‘linguistics’ for example, a
+list of repositories welcoming datasets within the field of language
+studies will appear. Be mindful of your search criteria.
+
+Sometimes you may involuntarily exclude relevant results by being too
+specific.
+:::
+
+## Data Search Engines
+
+![](images/3.png)
+
+::: notes
+A data search engine is a tool that will allow you to locate published
+research data, either entire data repositories or individual datasets.
+In other words, just like any other search engine, the data search
+engines will index relevant data archives and direct you to where you
+will find the requested data.
+:::
+
+## Data Search Engines (Cont.)
+
+-   Indexes content from data archives/repositories
+-   Allows you to search for data repositories or datasets
+-   Directs you to where the data is archived
+
+::: notes
+As a rule of thumb, it is only open metadata that will be harvested by
+data search engines, and thereby become visible. A search engine will
+point you to where the data is archived, hopefully with a permanent
+identifier and link. Depending on which data search engine you are
+using, the search results generated will differ from search engine to
+search engine.
+
+Some data search engines specialize in datasets, while others are more
+inclusive and will direct you to data repositories as well as published
+articles and research projects. The search engines have the same
+overarching purposes but have different qualities and functionalities.In
+this presentation, we will be looking into three of the most commonly
+used data search engines.
+:::
+
+## DataCite
+
+<https://datacite.org/>
+
+-   Multi-disciplinary search engine
+
+-   Aims to improve data citation
+
+-   Gathers metadata for each DOI assigned to an object
+
+-   Provides persistent identifiers (DOI) for research data
+
+-   Search for repositories, researchers as well as datasets and
+    published research
+
+::: notes
+The first data search engine we will have a closer look at is called
+DataCite. DataCite is a widely used, multidisciplinary search engine
+that allows you to search for datasets equipped with a DOI as their
+persistent digital identifier. DataCite gathers metadata associated with
+existing datasets and whenever a new dataset with a DOI-link is posted,
+it will automatically become indexed in DataCite.
+
+Apart from datasets, DataCite also indexes other kinds of works, more
+broadly defined, including audiovisual material, articles, as well as
+data repositories, and also allows the user to search for individual
+researchers. The search function is, however, far from flawless.
+:::
+
+## BASE
+
+<https://base-search.net/>
+
+-   Multi-disciplinary search engine
+-   Harvests metadata from different repositories and search providers
+    (including DataCite)
+-   Indexes resources providing an Open Archives Initiative interface
+-   Metadata free to access
+-   Refined search options
+
+::: notes
+The next data search engine we will look at is Bielefeld Academic Search
+Engine, commonly referred to simply as BASE. BASE is operated by
+Bielefeld University Library and provides access to hundreds of millions
+of documents and datasets.
+
+It has similar qualities to DataCite, but harvests metadata directly
+from thousands of repositories, including DataCite, which means that it
+will also pick up datasets that are not equipped with a DOI as their
+persistent identifier.
+
+Just like in DataCite, the BASE search engine makes it possible to
+search not only for datasets, but for articles, entire books, authors,
+and research projects, as well as other audiovisual material.
+
+BASE offers a much more refined search function than DataCite and is
+thereby more user friendly, although the search function for BASE is not
+without flaws either.
+
+BASE harvests resources from archives that operate with an Open Archive
+Initiative. This means that the majority of the indexed documents and
+datasets are available under Open Access licenses.
+:::
+
+## Google Dataset Search
+
+<https://datasetsearch.research.google.com/>
+
+-   Multi-disciplinary search engine
+-   Complements Google Scholar
+-   Targeted at Scientists and Data Journalists
+-   Open data and metadata
+-   Indexes data from DataCite and others
+-   Launched 2018, out of beta 2020
+
+::: notes
+The third and last data search engine we will look at is Google dataset
+search, which was launched in 2018 and moved out of beta in 2020.
+
+Google dataset search shares features and qualities with the widely used
+search engine Google scholar, and it is another service created by the
+search engine giant and directed towards the global research community,
+intended to complement Google scholar.
+
+The aim of Google dataset search is to unify the many thousands of
+different repositories for datasets and make all data searchable,
+without moving the actual data. Google thereby seeks to address the
+issue of the fragmented platform for dataset publication.
+
+Google dataset search engine bears striking resemblance to the google
+search engine we are all accustomed to, but the functionality and
+purpose is much more specialised.
+
+The search engine is a rather user-friendly system, and the fact that it
+indexes datasets only makes it a little more user friendly than both
+DataCite and BASE, at least for users who are looking for datasets only.
+Google dataset search shows where the original data is stored, where it
+can be accessed, available formats, information about funders, and a
+short description.
+
+The search engine is compatible with Google scholar, which allows users
+smooth access to information regarding any citations of the data and any
+associated publications.
+:::
+
+## Data Archives/Repositories
+
+-   Appropriate, subject-specific location where you can submit or
+    access data
+-   Subject specific or multidisciplinary
+-   Small or large
+-   Open or closed
+-   Who is allowed to deposit/access data?
+
+::: notes
+Now, you will learn about data archives or data repositories. The data
+archive is where the datasets are stored and you will find the actual
+data. Different data archives have different qualities and
+functionalities and it is beneficial to consider which archive is best
+suited for your data.
+
+The words 'repository' and 'archive' are sometimes used interchangeably.
+Curious about the differences between them? Read more about them
+[here](https://www.umu.se/en/library/research-data/share-and-publish/).
+
+The repository is where the datasets are stored, and you will find the
+actual data. Data repositories come in all sizes. At one end there are
+small institutional repositories which store a few dozen datasets, and
+at the other end the major international repositories, which boast tens
+of thousands of datasets. There are both multidisciplinary and subject
+specific repositories and most of them are free to use and specialise in
+open research data.
+
+Many research institutions have their own data archives, often referred
+to as institutional data repositories. The same goes for many companies,
+but the data stored here is often not as easily accessible to members of
+the public.
+
+Researchers are often free to choose if they want to deposit their data
+in the institutional repository or somewhere else. Most institutional
+repositories only welcome research data from their own researchers.
+
+However, within certain disciplines, there are institutional
+repositories that welcome research data from scholars worldwide,
+independent of any institutional affiliation. Once the data has been
+shared in the data repository anyone is free to access them.
+:::
+
+## Data Archives/Repositories (Cont.)
+
+![](images/6.png)
+
+-   Internationally widely used repositories
+
+-   Multidisciplinary
+
+-   Free
+
+-   Institutional data repositories
+
+-   ORCID
+
+::: notes
+For those who lack access to institutional repositories, such as
+independent scholars, the independent research repositories constitute a
+good alternative. Zenodo, Figshare, and Dryad are some of the best-known
+independent repositories.
+
+The independent repositories allow anyone to deposit their data and
+thereby make it possible for independent scholars to comply with data
+sharing requirements.
+
+Zenodo is one of the major players among data repositories. It is an
+open access-repository, which was developed under the OpenAIRE program,
+and it is operated by the European Organisation for Nuclear Research
+(CERN). Zenodo welcomes research data within all disciplines from
+researchers all over the world, and does not have any requirements when
+it comes to format, size, access restrictions or licenses. The
+repository provides access to research data as well as articles,
+conference objects, and other objects associated more generally with
+research. All submissions to Zenodo are assigned a DOI as a persistent
+identifier, which facilitates data citation. The citation information is
+also passed on to DataCite and other data search engines, which makes
+the data easily findable.
+
+Zenodo collaborates with another major data repository, Dryad. Dryad is
+another open-access repository which shares a lot of features with
+Zenodo. In terms of subject specialisation Dryad focuses more on
+scientific data and medical sciences and is particularly strong when it
+comes to a number of specific subjects. All data deposited in Dryad are
+associated with a published article and are available under a Creative
+Commons Zero license (CC-0), which makes the data public domain. Dryad
+encourages not only the researchers themselves, but also encourages
+institutions, journals, learned societies and publishers to share their
+data.
+
+Figshare is an online open access repository that was launched in 2011.
+It shares features with both ZENODO and Dryad and operates with creative
+commons licenses. All datasets are available under a Creative Commons
+Zero license (CC-0), and Figshare welcomes all kinds of different
+research outputs, regardless of file format. Figshare is backed by a
+long line of institutions and research associations, but the repository
+can be used by researchers regardless of institutional affiliation.
+:::
+
+## Data Archives/Repositories (Cont.)
+
+![](images/7.png){fig-align="center"}
+
+-   Internationally widely used repositories
+
+-   Multidisciplinary
+
+-   Free
+
+-   Institutional data repositories
+
+-   ORCID
+
+::: notes
+Another example of a major player in the field of data repositories is
+the Harvard Dataverse, which is open to all kinds of research data from
+scholars from all over the world, both within and outside the Harvard
+community. Dataverse is an open source software installation, which is
+used by research repositories all over the world. All the Dataverses
+share the same interface and system, but each individual Dataverse
+installation may have a specific focus.
+
+There are national Dataverses, for example the Dataverse for the
+Netherlands (DataverseNL) or the Dataverse for Norway (DataverseNO), as
+well as Dataverses for specific institutions, or even for specific
+departments within these institutions. Each of these Dataverses may in
+turn host Dataverses on their own, for specific research groups, and so
+forth.
+
+All of these data repositories are compatible with the identification
+system ORCID. ORCID is an alphanumeric code that is unique for every
+academic author and research contributor. In some cases, researchers are
+required to register with ORCID in order to submit data to a repository.
+:::
+
+## Importance of Data Citing {.smaller}
+
+-   Good research practice
+
+-   Transparency
+
+-   Increased visibility and citation
+
+-   Highlights the entire research process
+
+-   Strengthens the ties between data and publications
+
+::: notes
+Citing research data is an important part of the research process, since
+it fosters good research practices, and it is crucial for achieving
+transparency. Getting cited also creates an incentive to share data,
+which leads to positive reinforcement, which in turn strengthens the
+research community in general and the open science community in
+particular.
+
+It is just as important to properly cite research data as when using any
+other kind of source and resource, and just like any other source, the
+cited data should be included in the list of references.
+:::
+
+## Citing Research Data
+
+![](images/clipboard-3036581338.png)
+
+::: footer
+https://www.usgs.gov/media/images/data-citation-diagram
+:::
+
+::: notes
+The basic citation principles when using research data or published
+resources are the same, and at a glance it may appear that there is
+little difference between the citation of a published article and a
+dataset. The mandatory parts of the citation are the same when citing a
+paper or a dataset, but there are also a few differences. Author, year
+of publication, title, identifier and publisher are examples of
+components you should find in any kind of reference. Also keep in mind
+that special requirements may apply when working with multiple datasets,
+so-called derived data.
+:::
+
+## Bibliographic Reference
+
+Author. Publication year. Title. Version. Archive. Type data.
+Identifier. (DataCite, cf. Starr & Gastl, 2011)
+
+![](images/clipboard-1290939431.png)
+
+::: footer
+https://force11.github.io/data-citation-primer/authors/
+:::
+
+::: notes
+When we break down the components of a bibliographic reference for a
+dataset, it is only two components, the version and the name of the
+archive, that reveals that this is not a citation of a published
+resource. When citing a dataset, it is crucial to include the persistent
+identifier (for example a handle or the DOI), since the dataset can only
+be accessed online. The DOI-link at the very end is the barcode of the
+dataset.
+
+A few components in the reference are only used in data citations. These
+include the name of the data archive where the dataset can be found, and
+which version of the dataset has been used. This is a particularly
+important piece of information if the dataset has undergone change or
+revision since it was first published.
+
+The type of data used is also an important piece of information, for
+example if you have used the raw data or processed data. In some data
+archives, the individual files within a dataset will have their own
+unique identifiers, which is particularly useful if you want to cite
+specific files. In such cases, the related identifier that leads to the
+full dataset can be relevant to also include in a reference.
+:::
+
+## ![](images/8.png)
+
+::: notes
+It has become increasingly common that a citation for a particular
+dataset can be automatically generated directly via the data repository
+where the dataset is stored, or via the data search engine you are
+using, just as you often are able to do when you look up a published
+resource in a library catalogue. When you find a dataset in the data
+search engine DataCite for example, you can click on the button “cite”
+at the bottom, whereupon a reference will be automatically generated.
+
+You can choose which citation standard you want to use. Most of the
+major research repositories, for example Zenodo, Dryad, and any
+Dataverse-based repository, also offer a similar service with auto-
+generated data references. However, you have to make sure that the
+auto-generated reference contains all the necessary information. If
+something’s missing you will have to add it manually.
+:::
+
+## Data Citation {.smaller}
+
+`Why Cite Data?`
+
+By providing a citation for your data, you make it easier for other
+users to identify and acknowledge it. Data citation helps promote the
+reproduceability of research results, it allows us to track the usage
+and impact of data and it provides a structure by which we can recognize
+and reward data creators.
+
+`Citation Elements`
+
+-   Creater (Publication Year). Title. Publisher. Identifier.
+
+Richardson, Elizabeth A. (2019). Carstairs deprivation scores for
+Scotland by CATT2, 1981, 1991, 2001 \[Dataset\]. University of
+Edinburgh. School of GeoSciences. http://hdl.handle.net/10283/19
+
+`Accession Numbers`
+
+-   European Nucleotide Archive accession number CY115901
+
+-   NCBI SNP database accession number SS472331023
+
+`Unpublished Data`
+
+May, Suzzanne. 2004. Email message. (Communications Officer, Advisory
+Services, Statistics Canada). June 16.
+
+::: notes
+In 2014, a group called Force11 issued the Joint Declaration on Data
+Citation Principles. This has been endorsed by a number of scientific
+bodies and publishers, as well as individuals.
+
+**So why cite data?**
+
+By providing a citation for your data, you make it easier for other
+users to identify and acknowledge it. Data citation helps promote the
+reproduceability of research results, it allows us to track the usage
+and impact of data and it provides a structure by which we can recognize
+and reward data creators.
+
+**So whats the best practice in citing a data set?**
+
+As a general rule of thumb you want to make sure you include enough
+information for another use to be able to locate the data set or the
+part of the database that you're referring to.
+
+DataCite, an international standards body founded in 2009, recommends
+the following five minimum citation elements:
+
+-   *creator*
+
+-   *year of publication*
+
+-   *title*
+
+-   *publisher*
+
+-   *identifier*
+
+Here, identifier refers to any persistent ID which uniquely identifies
+the object, including a DOI or even a URL, though this may be less
+persistent.
+
+Two additional properties which may be added are **Version** and
+**ResourceType**. `ResourceType` refers to the class of object that is
+being citied, such as a dataset, database, map, sound file or website.
+The UK data service recommends using a title that indicates the subject
+matter, geography and time period that the data covers (see slide for
+example).
+
+When citing data it makes sense to try and adopt the same style and
+order of references as your other works. Bibliographic style guides and
+reference management software may help.
+
+But inevitably, some judgment may be called for. If so, err on the side
+of caution, and always provide more information than less to help the
+users find the data.
+
+In the case of a dynamic database, that is continually updated, it may
+be near impossible to refer back to the exact version that you used. In
+such circumstances always include a date of download. In the life
+sciences, it's common to include an accession number with the database
+name when you're referencing sequence data. You can see this in the
+examples on screen.
+
+**So what if you're using an unpublished data source?**
+
+Informal data sharing is relatively common. But even if the data are
+unpublished, the citation principles still applies. If somebody shared
+data with you, for example, via an email attachment, you can reference
+this as a private communication (see slide for example).
+
+Last but not least, good practice in data documentation and citation can
+contribute to reaching a better standard of reproducibility of research.
+Reproducibility is a fundamental principle of the scientific method.
+:::
+
+## Data Citation Practices {.smaller}
+
+-   Data citation practices are being developed by many communities of
+    practice or disciplines
+
+-   [Force11 Joint Declaration of Data Citation
+    Principles](https://www.force11.org/datacitation)is the most widely
+    used data citation principles within academic and scientific
+    communities
+
+-   Other disciplines or communities of practice use citation styles
+    common to their discipline when citing data (APA, MLA, Chicago,
+    etc.)
+
+-   Repositories, funders, or publishers may also have their own data
+    citation style to use
+
+-   Use of DOI and ORCID ID’s for researchers is becoming common
+    practice
+
+::: notes
+Disciplines such as the social sciences and humanities are also
+developing citation practices for data, however, these disciplines’
+common practice currently is to use a citation style manual that is
+already used by the discipline, such as APA, MLA, Chicago, among others.
+
+Lastly, institutional or discipline-specific repositories, funding
+agencies or foundations AND publishers may have their own data citation
+style that they prefer authors to use.
+
+Henderson, Chapter 7 and the other readings introduce other citation
+standards that are becoming part of current practice, such as DOI or
+ORCID ID’s for researchers. The DataOne lecture also explains these
+practices more fully.
+
+Be sure to complete the readings and review the DataOne lecture for more
+discussion on each of the issues introduced in this lecture. In Module
+6.2 next week we will learn more about sharing datasets, variables to
+consider when choosing a repository, and assessing which data to keep.
+:::
