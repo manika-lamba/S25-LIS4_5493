@@ -220,6 +220,8 @@ will find the requested data.
 
 ## Data Search Engines (Cont.)
 
+![](images/3-01.png){fig-align="center" width="219"}
+
 -   Indexes content from data archives/repositories
 -   Allows you to search for data repositories or datasets
 -   Directs you to where the data is archived
@@ -390,7 +392,7 @@ shared in the data repository anyone is free to access them.
 
 ## Data Archives/Repositories (Cont.)
 
-![](images/6.png)
+![](images/4.png)
 
 -   Internationally widely used repositories
 
