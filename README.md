@@ -8,3 +8,4 @@
 - [Week 6 Supporting Data Collection: Documenting and Describing Data](https://manika-lamba.github.io/S25-LIS4_5493/Week-6/#/title-slide)
 - [Week 7 Supporting Data Analysis](https://manika-lamba.github.io/S25-LIS4_5493/Week-7/#/title-slide)
 - [Week 8 Publishing Results and Datasets](https://manika-lamba.github.io/S25-LIS4_5493/Week-8/#/title-slide)
+- [Week 9 Sharing Data](https://manika-lamba.github.io/S25-LIS4_5493/Week-9/#/title-slide)
