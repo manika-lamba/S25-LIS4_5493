@@ -1,5 +1,5 @@
 ---
-title: "Sharing Datasets"
+title: "Sharing Data"
 subtitle: "LIS 4/5493: Data Stewardship"
 author: 
   - Dr. Manika Lamba
