@@ -280,9 +280,6 @@ storage. Also in Module 7.2 and 7.3 we will learn about preparing data
 for deposit and HOW to ingest data using popular protocols like APIs and
 OAI-PMH. In Module 10 we will come back to examine the legal and ethical
 risks that could be present in the data we wish to preserve.
-
-Please be sure to review the DataOne lecture for this module also to
-learn more about sharing data benefits, barriers, and best practices.
 :::
 
 ## Key Stakeholders in Data Sharing
@@ -530,15 +527,14 @@ to both researchers and the broader research community.
 
 ::::: columns
 ::: {.column width="50%"}
-![](images/5.png){fig-align="center"}
+![](images/5.png){fig-align="center"} ![](images/7.png)
 :::
 
 ::: {.column width="50%"}
 ![](images/6.png){fig-align="center"}
+![](privacy.gif){fig-align="center" width="500"}
 :::
 :::::
-
-![](privacy.gif){fig-align="center" width="500"}
 
 ::: notes
 When collecting data that deal with human subjects, researchers have an
@@ -579,11 +575,7 @@ there is a significant likelihood of psychological, social, emotional,
 physical or reputational harm. These definitions show the breadth of
 information that researchers need to actively protect when managing and
 potentially sharing data.
-:::
 
-## ![](images/7.png)
-
-::: notes
 Now let's look at three type of identifiers. As we mentioned above,
 there are both direct and indirect ways a person can be identified.
 Direct identifiers are those variables or information included within
@@ -598,7 +590,15 @@ race or income.
 
 Finally, we have geographic identifiers. Which may include indirect
 identifiers such as a Zip Code or direct identifiers such as a complete
-mailing address. Consider an example data set in which direct
+mailing address. 
+:::
+
+## Protecting Confidentiality (Cont.)
+
+![](confidentiality.gif)
+
+::: notes
+Consider an example data set in which direct
 identifiers have been removed. The data set represents the population of
 US citizens, who have earned doctoral degrees in 1991. Variables include
 the major field of study, race, sex and geographic region of the
@@ -617,10 +617,14 @@ Of those individuals, 2,119 received their degrees in the physical
 sciences 1,707 of which are male. Of that group, only 20 reported their
 race as black. Having quickly gone from over 25,000 people to just 20,
 how easy do you think it would be to figure out who those 20 people are?
+
 Well, only eight of them were astronomy majors it wouldn't take much
 more information to identify at least one of these individuals. If we
 knew where those degrees were granted, say in New York, we would likely
-know who that person is. This example demonstrates that protecting
+know who that person is. 
+
+This example demonstrates that protecting
 confidentiality requires careful consideration and special handling of
 not only direct identifiers, but also indirect identifiers.
 :::
+

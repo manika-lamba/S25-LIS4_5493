@@ -532,7 +532,6 @@ Dr.&nbsp;Manika Lamba
 <p>The criteria focus on technical, policy-guided, and practical criteria. For example, it goes without saying that the repository should be reliable and stable and permanent.</p>
 <p>In early days of establishing disciplinary repositories that were not funded by federal agencies such as the NSF, NIH or others, disciplinary repositories were not stable and often changed hands frequently. It is also very critical that the policies of the repository be present, clearly defined, and include all aspects of depositing, describing, storing, re-using, and even removing data if necessary.</p>
 <p>Also, there should be evident and well documented policies on terms of use, copyright, licensing and re-use of the data. In Module 7.1 we will look closer at policies and planning for data curation and long term storage. Also in Module 7.2 and 7.3 we will learn about preparing data for deposit and HOW to ingest data using popular protocols like APIs and OAI-PMH. In Module 10 we will come back to examine the legal and ethical risks that could be present in the data we wish to preserve.</p>
-<p>Please be sure to review the DataOne lecture for this module also to learn more about sharing data benefits, barriers, and best practices.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -676,23 +675,10 @@ Dr.&nbsp;Manika Lamba
 <h2>Protecting Confidentiality</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/5.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
+<p><img data-src="images/5.png" class="quarto-figure quarto-figure-center"> <img data-src="images/7.png"></p>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/6.png" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
+<p><img data-src="images/6.png" class="quarto-figure quarto-figure-center"> <img data-src="privacy.gif" class="quarto-figure quarto-figure-center" width="500"></p>
 </div></div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="privacy.gif" class="quarto-figure quarto-figure-center" width="500"></p>
-</figure>
-</div>
 <aside class="notes">
 <p>When collecting data that deal with human subjects, researchers have an ethical requirement to protect the privacy of study participants. This involves protecting an individual’s identity during the collection, handling, storage, and sharing of data.</p>
 <p>Often these ethical considerations are outlined in a researcher’s application to their institutional review board, or IRB. There can be serious consequences of confidentiality is accidentally breached. These consequences can negatively effect a researcher’s career. Negatively impact a research’s institution, and may include hefty fines or even legal sanctions.</p>
@@ -702,6 +688,9 @@ Dr.&nbsp;Manika Lamba
 <p>Note the reference to either direct or indirect means. We will come back to this idea in a moment.</p>
 <p>Next, we have Protected Health Information or PHI.</p>
 <p>PHI is individually identifiable health information transmitted or maintained, in any form or medium, by a covered entity. And finally there is sensitive information. Which is information, that if disclosed there is a significant likelihood of psychological, social, emotional, physical or reputational harm. These definitions show the breadth of information that researchers need to actively protect when managing and potentially sharing data.</p>
+<p>Now let’s look at three type of identifiers. As we mentioned above, there are both direct and indirect ways a person can be identified. Direct identifiers are those variables or information included within data that explicitly point to an individual or unit. These include, Social Security numbers, phone numbers, and names, and are often the easy ones to spot.</p>
+<p>The identifiers that can become more problematic are the indirect identifiers. These are variables that may make unique cases visible, particularly when combined with other individual attributes, such as race or income.</p>
+<p>Finally, we have geographic identifiers. Which may include indirect identifiers such as a Zip Code or direct identifiers such as a complete mailing address.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -714,14 +703,15 @@ Dr.&nbsp;Manika Lamba
           display:block!important;
       }</style></aside>
 </section>
-<section id="section" class="slide level2">
-<h2><img data-src="images/7.png"></h2>
+<section id="protecting-confidentiality-cont." class="slide level2">
+<h2>Protecting Confidentiality (Cont.)</h2>
+<p><img data-src="confidentiality.gif"></p>
 <aside class="notes">
-<p>Now let’s look at three type of identifiers. As we mentioned above, there are both direct and indirect ways a person can be identified. Direct identifiers are those variables or information included within data that explicitly point to an individual or unit. These include, Social Security numbers, phone numbers, and names, and are often the easy ones to spot.</p>
-<p>The identifiers that can become more problematic are the indirect identifiers. These are variables that may make unique cases visible, particularly when combined with other individual attributes, such as race or income.</p>
-<p>Finally, we have geographic identifiers. Which may include indirect identifiers such as a Zip Code or direct identifiers such as a complete mailing address. Consider an example data set in which direct identifiers have been removed. The data set represents the population of US citizens, who have earned doctoral degrees in 1991. Variables include the major field of study, race, sex and geographic region of the academic institution in which the degree was earned. Without direct identifiers such as name, phone number, mailing address, Social Security Number, and other information that link directly to the identity of the individual it would seem that it would be impossible to distinguish any given individual represented in this data set which includes over 25,000 people.</p>
+<p>Consider an example data set in which direct identifiers have been removed. The data set represents the population of US citizens, who have earned doctoral degrees in 1991. Variables include the major field of study, race, sex and geographic region of the academic institution in which the degree was earned. Without direct identifiers such as name, phone number, mailing address, Social Security Number, and other information that link directly to the identity of the individual it would seem that it would be impossible to distinguish any given individual represented in this data set which includes over 25,000 people.</p>
 <p>Let’s take a closer look at these data. If we were to take just the people who earned their doctoral degrees in the science and engineering fields, we are left with just over 14,000 individuals.</p>
-<p>Of those individuals, 2,119 received their degrees in the physical sciences 1,707 of which are male. Of that group, only 20 reported their race as black. Having quickly gone from over 25,000 people to just 20, how easy do you think it would be to figure out who those 20 people are? Well, only eight of them were astronomy majors it wouldn’t take much more information to identify at least one of these individuals. If we knew where those degrees were granted, say in New York, we would likely know who that person is. This example demonstrates that protecting confidentiality requires careful consideration and special handling of not only direct identifiers, but also indirect identifiers.</p>
+<p>Of those individuals, 2,119 received their degrees in the physical sciences 1,707 of which are male. Of that group, only 20 reported their race as black. Having quickly gone from over 25,000 people to just 20, how easy do you think it would be to figure out who those 20 people are?</p>
+<p>Well, only eight of them were astronomy majors it wouldn’t take much more information to identify at least one of these individuals. If we knew where those degrees were granted, say in New York, we would likely know who that person is.</p>
+<p>This example demonstrates that protecting confidentiality requires careful consideration and special handling of not only direct identifiers, but also indirect identifiers.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
