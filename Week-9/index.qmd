@@ -1,0 +1,626 @@
+---
+title: "Sharing Datasets"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+As we learned last module, the outcome of gathering and analyzing data
+is to publish the results and the dataset(s) associated with the
+research. In Module 6.1 you were introduced to the publication process
+and issues and considerations when publishing results and datasets.
+
+In Module 6.2, we will learn about sharing datasets, choosing
+appropriate options for storing data, and guidelines for determining
+which data to keep and store.
+
+There are two basic components to sharing data:
+
+1.  choosing which data to keep for the long term, and
+
+2.  selecting the best, most appropriate option for storing the data.
+
+We will also read about emerging best practices for sharing datasets the
+can guide both academic and non-academic research and storage contexts.
+
+In Module 4 we focused on how data stewards support researchers by
+helping them structure and organize the data, including storage options
+and documenting and describing the datasets. How data are stored during
+the research cycle is likely not appropriate for longer term storage or
+to facilitate preservation and re-use of the dataset.
+
+Also, during the research cycle all data are important and should be
+kept, but there are additional considerations and decisions to make when
+determining which datasets, or versions of datasets, to keep and
+preserve.
+
+In this module, you will read further about these two main issues as
+well as emerging best practices. Next week we will discuss policies and
+planning related to long term preservation of the dataset.
+:::
+
+## Is Storing and Preserving Data the Same?
+
+![](images/1.png){fig-align="center"}
+
+::: footer
+Henderson, M. (2017). Best practices for working with research data. In
+Data management: A practical guide for librarians, p. 28.
+:::
+
+::: notes
+Let’s refer back to Henderson’s helpful model of the simplified data
+life cycle to answer this question: [**Is storing and preserving data
+the same?**]{.underline}
+
+Researchers and data stewards will likely answer this question
+differently. During the research life cycle researchers need to keep ALL
+data, in any and all formats spreadsheets, interview audio and
+transcriptions, files in statistics programs like SPSS or content
+analysis programs like Nvivo.
+
+They also may keep lab journals or electronic notebooks. DURING the
+research cycle all of these sources are important to the research
+project and will be referred back to throughout the analysis and
+publishing phases.
+
+However, AFTER the research life cycle has completed (though some would
+argue with re-use of data the cycle is never complete), the researcher
+stores the data dependent upon funding and IRB requirements.
+
+The data steward does in fact also need to keep funder and IRB retention
+requirements at the forefront of what they do with the data but they
+also make determinations for long term storage and preservation.
+:::
+
+## How to Determine What to Keep (Appraisal)
+
+-   There may be different factors to consider depending on whether or
+    not a data management or data curation perspective is taken
+-   There may be disciplinary differences about what is necessary to
+    keep and what can be disposed AND how long data should be kept
+-   The nature of the data, how it was gathered or developed, and its
+    future use may be drivers considered during appraisal.
+
+::: notes
+Reviewing the readings for this week you will see two different, though
+not exclusive, perspectives at work, one from the data management
+perspective and one from data curation.
+
+Each may present a slightly different view on why and how data are
+preserved. The Henderson and Oliver & Harvey chapters outline the two
+perspectives. It is also important to note that there may be
+disciplinary differences about what to keep and what is not deemed
+important enough to keep.
+
+Institutional policies about data retentions, storage, and preservation
+can help resolve some of these issues.
+
+We will look closer at policies and planning in Module 7.1. Also, the
+nature of the data, how it was collected, as well as its future use may
+be drivers for determining what to keep and how long to keep the
+dataset.
+
+As will also be discussed by Simmons & Richards there are many new
+content types of datasets or data objects that are being preserved.
+:::
+
+## Some Key Questions to Ask (Management) {.smaller}
+
+-   Relevance to the mission of the institution
+
+-   Legal requirement to keep the data
+
+-   Uniqueness of the data objects or dataset
+
+-   Scientific or historical value
+
+-   Potential for re-use
+
+-   Non-replicability and cost to repeat the research if data is lost
+
+-   Future economic benefits
+
+-   Documentation and description included and interoperable with
+    repository
+
+::: notes
+From a data management perspective, Henderson (p. 59) presents some key
+questions to ask about the data when appraising whether or not to keep
+the data object or dataset.
+
+For example:
+
+-   What is the relevance of the data to the mission of the institution
+    (or business) and does the subject fit with the goals and priorities
+    of the institution?
+-   Is there a legal requirement to keep the data?
+-   How unique is the dataset or data objects and are they of scientific
+    or historical value?
+-   Can the data be replicated if lost or damaged? And what is the cost
+    of doing so?
+-   Is the data ready to be deposited in the repository or will
+    documentation and description work be necessary?
+
+These are definite considerations. Henderson also presents REASONS why
+researchers would want to store their data objects and datasets such as:
+
+1.  Verification of published findings by the researcher and others
+2.  Future use of the data to validate the prior study or to build
+    additional work
+3.  Promotion and tenure evidence
+4.  Use within communities of practice or to participate in open data
+    initiatives
+5.  Learning and teaching resource
+:::
+
+## Some Key Questions to Ask (Curation)
+
+-   Are there legal restrictions for keeping the data (data protection
+    or freedom of information acts)?
+-   Can the project continue without the data?
+-   What is the potential re-use value?
+-   What are the consequences for not keeping the data?
+-   Can the institution support the long term storage of the data?
+-   How long do we keep the data and what are the costs of doing so
+    (technology, mission of organization, and user requirements?
+
+::: notes
+From a data curtation perspective, Oliver & Harvey (pp. 131-135) present
+some other questions to ask about the data when appraising whether or
+not to keep the data object or dataset.
+
+For example, are there legal restrictions for keeping the data, such as
+copyright infringement or intellectual property rights OR privacy
+concerns? Oliver & Harvey also approach data curation from a risk
+management view but first asking what the consequences are for not
+keeping the data? And if there are risks, how would one mitigate the
+risks?
+
+They also take a practical approach asking if the institution can
+support the long term storage of the data, especially large datasets,
+and what are the costs associated with keeping the data in terms of
+technology needed and future migration of data, or whether the data will
+continue to support the mission of the institution or business?
+
+Review the Henderson and Oliver & Harvey chapter for more on appraisal.
+The Ogier, Nicholls, and Speer reading also addresses what to do with
+data at the end of the life cycle and the Johnston reading discusses
+risks and how to mitigate risk.
+:::
+
+## Where is Data Published?
+
+-   In a journal's digital library or repository (if available)
+
+-   On the academic researcher's website
+
+-   In the institutional repository of the university
+
+-   In a discipline-specific repository
+
+-   In an open science repository
+
+-   In a private company repository (in non-academic contexts)
+
+::: notes
+In the last module, we discussed the many options for publishing and
+storing data objects and datasets, such as 1) with the article in the
+publisher’s digital library or repository 2) on a researcher’s
+personal/university website, 3) an university’s institutional repository
+or in one specific to the discipline.
+
+In a non-academic context, data may be stored on a company’s server or
+in a cloud repository. It may also be stored on individual computer hard
+drives or external drives, though this is NOT best practice and could
+create problems for storing and accessing the data in the future.
+
+But how does the data steward or researcher determine which is the best
+option?
+:::
+
+## Criteria for Choosing a Repository {.smaller}
+
+-   Is the repository reliable and stable?
+-   Are others in the discipline using the repository?
+-   Are the security practices clear and appropriate for the types of
+    data being stored?
+-   What are the terms of use and rights and licensing agreements?
+-   Are the policies for deposit clear?
+-   Does the repository have policies for citations and use of DOI?
+-   Is the repository discoverable by major search engines?
+-   Does the repository follow standards?
+-   What is the cost of storing data?
+-   Are there necessary policies related to all aspects of depositing
+    and removing data?
+
+::: notes
+The second aspect of sharing datasets in this module is to examine
+criteria for choosing a repository or other environment for storing,
+managing, and preserving the data objects and datasets.
+
+The Henderson reading (p. 61) presents these and other useful criteria
+to consider when choosing a repository or other environment for long
+term storage. The McNeil (2016) reading also includes helpful criteria
+to consider.
+
+The criteria focus on technical, policy-guided, and practical criteria.
+For example, it goes without saying that the repository should be
+reliable and stable and permanent.
+
+In early days of establishing disciplinary repositories that were not
+funded by federal agencies such as the NSF, NIH or others, disciplinary
+repositories were not stable and often changed hands frequently. It is
+also very critical that the policies of the repository be present,
+clearly defined, and include all aspects of depositing, describing,
+storing, re-using, and even removing data if necessary.
+
+Also, there should be evident and well documented policies on terms of
+use, copyright, licensing and re-use of the data. In Module 7.1 we will
+look closer at policies and planning for data curation and long term
+storage. Also in Module 7.2 and 7.3 we will learn about preparing data
+for deposit and HOW to ingest data using popular protocols like APIs and
+OAI-PMH. In Module 10 we will come back to examine the legal and ethical
+risks that could be present in the data we wish to preserve.
+
+Please be sure to review the DataOne lecture for this module also to
+learn more about sharing data benefits, barriers, and best practices.
+:::
+
+## Key Stakeholders in Data Sharing
+
+![](images/2.png)
+
+::: notes
+Let's consider the key players when it comes to data sharing. First,
+there is the data creator or producer. This is the person or entity who
+is making the data available to share. There is also the person who
+reuses the data or the secondary data user. Finally, there is the data
+repository. This is where the data creator makes the data available.
+
+A data repository plays a key role in enhancing the discovery and reuse
+of the data. And ideally, creating a formal data citation.
+:::
+
+## Benefits of Sharing Data {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+-   Reinforces open scientific inquiry
+
+-   Supports the verification and replication of original results
+
+-   Promotes new research and allows for the testing of new or
+    alternative methods
+
+-   Encourages collaborations and multiple perspectives
+
+-   Provides important teaching resources
+
+-   Reduces costs by avoiding duplicate data collection efforts
+
+-   Protects against faulty or fraudulent data
+:::
+
+::: {.column width="50%"}
+![](images/3.png){fig-align="center" width="397"}
+
+-   Enhances the visibility and overall impact of research projects
+
+-   Preserves data for future use
+
+-   Helps the broader community and individual researchers "do better
+    research"
+:::
+:::::
+
+::: notes
+So what are some of the benefits of data sharing? As we discussed
+previously, funders are encouraging. And in some cases, requiring
+researcher to make their data available for sharing to support
+transparency and openness and maximize funders return on investment. The
+specific benefits of data sharing to the research community are numerous
+and discussed in much of the literature. We will now look at the top ten
+benefits of sharing research data.
+
+Number one, sharing data reinforces open scientific inquiry. Making data
+openly available decreases the potential for disagreements among
+researchers and allows scientific inquiry to progress unimpeded to the
+benefit of the entire research community.
+
+Number two, sharing data supports the verification and replication of
+original results. By making data available, data can be used to verify
+or replicate published results. Verification can bolster the original
+results or it can expose errors. Either outcome helps strengthen and
+protect the integrity of the scientific record.
+
+Number three, sharing data promotes new research and allows for the
+testing of new or alternative methods. While data creators may have one
+research question in mind, the same data may be reused to answer new and
+innovative research questions.
+
+Number four, sharing data encourages collaboration and multiple
+perspectives. Sharing data can begin conversations between researchers
+across disciplines. This could lead to cross-disciplinary collaborations
+or the exchange of knowledge across fields that could result in new
+innovative research approaches.
+
+Number five, sharing data provides important teaching resources. Data
+are extremely valuable pedagogical tools. Instructors may use data in
+analytical exercises or students may model their own work after
+high-quality data examples.
+
+Data can also provide students with firsthand experience in verifying
+results.
+
+Number six, sharing data reduces costs by avoiding duplicate data
+collection efforts. Avoiding unintended duplicate data collections saves
+both respondents and researchers valuable time and resources and freeze
+up researcher funds for other projects.
+
+Number seven, sharing data protects against faulty or fraudulent data.
+Over the past few years, there have been multiple stories in the news
+about misconduct in research. Sharing data promotes transparency and
+accountability, which lessens the potential for purposeful falsification
+or distortion of data. It also allows reusers to detect unintentional
+errors. And finally, the expectation that others may be verifying data
+should encourage greater care in original analyses.
+
+Number eight, sharing data enhances the visibility and overall impact of
+research projects. Making research data available within a data
+repository can increase the visibility of researched products and
+increase the impact of a project by encouraging secondary analysis of
+the data. Scholars have also found a significant association between
+publishing data and increased citation rates.
+
+In the end, sharing data does not only benefit the broader research
+community, but can also produce potential career benefits for
+researchers.
+
+Number nine, sharing data preserves data for future use. If a researcher
+makes their data available for sharing within a data repository, then
+they can be sure that the data will be available and understandable for
+the long-term for their own and others use.
+
+Number ten, sharing data helps the broader community and individual
+researchers do better research. By sharing data, researchers support
+both their own research and the broader research community resulting in
+science that is more accurate, more open, more knowledgeable and has
+more resources at its disposal.
+:::
+
+## Challenges to Share Data {.smaller}
+
+1.  It takes time and effort to make data shareable
+2.  Perceived risks from loss of control of data the data
+3.  Data contain confidential or sensitive information
+4.  Ownership of data may be unclear or problematic
+5.  A lack of incentives for sharing data
+
+![](data%20anonymization.gif){fig-align="center" width="600"}
+
+::: notes
+We have just covered a lot of benefits of sharing data. But there are
+also multiple challenges, or obstacles that can effect researchers
+ability or willingness to share their data.
+
+Let's now go over the top five of several known challenges to data
+sharing.
+
+Number one, it takes time and effort to make data shareable. Making data
+publicly available can be a labor intensive and time consuming process.
+In a 2011 survey of researchers, over 50% sited insufficient time. And
+40% sited lack of funding, as their reasons for not making data
+available.
+
+Number 2, perceived risks from loss of control of the data. By sharing
+data, researchers may believe they're relinquishing control over their
+data. This can raise concerns that they may be scooped or another
+researcher could discover errors in their data, could reach
+contradictory conclusions using the data, or misuse the data.
+
+Number 3, data contained confidential or sensitive information. Data
+collected from human subjects may contain protected health information,
+or personally identifiable information, and researchers are responsible
+for protecting this sensitive data. In some cases, de-identifying data
+may be an option, but this can also be a labor intensive process. In
+other cases, removing certain identifiable information could negatively
+effect the usability of the data for secondary analysis.
+
+Number four, the ownership of the data may be unclear or problematic.
+Researchers must also consider if they even have the right to share the
+data. In the case of collaborative projects, they will want to discuss
+the data with their partners. In some cases, for instance, if the data
+were proprietary or funded by private entities, researchers may not even
+be permitted to share the data due to intellectual property or copyright
+concerns.
+
+Number five, a lack of incentives for sharing data. And last but not
+least, in many ways the current academic culture lacks the incentive
+structure to properly reward researchers who share their data.
+Researchers gain career advancement through publishing articles in books
+often based on data.
+
+However, there's currently not a similar reward system for publishing
+the data themselves. There are no easy answers to overcome these
+challenges as Christine Borgman states, "Sharing research data is an
+intricate and difficult problem. In other words, a conundrum."
+
+However, one other challenge to sharing data that researchers have cited
+is a lack of experience and knowledge of data management. By applying
+the data management practices, researchers and other information
+professionals will have more tools in their toolbox for successfully
+preparing data to share in an efficient and effective manner.
+:::
+
+## Data Citation
+
+Data Citation provides a
+`standardized method for secondary users to cite data`
+
+![](images/4.png){fig-align="center"}
+
+::: notes
+As I mentioned before, one of the obstacles to sharing data is a lack of
+career incentives for researchers.
+
+One method to reward researchers for sharing their data is to ensure
+they receive proper acknowledgement and credit for their data through
+citation.
+
+Data citation provides a standardized method for secondary users to cite
+data. Data citations can also be used by data producers. To cite their
+own data as standalone research products.
+
+For instance, NSF has renamed publications to products in its
+biographical sketch section of its grant application where researchers
+can now list datasets along with publications and other research
+products.
+
+Currently, work is being done in the data curation field to establish
+data citation principles and standards. For instance, the Joint
+Declaration of Data Citation Principles, which is a synthesis of work by
+a number of prominent groups, has established principles to guide the
+development of human understandable and machine actionable data
+citations. The eight principles include importance, credit and
+attribution, evidence, unique identification, access, persistence,
+specificity and verifiability, and interoperability and flexibility.
+
+Another group doing important work in expanding the infrastructure and
+culture for citing data is DataCite. DataCite works with data
+repositories incentives to assigned persistent identifierssuch as
+digital object identifiers, or DOIs, to data. Through their work, data
+sites support simple and effective methods of data citation, discovery,
+and access.
+
+The DOI insures that data can be discovered online, regardless of where
+they are located.
+
+One thing researchers may want to consider when choosing a data
+repository for making their data available is whether the repository
+supports the creation of unique data citations that embody the joint
+declaration of data citation principles. Proper citation of datasets
+supports the reproducibility of research, ensures proper credit for
+researchers, and enables the tracking of data reuse.
+
+Although there are very real challenges that may make it difficult, or
+in some cases, impossible to share data, there are significant benefits
+to both researchers and the broader research community.
+:::
+
+## Protecting Confidentiality
+
+::::: columns
+::: {.column width="50%"}
+![](images/5.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/6.png){fig-align="center"}
+:::
+:::::
+
+![](privacy.gif){fig-align="center" width="500"}
+
+::: notes
+When collecting data that deal with human subjects, researchers have an
+ethical requirement to protect the privacy of study participants. This
+involves protecting an individual's identity during the collection,
+handling, storage, and sharing of data.
+
+Often these ethical considerations are outlined in a researcher's
+application to their institutional review board, or IRB. There can be
+serious consequences of confidentiality is accidentally breached. These
+consequences can negatively effect a researcher's career. Negatively
+impact a research's institution, and may include hefty fines or even
+legal sanctions.
+
+Today, the news is full of horror stories of data breaches that may
+arise from careless data management practices. In order to avoid these
+situations a researcher needs to think carefully during the data
+management planning phase about what confidential information they may
+collect. If the data will be de-identified and how or if they will share
+the data at the conclusion of the research project?
+
+So what are the types of information that need to be protected?
+
+First there is Personally Identifiable Information, or PII. PII is
+defined as any representation of information that permits the identity
+of an individual to whom the information applies to be reasonably
+inferred by either direct or indirect means.
+
+Note the reference to either direct or indirect means. We will come back
+to this idea in a moment.
+
+Next, we have Protected Health Information or PHI.
+
+PHI is individually identifiable health information transmitted or
+maintained, in any form or medium, by a covered entity. And finally
+there is sensitive information. Which is information, that if disclosed
+there is a significant likelihood of psychological, social, emotional,
+physical or reputational harm. These definitions show the breadth of
+information that researchers need to actively protect when managing and
+potentially sharing data.
+:::
+
+## ![](images/7.png)
+
+::: notes
+Now let's look at three type of identifiers. As we mentioned above,
+there are both direct and indirect ways a person can be identified.
+Direct identifiers are those variables or information included within
+data that explicitly point to an individual or unit. These include,
+Social Security numbers, phone numbers, and names, and are often the
+easy ones to spot.
+
+The identifiers that can become more problematic are the indirect
+identifiers. These are variables that may make unique cases visible,
+particularly when combined with other individual attributes, such as
+race or income.
+
+Finally, we have geographic identifiers. Which may include indirect
+identifiers such as a Zip Code or direct identifiers such as a complete
+mailing address. Consider an example data set in which direct
+identifiers have been removed. The data set represents the population of
+US citizens, who have earned doctoral degrees in 1991. Variables include
+the major field of study, race, sex and geographic region of the
+academic institution in which the degree was earned. Without direct
+identifiers such as name, phone number, mailing address, Social Security
+Number, and other information that link directly to the identity of the
+individual it would seem that it would be impossible to distinguish any
+given individual represented in this data set which includes over 25,000
+people.
+
+Let's take a closer look at these data. If we were to take just the
+people who earned their doctoral degrees in the science and engineering
+fields, we are left with just over 14,000 individuals.
+
+Of those individuals, 2,119 received their degrees in the physical
+sciences 1,707 of which are male. Of that group, only 20 reported their
+race as black. Having quickly gone from over 25,000 people to just 20,
+how easy do you think it would be to figure out who those 20 people are?
+Well, only eight of them were astronomy majors it wouldn't take much
+more information to identify at least one of these individuals. If we
+knew where those degrees were granted, say in New York, we would likely
+know who that person is. This example demonstrates that protecting
+confidentiality requires careful consideration and special handling of
+not only direct identifiers, but also indirect identifiers.
+:::
