@@ -1,0 +1,883 @@
+---
+title: "Privacy and Security"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+In this module, we will explore the fundamentals of data privacy and
+compliance, data governance, and how to secure data as it moves. First,
+we will learn about data security and privacy; and also discuss common
+threats to data security, encryption, and access control. Next, we will
+learn about data classification and various data privacy regulations.
+
+We will also explore data anonymization and pseudonymization and some
+best practices for data compliance. Finally, we will examine data
+governance; compare data stewardship versus data ownership; and
+learn about secure storage solutions. We have a lot to learn, so let's get
+started.
+:::
+
+## Data Security vs. Data Privacy {.smaller}
+
+`Data Security`: *It protects digital information from unauthorized
+access, use, disclosure, disruption, modification, or destruction*
+
+-   confidentiality
+-   integrity
+-   availablity
+
+`Data Privacy`: *Data privacy is the legal and ethical right of
+individuals to control their personal information*
+
+-   how data is collected?
+-   why data is collected?
+-   how long is data stored?
+-   with whom your data is shared with?
+-   how is your data stored?
+
+::: notes
+In our increasingly digital world, our data has become a valuable asset.
+It details our finances, health, personal lives, and online activities.
+This valuable resource needs protection, and that's where data security
+and data privacy come in.
+
+`Data security` protects digital information from unauthorized access,
+use, disclosure, disruption, modification, or destruction. It's like
+building a high security vault to safeguard digital assets, protecting
+them from potential bad actors. This can be accomplished through the
+systems we use, as well as the processes by which we store data. Data
+security protects confidentiality and ensures only authorized users can
+access the data. It also protects the integrity of the data by
+maintaining its completeness and accuracy. Data security guarantees that
+data is available, making sure data is accessible when it's needed.
+
+Now, let's explore what data privacy is. `Data privacy` is about giving
+individuals control over their personal information. This tends to be
+less about the systems and processes and more about people's decisions
+about who can access their data. Data privacy is the legal and ethical
+right of individuals to control their personal information. It's about
+having the right to decide what data is collected about you, how it's
+used, and by whom?
+
+Think of it as having the keys to your own data vault, allowing you to
+grant access selectively and revoke it when necessary. Data privacy
+attempts to answer the following questions:
+
+-   How data is collected about a person, including the methods used and
+    the context in which it's gathered
+-   Why data is collected about a person and the purposes for which it
+    will be used
+-   How long data is stored and whether there are procedures for
+    deletion upon request
+-   Who the data is shared with and whether the person has a say and how
+    it's shared
+-   How a person's data is secured and what measures are taken to
+    protect the data from unauthorized access or misuse
+
+Data privacy and security are crucial terms in the world of data
+management, and each has its own considerations and limitations.
+
+Ultimately, data security and data privacy are intertwined. Strong data
+security practices are essential for protecting user privacy, while it's
+also important to empower individuals with control over their data. We
+can work together to create a more secure and privacy-conscious digital
+world by understanding these concepts. Stay informed and take control of
+your data.
+:::
+
+## Data Security: Benefits & Limitations
+
+::::: columns
+::: {.column width="50%"}
+`Benefits`
+
+-   Protects sensitive information from breaches and misuse
+-   Maintains data integrity and reliability
+-   Builds trust with customers and partners
+:::
+
+::: {.column width="50%"}
+`Limitations`
+
+-   Implementing security measures can be costly
+-   Balancing security with user convenience can be a challenge
+-   Absolute security ay not be achievable in all cases
+:::
+:::::
+
+::: notes
+Let's examine some of the benefits and limitations of data security. One
+benefit of data security is that it protects against breaches and data
+misuse. It also helps maintain data integrity and reliability and allows
+for trust in insights gained from data. By ensuring their data is safe,
+data security builds trust with customers and partners.
+
+Data security comes with some limitations, though. There is the cost.
+Implementing security measures can require new processes and technical
+infrastructure that can be costly. Like adding a lock to a door, things
+can take longer to access once you have data security measures in place,
+reducing how convenient it can be to access the protected information.
+
+Another limitation of data security is that no matter the measures
+taken, absolute security is likely unachievable. It's going to be an
+ongoing challenge to discover vulnerabilities and close them as quickly
+as possible.
+:::
+
+## Data Privacy: Benefits & Limitations
+
+::::: columns
+::: {.column width="50%"}
+`Benefits`
+
+-   Empowers individuals to control their data
+-   Increases transparency and accountability
+-   Protects against identity theft and discrimination
+:::
+
+::: {.column width="50%"}
+`Limitations`
+
+-   Balancing individual privacy with legitimate business needs can be
+    complex
+-   Enforcing privacy regulations can be challenging across borders
+-   Individuals may not always understand how their data is being used
+:::
+:::::
+
+::: notes
+Now, let's examine some of the benefits and limitations of data privacy.
+Data privacy empowers individuals to control their own data by choosing
+how and when their data is shared. Transparency is another benefit.
+Helping to build trust between people and organizations by sharing
+information about how the organization is collecting and using a
+person's data.
+
+Strong data privacy protections can help to reduce the risk of identity
+theft and discrimination. Data privacy has some limitations, too, like
+balancing individual privacy with legitimate business needs. Enforcing
+privacy regulations can be difficult across territorial borders due to
+the different standards enforced by international markets.
+
+Even with transparency, individuals might not always be equipped to
+understand how their data is being used because of the complexity of the
+information provided. Understanding how our data is being used is the
+first step to protecting our privacy.
+:::
+
+## Security Threats and Vulnerabilities {.smaller}
+
+`Security Threats`: *These are attempts by bad actors to steal, corrupt,
+or disrupt your data*
+
+Examples
+
+-   Malware
+-   Phishing attacks
+
+`Data Vulnerabilities`: *These are weaknesses in your systems that make
+it possible for bad actors to harm an organization's data*
+
+Examples
+
+-   Unsecured networks
+-   Weak password requirements
+
+::: notes
+A critical challenge of data management is keeping data safe and dealing
+with problems as they arise. Now, we'll define security
+threats and vulnerabilities and explore some common kinds and how
+they're dealt with.
+
+Let's start by describing what a security threat is. Security threats
+are attempts by bad actors to steal, corrupt, or disrupt your data. Data
+systems constantly face security threats. So it is crucial to understand
+the various threats and how to defend against them. Let's explore some
+common examples of security threats. One very common security threat is
+malware. Malware is malicious software, like viruses, ransomware, and
+spyware, that can infiltrate systems and steal data or disrupt
+operations.
+
+Another type of security threat is phishing attacks. Phishing attacks
+are deceptive emails or messages that try to trick users into revealing
+sensitive information or clicking malicious links. There are those that
+are trying to harm data and their efforts will try to find areas in your
+systems that are not well protected. These are considered data
+vulnerabilities.
+
+Data vulnerabilities are weaknesses in your systems that make it
+possible for bad actors to harm an organization's data. Imagine that
+physical structures like walls and doors protect your data. If there are
+cracks in the walls or if somebody fails to close a door, your data will
+be left vulnerable.
+
+Now, let's explore some examples of security vulnerabilities. The use of
+unsecured networks can be a significant security vulnerability. This
+could be a network accessible in a public place, like a coffee shop, or
+even just a random network that you encounter with no password to be
+able to connect. Unsecured networks, such as public WiFi, can expose
+data to other users on the network, especially malicious actors that may
+be connected, just by using the network without any protective software,
+like a virtual private network or VPN.
+
+Another vulnerability is weak password requirements, like allowing users
+to create passwords that are easily guessable, leaving your data
+vulnerable to security threats like a brute force attack, which is when
+someone tries many different passwords to try and guess the correct one
+and access the system. These are just a few examples of various threats
+and vulnerabilities of data. There are many more.
+:::
+
+## Possible Measures to Defend Data
+
+-   Data encryption
+-   Regular backups
+-   Access control
+-   Security awareness training
+-   Incident response plan
+
+::: notes
+Now, let's explore some general defense measures that can be used to
+ensure the security of your data. One measure that can be used to defend
+data is data encryption. This scrambles data into an unreadable format,
+making it useless even if intercepted.
+
+Another is performing regular backups. This ensures there are copies of
+the data in case of system failures or attacks. Access control is
+another strong defense. Try to restrict data access within an
+organization based on user roles and needs.
+
+Security awareness training is a powerful measure to take to defend
+data. This includes educating users on data security best practices to
+identify and prevent threats. There is also incident response planning,
+having a clear strategy to respond to security breaches and minimize
+damage.
+
+By understanding these threats and implementing robust security
+measures, an organization can build a strong defense for its data and
+ensure its integrity.
+
+Remember, data security is an ongoing process. It's important to remain
+vigilant and adapt defense measures to protect your valuable
+information.
+:::
+
+## Encryption
+
+`Encription`: *It is the process of transforming data into an unreadable
+format, using a mathematical algorithm and a secret key called an
+encryption key*
+
+::::: columns
+::: {.column width="50%"}
+**Types**
+
+-   Symmetric
+-   Asymmetric
+
+**Benefits**
+
+-   Confidentiality
+-   Data integrity
+:::
+
+::: {.column width="50%"}
+**Limitations**
+
+-   Performance overhead
+-   Key management
+:::
+:::::
+
+::: notes
+Now, we'll delve into two essential tools for safeguarding data,
+encryption, and access control. Imagine data as valuable documents
+locked away in a vault. Encryption and access control are the security
+guards that make sure only authorized individuals can access and
+understand the information inside.
+
+Encryption is the process of transforming data into an unreadable
+format, using a mathematical algorithm and a secret key called an
+encryption key. The algorithm acts as a recipe, scrambling the original
+data into cipher text. This cipher text appears like a meaningless
+jumble of letters, numbers, and symbols to anyone who doesn't possess
+the decryption key.
+
+There are two main types of encryption. One is called symmetric
+encryption. Symmetric encryption uses the same key for both encryption
+and decryption. The other type of encryption is asymmetric encryption.
+Asymmetric encryption uses a public key for encryption and a private key
+for decryption.
+
+So why do we even need encryption? What can it do for us? One key
+benefit we get by using encryption is confidentiality.
+
+Encryption protects sensitive data from unauthorized access, even if
+it's intercepted during transmission or storage. Imagine a thief
+stealing the vault, but being unable to open it without the key.
+Encryption also provides data integrity, ensuring that data remains
+unaltered during transmission or storage. Encryption helps detect any
+unauthorized modifications, ensuring the information remains reliable.
+
+Encryption, like most things, has some limitations too. One limitation
+is the performance overhead. The encryption and decryption process can
+require additional computing power, potentially slowing down systems.
+And there is also key management.
+
+Keeping encryption keys secure is crucial. Losing a key could render the
+data permanently inaccessible, or if the key was stolen, allowing
+unauthorized people to access it.
+:::
+
+## Access Control
+
+`Access Control`: *It is a security measure that includes a set of rules
+to determine who can access a computer system and what they're
+authorized to do*
+
+-   Subjects
+-   Objects
+-   Permissions
+
+::: notes
+Now that we have a good understanding of encryption, let's examine
+access control. Access control is a security measure that includes a set
+of rules to determine who can access a computer system and what they're
+authorized to do. It's like having a security guard at the vault door,
+checking IDs and permissions before allowing entry.
+
+Now, let's examine what the components of access control are. Access
+control includes subjects. The subjects are the entities requesting
+access, such as users, processes, or applications. It also has objects.
+These are the resources being protected, such as files, databases, or
+network devices.
+
+Last, we have permissions. Permissions define what the subjects are
+allowed to do. Common permissions include read, write, execute, and
+delete. Access control reduces risk by limiting access to data based on
+user roles and needs. This reduces the potential for misuse or
+accidental exposure.
+
+Keep in mind that the use of any security measure comes with some added
+challenges on an organization. Implementing and managing access controls
+for various systems can be complex, requiring support and management.
+Things like maintaining user roles and permissions requires ongoing
+monitoring to ensure they remain accurate and reflect current needs.
+
+Encryption and access control are powerful tools, but they work best
+when used together. Encryption safeguards data confidentiality, while
+access control ensures that only users who are authorized can access
+systems and perform tasks.
+
+Data security is an ongoing process. Regular review and updating of
+encryption and access control measures is needed to maintain a strong
+defense against evolving threats.
+:::
+
+## Data Classification
+
+It is the process of organizing information based on its sensitivity and
+importance
+
+::::: columns
+::: {.column width="50%"}
+`Examples`
+
+-   Confidential
+-   Internal
+-   Public
+:::
+
+::: {.column width="50%"}
+`Benefits`
+
+-   Security
+-   Compliance
+-   Privacy
+-   Efficiency
+:::
+:::::
+
+::: notes
+Imagine a messy filing cabinet, overflowing folders with no labels,
+important documents mixed with random notes. This chaos is similar to
+what happens when data isn't classified. Now, we're going to explore
+what data classifications are and how they help bring organization and
+efficiency to data management.
+
+Data classification is the process of organizing information based on
+its sensitivity and importance. For instance, data could be classified
+as the confidential, which could include financial records or data held
+by human resources internal, which could include project plans or client
+emails public, which could include marketing materials like product
+brochures.
+
+Data classification offers many benefits. Let's explore some of them,
+starting with the security benefits. By identifying and classifying
+sensitive data, an organization can implement security measures to
+protect it from unauthorized access. Data classification also helps with
+compliance. Many regulations require organizations to securely store and
+handle specific types of data. Classifying data ensures that compliance
+requirements are being met and will help to avoid legal risks.
+
+Data classification can safeguard privacy as well. By knowing what data
+is private, an organization can take steps to protect personal
+information and prevent access to it. Finally, data classification
+improves efficiency. When data is well organized and classified, it's
+easier to find the information that's needed. Think of searching for a
+specific document in a well labeled filing cabinet. Classification saves
+time and effort.
+
+Data classification empowers informed decision making. By understanding
+the sensitivity of your data, you can determine how to use it
+responsibly and securely. Data classification brings order to your data
+chaos and instills you with confidence in your data endeavors.
+:::
+
+## Data Privacy Regulations {.smaller}
+
+1.  `General Data Protection Regulation (GDPR)`: *A law that protects
+    the data and privacy of people who live in the European Union*
+2.  `California Consumer Privacy Act (CCPA)`: *Law to enhance privacy
+    rights and consumer protection for residents of California*
+
+::::: columns
+::: {.column width="50%"}
+**GDPR Rights**
+
+-   The right to know
+-   The right to edit
+-   The right to be forgotten
+-   The right to take your data and go
+:::
+
+::: {.column width="50%"}
+**CCPA Rights**
+
+-   Know what personal information is collected
+-   Know whether and to whom data is sold, and have the right to opt-out
+-   Access personal information
+-   Request that a business delete personal information
+-   Not be discriminated against for exercise rights under the act
+:::
+:::::
+
+::: notes
+If you spent any time online, you've probably wondered things like,
+who's keeping track of all this info about me? Governments around the
+world are becoming serious about how our data is used.
+
+For instance, Canada has PIPEDA and Australia has its Privacy Act. These
+laws have similarities and differences compared to GDPR and and CCPA.
+Now, we'll explore some of the big privacy laws, GDPR, CCPA, and COPPA.
+Whether running online ads or just browsing the web, it's good to know
+the basics.
+
+Let's start with GDPR, the General Data Protection Regulation. This
+European Union law is about keeping your online information safe and
+sound. Think of GDPR as your data bodyguard. It gives EU citizens a
+bunch of rights. So what rights does GDPR give you? Here are a few, the
+right to know. Companies must disclose their data about you.
+
+The right to edit, don't like what they've got, you can make changes.
+The right to be forgotten, delete my info, please. Companies have to
+comply the right to take your data and go want to switch services? GDPR
+lets you take your data with you.
+
+GDPR also makes companies get serious about protecting your data.
+They've got to report leaks fast, hire people focused on data privacy,
+and generally play by the rules. They also need your permission before
+collecting most types of data. GDPR applies to any company that handles
+the data of EU residents, even if that company is based somewhere else.
+Mess up and those fines can be huge, up to 4% of a company's yearly
+earnings across the pond.
+
+California isn't messing around either, their California Consumer
+Privacy Act, CCPA, hit the scene in 2020 and gives Californians some
+similar powers to GDPR. Companies must tell you what they collect. You
+can opt out of having your data sold. Businesses have to provide any
+data they've gathered on you and you can request they delete your data.
+
+Finally, companies can't treat you differently for using your privacy
+rights. The CCPA applies to businesses that handle Californian's data,
+and the fines can be large, though not usually as much as those under
+GDPR. The CCPA is enforced by the California attorney general and can
+include fines anywhere from 2,500 to \$7500.
+:::
+
+## Data Privacy Regulations (Cont.) {.smaller}
+
+3.  `Children's Online Privacy Protection Act (COPPA)`: *Law to protect
+    the privacy of children under the age of 13*
+
+**COPPA Rights**
+
+-   Notice and parental consent before data collection
+-   "Clear and comprehensive" privacy policy
+-   Keep data confidential and secure
+
+::: notes
+Finally, we've got COPPA, the Children's Online Privacy Protection Act.
+This us law has been around since 2000 and puts focus on keeping kids
+data safe. CoPPA means websites and apps aimed at kids under 13 need
+extra verification steps before trying to collect data.
+
+Companies must make it clear what data they're collecting. Parental
+permission is a must before collecting any kids information.
+
+They've got to have a clear and concise privacy policy anyone can
+understand. Child compromising data needs to be secured. COPPA is
+enforced by the US Federal Trade Commission, or FTC, and they don't mess
+around. Fines can get super pricey here, too, costing up to \$50,000 per
+violation.
+
+This was a high level overview of the most prominent laws governments
+have established to regulate the collection and use of personal data,
+focusing on GDPR, CCPA, and Coppa. Compliance with these and other
+regulations is critical when managing data.
+:::
+
+## Data Anonymization and Pseudonymization
+
+::::: columns
+::: {.column width="50%"}
+`Anonymization`: *It is the process of irreversibly transforming data so
+that it cannot be linked to a specific individual*
+:::
+
+::: {.column width="50%"}
+`Pseudonymization`: *It replaces identifying information with aliases or
+pseudonyms*
+:::
+:::::
+
+::: notes
+Data privacy is a crucial concern. When we collect and analyze data, we
+must protect individual identities. We'll explore two techniques for
+achieving this, anonymization and pseudonymization.
+
+Imagine blurring a person's face in a video, anonymization, versus
+masking their identity with sunglasses and a hat, pseudonymization.
+
+Both methods obscure identities, but in different ways. Anonymization is
+the process of irreversibly transforming data so that it cannot be
+linked to a specific individual. The anonymization process is like
+taking the logo off a beverage can. It removes any information that
+could be used to identify what's contained inside the can. The resulting
+data after the anonymization process is no longer considered personal
+data under privacy regulations like GDPR.
+
+Pseudonymization, in contrast, replaces identifying information with
+aliases or pseudonyms. The pseudonymization process replaces names with
+codes, like replacing John Doe with ID number 123. The data in this
+example can still be linked back to the original individual using a
+separate key. Key difference is the risk of re-identification.
+
+Anonymized data is highly resistant to re-identification, even with
+sophisticated techniques. Pseudonymized data, however, carries a greater
+risk of re identification if the key linking the pseudonym to the
+original identity as compromised.
+
+When choosing between anonymization and pseudonymization, the use case
+determines the best approach. Anonymized data is ideal for research
+purposes where individual identities are not relevant, like music
+listening trends on the radio. Pseudonymized data is often used where
+some level of identification might still be needed, like if an anonymous
+study is looking for new ways to diagnose illnesses and you need to
+inform a participant of the result.
+:::
+
+## Compliance Best Practices
+
+-   `Data Governance`: *Establishing internal rules that define
+    ownership and accountability of an organization's data*
+
+-   `Data Security`: *Protects data from unauthorized access, breaches,
+    and loss*
+
+-   `Access controls`: *Restricts who can access and modify data*
+
+-   `Data breach response`: *Prepares your organization to effectively
+    respond to a day security incident*
+
+::: notes
+Data compliance is an essential part of data management. Organizations
+must manage data responsibly and securely to comply with regulations and
+protect user privacy. Now, we will highlight some of the best practices
+used for data compliance. Following these practices helps organizations
+minimize risks and build trust with users and stakeholders.
+
+Let's start with the best practice of data governance. Data governance
+is about establishing internal rules that define ownership and
+accountability of an organization's data. This involves defining data
+classification schemes, developing data privacy policies, and appointing
+a data governance team to oversee compliance efforts. Imagine organizing
+the shelves of a warehouse. Data governance establishes clear rules for
+how data is categorized, protected, and used.
+
+Data security focuses on protecting data from unauthorized access,
+breaches, and loss. This includes implementing strong security measures
+like encryption, firewalls, and intrusion detection systems. This can
+mean implementing high-tech security measures like a firewall that
+guards your data against cyber attacks.
+
+Access controls restrict who can access and modify data. A common
+approach is role-based access control or RBAC, where users are granted
+access based on their specific roles and responsibilities. This can
+involve granting specific keys to authorized personnel within your data
+storage system. Access controls ensure that only those who need access
+can enter.
+
+Data breach response prepares your organization to effectively respond
+to a day security incident. This includes having a data breach response
+plan, a team to manage the incident, and clear communication protocols.
+A data breach response plan ensures you can react quickly and
+effectively.
+
+By following these data compliance best practices, data governance, data
+security, access controls, and data breach response, an organization can
+build a strong foundation for data privacy and regulatory compliance.
+This protects its data and builds trust with users and stakeholders.
+:::
+
+## Data Governance Framework {.smaller}
+
+It includes (1) Data classification, (2) Data quality standards, (3)
+Data security protocols, (4) Data access controls, and (5) Data
+ownership
+
+::::: columns
+::: {.column width="50%"}
+`Advantages`
+
+-   Improved data quality
+
+-   Enhanced data security
+
+-   Increased regulatory compliance
+
+-   Better data collaboration
+
+-   Data-driven decision
+:::
+
+::: {.column width="50%"}
+`Disadvantages`
+
+-   Cost and complexity
+-   Change management
+-   Bureaucracy: overly rigid
+-   Silos and resistance
+:::
+:::::
+
+::: notes
+Data is booming, but without proper controls, we have chaos. Now, we'll
+explore the data governance framework, the sheriff that brings order and
+unlocks the true value of your data. Imagine a town overflowing of the
+resources, but lacking rules and organization. Data governance is like
+the sheriff who establishes clear guidelines, ensures responsible data
+use, and empowers everyone to benefit.
+
+As we have already discussed in one of the previous slides that data
+governance is about establishing internal rules that define ownership
+and accountability of an organization's data. It's essentially a
+framework for ensuring the integrity, security, and accessibility of
+your information assets.
+
+Now, let's explore what composes the data governance framework. A data
+governance framework provides the structure for your data management
+strategy. It typically includes data classification, categorizing data
+based on sensitivity and importance, data quality standards, defining
+acceptable levels of accuracy and completeness, data security protocols,
+safeguarding data from unauthorized access or breaches, data access
+controls, determining who can access and use specific data sets, data
+ownership, assigning responsibility for data stewardship within the
+organization.
+
+For example, a data governance framework might mandate that customer
+purchase data is classified as sensitive and requires encryption for
+storage. Other than providing structure, what other benefits does
+implementing a data governance framework provide?
+
+Let's examine a few. One advantage is that users will experience
+improved data quality by ensuring data is accurate, consistent, and
+reliable for better decision making. Users will also find that enhanced
+data security reduces the risks of data breaches and unauthorized
+access. There will be no need to worry due to increased regulatory
+compliance, which helps organizations meet data privacy regulations like
+GDPR and CCPA.
+
+It also fosters better data collaboration by breaking down data silos
+and facilitating data sharing across the organization. Lastly, it
+promotes data driven decision making. It empowers employees to leverage
+trusted data for effective strategies. While beneficial, data governance
+also presents some challenges.
+
+Cost and complexity will be a challenge. Implementing and maintaining a
+framework can require resources and expertise. Another is change
+management. Encouraging a cultural shift toward data centric practices
+can be time consuming. Bureaucracy can also hinder. Overly rigid
+governance can limit agility and innovation. Then there are silos and
+resistance. Data silos where departments hoard information can create
+barriers for effective data governance. For example, a sales team might
+resist sharing customer data with the marketing team, fearing it could
+be misused.
+
+Data governance is an ongoing process, not a one time fix. By carefully
+considering the advantages and disadvantages, organizations can develop
+a framework that balances data control with agility and fosters a data
+driven culture for success.
+:::
+
+## Data Stewardship and Data Ownership
+
+::::: columns
+::: {.column width="50%"}
+`Data Stewardship`: Responsible of data quality and compliance and
+maintaining expertise of the data's origin, meaning, and structure
+:::
+
+::: {.column width="50%"}
+`Data Ownership`: It is the authority and accountability for deciding
+how data is collected, stored, used, shaped, and disposed of
+:::
+:::::
+
+::: notes
+Within data management, there are two kinds of roles and
+responsibilities, those who maintain quality and compliance, and those
+who make decisions about data use and access. Now, will explore these
+roles and responsibilities as data stewardship and data ownership.
+
+Data stewardship or data stewards are responsible for data quality and
+compliance and may also help define how data is used or who can access
+it, depending on the organization's needs. They are the Go two experts
+for specific datasets, maintaining a thorough understanding of the
+data's origins, meaning, and structure.
+
+Data stewards are responsible for a variety of critical tasks, including
+ensuring data quality, maintaining accuracy, completeness, and data
+consistency, data lineage, tracking the origin and transformation of
+data throughout its life cycle. Managing data access control, granting
+access to authorized users based on predefined rules, though they don't
+make these rules. That's done by data ownership, which we'll discuss
+later in this presentation.
+
+Data stewardship also includes compliance. Ensuring data adheres to
+internal policies and external regulations. While data stewardship
+maintains compliance and data quality, data ownership defines critical
+rules about how the data is used and who will have access to it.
+
+Data ownership is the authority and accountability for deciding how data
+is collected, stored, used, shared, and disposed of. Here's a breakdown
+of some key aspects of data ownership. 
+
+- Strategy and decision making: Data ownership has the authority over data strategies, such as how the
+data is used, collected, stored, and disposed of. 
+- Accountability, it's
+responsible for the well being of the data. 
+- Strategic alignment: Data
+ownership is crucial in aligning data usage with the organization's
+overall goals and objectives. 
+- Access control policies, determining who
+can access specific data and for what purpose. 
+- Data security protocols,
+establishing measures to safeguard data confidentiality and integrity.
+- Data life cycle management, overseeing the entire journey of data within
+the organization. 
+
+Data ownership defines the rules that govern the data
+strategy, and data stewardship follows these rules to execute the
+strategy.
+
+Data stewardship and data ownership are complementary roles. Data
+stewardship ensures daily maintenance while owners make strategic
+decisions. By fostering collaboration between these two functions,
+organizations can create a robust data management ecosystem that unlocks
+the true potential of their information assets.
+:::
+
+## Secure Data Solutions
+
+`A technology designed to store and protect sensitive data from unauthorized access`
+
+**Secure Storage Devices**
+
+- Network-attached storage devices (NAS) 
+- On-premises servers and storage arrays
+- Cloud storage platforms
+- External hard drives and removable media
+
+
+:::notes
+Every interaction you have
+online is managed and stored. Every conversation, picture, post or
+piece of data is transferred and stored in a secure storage solution
+to keep them private and safe. Now, we'll learn what a secure
+storage solution is and explore some of the different kinds of secure storage
+devices available on the market. 
+
+Lets begin with a description
+of a secure storage solution. A secure storage solution is simply
+a technology designed to store and protect sensitive data
+from unauthorized access. These solutions are typically
+local hardware or cloud-based technologies that use
+encryption techniques to safeguard data. 
+
+Lets explore some examples. NAS or network-attached storage devices
+are commonly found in a home or small business environment. They're dedicated storage
+appliances connected to a network. Providing centralized storage and
+file sharing capabilities while implementing security features
+such as access controls and encryption. 
+
+On-premises servers and storage arrays
+are the next step up in complexity and capability. They allow organizations to
+deploy dedicated servers and storage systems within
+their physical premises, providing direct control over
+data management and security. 
+
+Cloud storage services offer scalable and
+flexible solutions, allowing organizations to store and
+access data remotely via the Internet. Cloud providers implement robust security
+measures to protect data stored on their platforms. 
+
+External hard drives, USB flash drives, and other removable media can also
+be used for secure data storage, often featuring built-in encryption and
+password protection functionality. Though they typically don't provide
+the type of fault tolerant protection that a NAS or
+other storage array might provide. 
+
+Secure storage solutions are essential for protecting sensitive information
+from unauthorized access. Complying with data
+protection regulations, and mitigating the risks of data breaches and
+unauthorized disclosure. Organizations must carefully evaluate
+their storage requirements and implement appropriate security measures
+to safeguard their valuable data assets.
+:::
+
+# Going Forward
+
+:::notes
+
+You now know the fundamentals of data security, privacy, compliance, and governance, and how data should be stored securely. Now that you're familiar with data security concepts, in the next module, we will learn about the benefits and barriers often encountered when re-using data!
+:::
