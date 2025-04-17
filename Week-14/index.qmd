@@ -1,0 +1,572 @@
+---
+title: "Data Management and Curation Planning"
+subtitle: "LIS 4/5493: Data Stewardship"
+author: 
+  - Dr. Manika Lamba
+format:
+  revealjs: 
+    slide-number: true
+    chalkboard: 
+      theme: whiteboard
+      buttons: true
+    preview-links: false
+    controls: true
+    progress: true
+    show-notes: separate-page
+    logo: images/ou.png
+    css: styles.css
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Introduction
+
+::: notes
+Like planning for your taxes, planning for data management will save you
+time and headaches in the long run. By the end of this module, you will
+be able to identify the components of a good DMP, understand the
+importance and purpose of DMPs, and be familiar with the DMP policies of
+several funding agencies. Also, you will add to your toolkit some great
+resources and tools for data management planning.
+
+Let's go ahead and get started.
+:::
+
+## Data Management Plan
+
+::::: columns
+::: {.column width="50%"}
+-   Formal document that describes the data produced in the course of a
+    research project
+-   Outlines data management strategies
+:::
+
+::: {.column width="50%"}
+![](dmp.gif){fig-align="center"}
+:::
+:::::
+
+::: notes
+At this point, you have a good understanding of what is required to
+effectively manage data as you move through the research life cycle. As
+you know, data management can seem quite the undertaking, when you
+consider all the aspects of data management best practice. But data
+management does not have to be overwhelming, if you have a data
+management plan.
+
+A data management plan or a DMP for short is a formal document that
+describes the data produced in the course of a research project. And
+outlines the data management strategies that will be implemented both
+during the active phase of the research project and after the project
+ends.
+:::
+
+## Funders
+
+![](images/2.png){fig-align="center"}
+
+::: notes
+If you have been involved in a research project supported by a major
+funding agency, you probably have a good idea of what should be included
+in a DMP. Many funding agencies, particularly federal agencies, now
+require grantees to submit a data management plan as part of the
+proposal package.
+
+If you think you or your clients may be applying for a grant from the
+National Science Foundation, the National Institutes of Health, the
+Alfred P Sloan Foundation, NASA, the Institute of Museum and Library
+Services, The National Endowment for the Humanities, the Gordon and
+Betty Moore Foundation, the Institute of Education Sciences and the
+Economic and Social Research Council, the Science and Technology
+Facilities Council, the Wellcome Trust, and while the list goes on you
+will need to know how to write a comprehensive DMP.
+
+**Even if you won't be participating in funded research, writing a DMP
+will encourage you to think carefully about the data management needs of
+your research data and plan accordingly.**
+:::
+
+## Why Manage Data?
+
+::::: columns
+::: {.column width="50%"}
+-   Allows for verification or refinement of published research results
+
+-   Reduces the potential for scientific fraud
+
+-   Promotes new research
+
+-   Provides resources for training new research
+
+-   Discourages unintentional redundancy
+:::
+
+::: {.column width="50%"}
+![](images/3.png){fig-align="center"}
+:::
+:::::
+
+::: notes
+Just as I mentioned, many funding agencies now require grantees to
+submit a data management plan as part of the proposal package
+submission. This gives assurances to the funding agency the project data
+will be accessible and usable over the long term. They want to see that
+you have established a strategy for managing your data throughout the
+research lifecycle.
+
+Making plans for how you will collect, document, organize, and preserve
+your data are all part of the data management strategy. This is
+important for funding agencies, for two primary reasons. The first
+reason is transparency and openness. It is an expectation that publicly
+funded research data will be discoverable, accessible, and reusable to
+the public.
+
+Since they underwrite federally funded grants, it is a government
+responsibility to ensure citizens can see where their tax dollars are
+spent and allow them to capitalize on the products of these grants. A
+data management plan that illustrates how data will be made
+discoverable, accessible and reusable supports this responsibility. The
+second reason is return on investment.
+
+Making data discoverable, accessible and reusable, maximizes the
+research potential of the data and provides greater returns on public
+investments and research. Well-managed data allows for verification or
+refinement of published research results, reduces the potential for
+scientific fraud, promotes new research through the use of existing
+data, provides resources for training new researchers and discourages
+unintentional redundancy in research. By planning for data management,
+these benefits are more likely to be realized.
+:::
+
+## Funding Agency Requirements {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+`NSF Requirements`
+
+1.  Types of data to be produced for the project
+2.  Data and metadata format and content
+3.  Policies for access and sharing, including security provisions
+4.  Policies and provisions for dissemination and re-use
+5.  Plans for archiving, preserving, and providing access to the data
+
+![](images/4.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+`NIH Requirements`
+
+1.  Final dataset formats
+2.  Documentation
+3.  Analytic tools necessary to use the data
+4.  Data sharing agreements
+5.  How and when the data will be accessible to others
+
+![](images/5.png)
+:::
+:::::
+
+::: notes
+Let's take a look at the data management policies from a few of the
+major US funding agencies.
+
+The National Science Foundation data management plan policy requires
+that proposals include a supplementary Data Management Plan document of
+no more than two pages. That includes information on five key aspects of
+data management. The types of data to be produced for the project, data
+and metadata format and content, policies for access and sharing,
+including security provisions, policies and provisions for dissemination
+and reuse. And plans for archiving, preserving, and providing access to
+the data.
+
+The National Institutes of Health requires applicants seeking \$500,000
+or more in direct costs to provide a description of how project data
+will be made available in a data sharing plan.
+
+This document should describe final dataset formats, documentation,
+analytic tools necessary to use the data, data sharing agreements, and
+how and when the data will be made accessible to others.
+:::
+
+## Funding Agency Requirements (Cont.) {.smaller}
+
+`NEH Requirements`
+
+1.  The data to be produced
+2.  How the data will be managed and maintained
+3.  Any factors that might impact the researcher's ability to manage the
+    data
+4.  The types of information that need to be managed and maintained
+    alongside the data
+5.  How the data will be shared in a timely manner
+6.  Facilities used to preserve the data
+
+![](images/7.png){fig-align="center"}
+
+::: notes
+The National Endowment for the Humanities summarizes the content of data
+management plans they require with two questions that should be
+addressed. What data are generated by your research?
+
+And what is your plan for managing these data? To answer these
+questions, NEH requires that the DMP describe the data to be produced,
+how the data will be managed and maintained during the active phase of
+the project, any factors that might impact the researcher's ability to
+manage the data, types of information that need to be managed and
+maintained alongside the data, how data will be shared in a timely
+manner, and the facilities used to preserve the data.
+:::
+
+## Data Management Plan Content {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+![](images/9.png){fig-align="left" width="313"}
+:::
+
+::: {.column width="50%"}
+-   Provides a description of the data
+
+-   Outline storage implications
+:::
+:::::
+
+::::: columns
+::: {.column width="50%"}
+![](images/10.png){fig-align="left" width="313"}
+:::
+
+::: {.column width="50%"}
+-   Describe the data collection methods
+-   Discuss the plans for organizing the files
+-   Discuss quality assurance protocols
+:::
+:::::
+
+::: notes
+In all of these three data management policies, DMP should describe in
+detail all major aspects of data management throughout the research life
+cycle. Here is a checklist for a data management plan from the Digital
+Curation Center that list questions that should be addressed in the DMP.
+
+`What data will you collect or create?`
+
+To answer this question, you should provide a description of the data,
+including the type, format, and volume, with a justification of the
+format choice. If there are any storage implications due to the format
+or volume of the data. You should include these as well.
+
+`How will the data be collected or created?`
+
+Describe the data collection methods to be used, including the standards
+that dictate these methods. You should also discuss your plans for
+organizing data files and applying version control, as well as how
+quality assurance protocols will be implemented during and after data
+collection.
+:::
+
+## DMP Content (Cont.) {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+![](images/11.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Describe documentation needed for interpretation and use
+
+![](dmp2.gif){fig-align="center" width="313"}
+:::
+:::::
+
+::::: columns
+::: {.column width="50%"}
+![](images/12.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Describe provisions for protecting confidentiality
+
+![](dmp3.gif){fig-align="center" width="260"}
+:::
+:::::
+
+::: notes
+`What documentation of metadata will accompany the data?`
+
+It is important to determine what information will be required to ensure
+that the data be understandable to secondary users of the data, or for
+you and your team in the future. In other words, you should describe the
+type of documentation that will be needed to accompany the data in order
+to interpret and use them.
+
+These documents might include a description of the methodologies, a
+codebook that provides variable and value definitions, questionnaires or
+instruments, or analysis procedures.
+
+`How will you manage any ethical issues?`
+
+The DMP should demonstrate that you have considered critical issues
+related to laws and guidelines. Regarding the protection of human
+subjects. If your project will conduct research involving human
+participants, you need to describe provisions for protecting their
+confidentiality. This should include strategies for handling and storing
+sensitive data, restricting access to sensitive data, and preparing
+de-indentified datasets for sharing.
+:::
+
+## DMP Content (Cont.) {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+![](images/13.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Identify the owner of the data and conditions for use
+-   Discuss permissions with the data producer
+:::
+:::::
+
+::::: columns
+::: {.column width="50%"}
+![](images/14.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Describe provisions for storage
+-   Describe plans for systematic backups
+:::
+:::::
+
+::: notes
+`How will you manage copyright and intellectual property rights issues?`
+
+This is where legal issues of data ownership need to be addressed.You
+need to identify the owner of the data and their conditions for using
+the data. If you are reusing third-party data particularly property
+data. You should discuss permissions with the data producer.
+
+`How will the data be stored and backed up during research?`
+
+To answer this question, you should describe provisions for storage. And
+the degree to which they are adequate for the type and size of your
+data. Provisions for storage should include plans for systematic back
+ups of the data files.
+:::
+
+## DMP Content (Cont.) {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+![](images/15.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Describe security measures
+-   Describe compliance with standards
+:::
+:::::
+
+::::: columns
+::: {.column width="50%"}
+![](images/16.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Note the potential value of the data
+-   Note the effort required to prepare data for preservation and access
+:::
+:::::
+
+::: notes
+`How will you manage access and security?`
+
+If the data are sensitive or should otherwise be restricted. To
+authorize project personnel. You should describe in detail security
+measures that will be in place to protect the data. You also need to
+describe the standards with which those security measures comply.
+
+`Which data should be retained, shared, and/or preserved?`
+
+In thinking about how the data will be used by others or by your team in
+the future, you should make note of the potential value of the data and
+the effort that will be required to prepare the datasets for
+preservation and access.
+:::
+
+## DMP Content (Cont.) {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+![](images/17.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Identify a repository to archive the data
+-   Identify plans to prepare and document the data
+:::
+:::::
+
+::::: columns
+::: {.column width="50%"}
+![](images/18.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Identify the mechanism to share the data
+-   Describe how the data will be found/delivered
+-   Specify acknowledgment and citation requirements
+:::
+:::::
+
+::: notes
+`What is the long-term preservation plan for the dataset?`
+
+Answering this question requires you to identify the repository you will
+use to archive the data and your plans to prepare and document the data
+to ensure that they will be preserved and usable into the foreseeable
+future.
+
+`How will you share the data?`
+
+Here you should identify the mechanism you will use to share your data.
+Describe how others might find your data and how data files will be
+delivered. You should also specify how you would like others to
+acknowledge or cite your data.
+:::
+
+## DMP Content (Cont.) {.smaller}
+
+:::::: columns
+::: {.column width="50%"}
+![](images/19.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Discuss the privacy concerns
+-   Discuss how to overcome concerns
+-   Explain any embargo periods
+
+![](dmp4.gif){fig-align="center" width="260"}
+:::
+
+![](images/20.png){fig-align="center" width="600"}
+
+::: notes
+`Are any restrictions on data sharing required?`
+
+Again, if privacy concerns affect your ability to share project data,
+you will need to discuss them and how you will overcome these concerns
+to enable data sharing whether by providing anonymized versions of the
+data. Requiring a data use agreement or other mechanisms. You may also
+choose to place an embargo on the data, to ensure you have exclusive use
+of the data for a period of time. If this is the case, you should
+explain why this is necessary.
+:::
+::::::
+
+## DMP Content (Cont.) {.smaller}
+
+:::::::::: columns
+::::: columns
+::: {.column width="50%"}
+![](images/21.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Identify who will oversee the implementation of the DMP
+:::
+:::::
+
+::::: columns
+::: {.column width="50%"}
+![](images/22.png){fig-align="left" width="290"}
+:::
+
+::: {.column width="50%"}
+-   Identified specialized expertise or equipment
+-   Consider ongoing data management costs
+-   Consider long-term preservation costs
+:::
+:::::
+
+::: notes
+`Who will be responsible for data management?`
+
+Quite simply, you need to identify, by name if possible, who will
+oversee the implementation of the data management plan.
+
+`What resources will you require to implement your plan?`
+
+For some projects with complex data, whether due to type, size, or the
+fact that project activities are geographically distributed among
+different institutions, data management might require specialized
+expertise or special equipment.
+
+You may also consider costs associated with performing ongoing data
+management tasks, as well as the resources required for long-term
+preservation of the data in a repository.
+:::
+::::::::::
+
+## Data Management Planning Tools
+
+
+::::: columns
+::: {.column width="50%"}
+[`DMPTool`](https://dmptool.org/)
+
+<https://dmptool.org/>
+
+- UC3 of the California Digital Library
+-   Step-by-Step Wizard
+-   Based on funder requirement
+-   Resources, help text, and suggested answers
+:::
+
+::: {.column width="50%"}
+[`DMPOnline`](https://dmponline.dcc.ac.uk/)
+
+<https://dmponline.dcc.ac.uk/>
+
+- Digital Curation Center
+-   DMP guidance
+
+-   Templates for UK funding agencies
+
+-   Customizable templates
+:::
+:::::
+
+::: notes
+If this check list seems overwhelming, don't worry.
+
+There are multiple data management plan tools available to use online
+for free. Two of these are the DMPTool produced by the University of
+California, Curation Center of the California Digital Library and
+DMPOnline developed by the Digital Curation Centre.
+
+The DMPTool allows researchers to create customized data management
+plans via a step-by-step wizard based on each funding agency's
+requirements. This wizard office resources, help text and suggested
+answers based on templates developed and reviewed by information
+professionals from the researches institution in the California Digital
+Library. 
+
+When funding agency policies change, the DMPTool is updated.
+This ensures that the information is up to date and all new requirements
+are listed in the DMPTool templates. DMPOnline like the DMPTool is the
+DCC's data management planning tool. It offers guidance for researchers
+writing DMPs and includes templates specific to the requirements of UK
+funding agencies and funding agencies outside the UK. Institutions can
+also customize templates via DMPOnline.
+
+Writing a data management plan gets you to think through data management
+issues early on in the research life cycle. By considering all of these
+issues, you will not only be in compliance with data management
+requirements, you will also be better prepared to implement data
+management strategies. Even if you aren't required to write a data
+management plan, this is a helpful process to do better research.
+:::
