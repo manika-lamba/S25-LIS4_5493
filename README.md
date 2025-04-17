@@ -10,3 +10,4 @@
 - [Week 8 Publishing Results and Datasets](https://manika-lamba.github.io/S25-LIS4_5493/Week-8/#/title-slide)
 - [Week 9 Sharing Data](https://manika-lamba.github.io/S25-LIS4_5493/Week-9/#/title-slide)
 - [Week 12 Privacy and Security](https://manika-lamba.github.io/S25-LIS4_5493/Week-12/#/title-slide)
+- [Week 14 Data Management and Curation Planning](https://manika-lamba.github.io/S25-LIS4_5493/Week-14/#/title-slide)
